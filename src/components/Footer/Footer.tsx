@@ -197,7 +197,7 @@ const Footer = () => {
             <p className="text-sm text-white">
               © 2022 Educrat. All Right Reserved.
             </p>
-            <div className="flex flex-wrap items-center mt-4 space-x-4 sm:mt-0 space-y-2">
+            <div className="flex flex-wrap items-center mt-4 space-x-4 sm:mt-0 space-y-2 ">
               <Link
                 href="/"
                 className="text-white text-sm lg:text-md transition-colors duration-300 hover:text-teal-accent-400"

@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { BsFillStarFill } from 'react-icons/bs';
 
 interface CourseInfo {
   data: {
+    id: number;
     title: string;
     imgSrc: string;
     lessons: number;
@@ -13,9 +15,12 @@ interface CourseInfo {
 }
 
 const CourseCard: React.FC<CourseInfo> = ({ data }) => {
-  const { title, imgSrc, lessons, duration, level } = data;
+  const { title, imgSrc, lessons, duration, level, id } = data;
   return (
-    <div className="w-full h-[470px] md:h-[420px]  shadow-md rounded-lg">
+    <Link
+      href={`/courseDetails/${id}`}
+      className="w-full h-[470px] md:h-[430px]  shadow-md rounded-lg"
+    >
       <div>
         <Image
           src={imgSrc}
@@ -86,7 +91,7 @@ const CourseCard: React.FC<CourseInfo> = ({ data }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

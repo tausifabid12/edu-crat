@@ -16,7 +16,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'Courses', href: '/' },
+    { label: 'Courses', href: '/courses' },
     { label: 'Event', href: '/' },
     { label: 'Blogs', href: '/' },
     { label: 'Contact', href: '/' },
@@ -47,7 +47,7 @@ const Navbar = () => {
     <>
       <nav
         className={`${
-          isScrolled ? 'bg-primary' : 'bg-transparent'
+          isScrolled ? 'bg-primary' : 'bg-primary'
         }  fixed top-0 z-50 w-full  transition-all duration-300 `}
       >
         <div className="bg-secondary py-2 lg:px-16 hidden lg:flex items-center justify-between text-white">
@@ -131,7 +131,7 @@ const Navbar = () => {
                   {navLinks.map((link, i) => (
                     <Link
                       key={i + 1}
-                      href="#"
+                      href={link.href}
                       className=" text-white px-3 py-2 rounded-md text-md font-medium"
                     >
                       {link.label}
@@ -160,7 +160,7 @@ const Navbar = () => {
             {navLinks.map((link, i) => (
               <Link
                 key={i + 1}
-                href="#"
+                href={link.href}
                 className=" text-primary px-3 py-2 rounded-md text-md font-medium block"
               >
                 {link.label}
