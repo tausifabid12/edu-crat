@@ -53,7 +53,7 @@ const CourseDetails = () => {
           spacing={5}
           sx={{ padding: '60px', backgroundColor: 'info.main' }}
         >
-          <Grid item xs={12} lg={8} py={20}>
+          <Grid item xs={12} lg={8} py={19}>
             <CourseDetailsCard />
             <DescriptionCard />
             <CourseSummery />
