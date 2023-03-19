@@ -49,9 +49,14 @@ const CourseDetails = () => {
         </Breadcrumbs>
         {/* body */}
         <Grid
+          className=""
           container
           spacing={5}
-          sx={{ padding: '60px', backgroundColor: 'info.main' }}
+          sx={{
+            padding: '60px',
+            backgroundColor: 'info.main',
+            position: 'relative',
+          }}
         >
           <Grid item xs={12} lg={8} py={19}>
             <CourseDetailsCard />
@@ -61,13 +66,10 @@ const CourseDetails = () => {
             <Instructor />
             <FeedBack />
           </Grid>
-          <Grid
-            item
-            xs={12}
-            lg={4}
-            // sx={{ position: 'relative' }}
-          >
-            <CourseAddToCartCard />
+          <Grid item xs={12} lg={4}>
+            <div className="fixed min-h-[700px] ">
+              <CourseAddToCartCard />
+            </div>
           </Grid>
         </Grid>
       </Box>

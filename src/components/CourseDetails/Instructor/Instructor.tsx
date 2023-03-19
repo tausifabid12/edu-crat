@@ -5,6 +5,13 @@ import Image from 'next/image';
 const Instructor = () => {
   return (
     <Stack spacing={3}>
+      <Typography
+        variant="h6"
+        component="p"
+        sx={{ fontWeight: '600', color: 'primary.main', pt: 3 }}
+      >
+        Instructor
+      </Typography>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Image
           src="/assets/courseDetails/instructor.png"
