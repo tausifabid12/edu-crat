@@ -33,7 +33,7 @@ const Courses = () => {
               variant="h4"
               sx={{ color: 'primary.main', fontWeight: '600' }}
             >
-              User Interface Courses
+              Courses
             </Typography>
             <button
               onClick={() => setIsOpen(!isOpen)}

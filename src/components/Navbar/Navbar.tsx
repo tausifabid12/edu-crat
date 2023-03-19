@@ -20,6 +20,7 @@ const Navbar = () => {
     { label: 'Event', href: '/' },
     { label: 'Blogs', href: '/' },
     { label: 'Contact', href: '/' },
+    { label: 'Dashboard', href: '/dashboard' },
   ];
 
   const toggleMenu = () => {
