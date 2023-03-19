@@ -6,7 +6,7 @@ import { Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar/Navbar';
 
-const Login = () => {
+const SignUp = () => {
   return (
     <>
       <Navbar />
@@ -58,7 +58,7 @@ const Login = () => {
             component="form"
             sx={{
               backgroundColor: 'white',
-              width: '70%',
+              width: '83%',
               height: 'auto',
               borderRadius: '10px',
               padding: '50px',
@@ -68,23 +68,94 @@ const Login = () => {
             autoComplete="off"
           >
             <Typography variant="h4" color="primary" sx={{ fontWeight: '600' }}>
-              Login
+              Sign up
             </Typography>
             <Typography
               mt={1}
               variant="subtitle2"
               sx={{ color: 'secondary.contrastText', display: 'flex' }}
             >
-              {`Don't have an account yet? `}{' '}
+              {`Already have an account `}
               <Typography
                 component="span"
                 variant="subtitle2"
                 sx={{ color: 'secondary.main' }}
               >
-                Sign up for free
+                {' '}
+                Login
               </Typography>
             </Typography>
-            <Stack spacing={2} mt={6} sx={{ width: '100%' }}>
+            <Grid
+              className=""
+              container
+              mt={6}
+              sx={{ width: '100%' }}
+              spacing={2}
+            >
+              <Grid item xs={12} lg={6}>
+                <TextField
+                  error={false}
+                  id="outlined-error"
+                  label="Name "
+                  helperText=""
+                  sx={{ width: '100%' }}
+                />
+              </Grid>
+              <Grid item xs={12} lg={6}>
+                <TextField
+                  error={false}
+                  id="outlined-error"
+                  label="User Name "
+                  helperText=""
+                  sx={{ width: '100%' }}
+                />
+              </Grid>
+              <Grid item xs={12} lg={6}>
+                {' '}
+                <TextField
+                  error={false}
+                  id="outlined-error"
+                  label="Email"
+                  helperText=""
+                />
+              </Grid>
+              <Grid item xs={12} lg={6}>
+                {' '}
+                <TextField
+                  error={false}
+                  id="outlined-error"
+                  label="Phone Number"
+                  helperText=""
+                  sx={{ width: '100%' }}
+                />
+              </Grid>
+              <Grid item xs={12} lg={6}>
+                {' '}
+                <TextField
+                  error={false}
+                  id="outlined-error"
+                  label="Password"
+                  helperText=""
+                />
+              </Grid>
+              <Grid item xs={12} lg={6}>
+                {' '}
+                <TextField
+                  error={false}
+                  id="outlined-error"
+                  label="Conform Password"
+                  helperText=""
+                />
+              </Grid>
+              <Grid item xs={12} lg={12}>
+                {' '}
+                <button className="bg-highlight py-3 text-primary w-full rounded-lg font-semibold">
+                  Sign up
+                </button>
+              </Grid>
+            </Grid>
+            {/* ======== */}
+            {/* <Stack spacing={2} mt={6} sx={{ width: '100%' }}>
               <TextField
                 error={false}
                 id="outlined-error"
@@ -99,9 +170,9 @@ const Login = () => {
                 helperText=""
               />
               <button className="bg-highlight py-3 text-primary w-full rounded-lg font-semibold">
-                Login
+                Sign up
               </button>
-            </Stack>
+            </Stack> */}
             <Typography
               mt={3}
               variant="subtitle1"
@@ -124,4 +195,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
