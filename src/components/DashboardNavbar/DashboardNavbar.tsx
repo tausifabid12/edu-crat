@@ -17,6 +17,11 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Image from 'next/image';
 
+interface navProps {
+  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  mobileOpen: boolean;
+}
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -57,7 +62,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const DashboardNavbar = () => {
+const DashboardNavbar: React.FC<navProps> = ({ mobileOpen, setMobileOpen }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -174,13 +179,20 @@ const DashboardNavbar = () => {
       >
         <Toolbar>
           <IconButton
+            onAbort={() => {
+              setMobileOpen(!mobileOpen);
+            }}
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, display: { xs: 'block', md: 'none' } }}
           >
-            <MenuIcon />
+            <MenuIcon
+              sx={{
+                color: 'secondary.contrastText',
+              }}
+            />
           </IconButton>
           <div className="flex-shrink-0">
             <img
@@ -194,15 +206,7 @@ const DashboardNavbar = () => {
               alt="Logo"
             />
           </div>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton
@@ -238,18 +242,6 @@ const DashboardNavbar = () => {
                 width={50}
                 alt=""
               />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
             </IconButton>
           </Box>
         </Toolbar>

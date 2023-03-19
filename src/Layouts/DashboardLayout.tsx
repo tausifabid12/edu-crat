@@ -20,15 +20,60 @@ import Link from 'next/link';
 
 const drawerWidth = 240;
 
-interface DProps {
+interface Props {
+  window?: () => Window;
   children: JSX.Element[] | JSX.Element;
 }
+// interface DProps {
+//   children: JSX.Element[] | JSX.Element;
+// }
 
-const DashboardLayout: React.FC<DProps> = ({ children }) => {
+const drawer = (
+  <div>
+    <Toolbar />
+    <Divider />
+    <Stack spacing={8} sx={{ overflow: 'auto', mt: 5, border: 'none' }}>
+      <List>
+        {[
+          'Dashboard',
+          'My Courses',
+          'Bookmarks',
+          'Messages',
+          'Create Course',
+          'Reviews',
+          'Settings',
+          'Logout',
+        ].map((text, index) => (
+          <Link href="/mycourse" key={text}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
+        ))}
+      </List>
+    </Stack>
+  </div>
+);
+
+const DashboardLayout = (props: Props) => {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const { window, children } = props;
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-
       <AppBar
         position="fixed"
         sx={{
@@ -38,57 +83,59 @@ const DashboardLayout: React.FC<DProps> = ({ children }) => {
         }}
       >
         <Toolbar>
-          <DashboardNavbar />
+          <DashboardNavbar
+            mobileOpen={mobileOpen}
+            setMobileOpen={setMobileOpen}
+          />
         </Toolbar>
       </AppBar>
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          border: 'none',
-
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-            border: 'none',
-          },
-        }}
+      <Box
+        component="nav"
+        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        aria-label="mailbox folders"
       >
-        <Toolbar />
-        <Stack spacing={8} sx={{ overflow: 'auto', mt: 5, border: 'none' }}>
-          <List>
-            {[
-              'Dashboard',
-              'My Courses',
-              'Bookmarks',
-              'Messages',
-              'Create Course',
-              'Reviews',
-              'Settings',
-              'Logout',
-            ].map((text, index) => (
-              <Link href="/mycourse" key={text}>
-                <ListItem disablePadding>
-                  <ListItemButton>
-                    <ListItemIcon>
-                      {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                    </ListItemIcon>
-                    <ListItemText primary={text} />
-                  </ListItemButton>
-                </ListItem>
-              </Link>
-            ))}
-          </List>
-        </Stack>
-      </Drawer>
+        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            border: 'none',
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+              border: 'none',
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+        <Drawer
+          variant="permanent"
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+            '& .MuiDrawer-paper': {
+              boxSizing: 'border-box',
+              width: drawerWidth,
+            },
+          }}
+          open
+        >
+          {drawer}
+        </Drawer>
+      </Box>
       <Container
         component="main"
         sx={{
           flexGrow: 1,
           //   px: ,
           backgroundColor: 'info.main',
-          mx: 9,
+          mx: { xs: 'none', sm: 8 },
           mt: 14,
           borderRadius: '15px',
         }}
