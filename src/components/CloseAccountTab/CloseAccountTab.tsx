@@ -1,7 +1,5 @@
 import React from 'react';
-import Stack from '@mui/material/Stack/Stack';
-import TextField from '@mui/material/TextField/TextField';
-import Typography from '@mui/material/Typography';
+import { Stack, TextField, Typography } from '@mui/material';
 
 const CloseAccountTab = () => {
   return (

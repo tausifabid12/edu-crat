@@ -1,7 +1,6 @@
-import Box from '@mui/material/Box/Box';
-import Stack from '@mui/material/Stack/Stack';
-import TextField from '@mui/material/TextField/TextField';
 import React from 'react';
+
+import { Box, Stack, TextField } from '@mui/material';
 
 const EditPasswordTab = () => {
   return (

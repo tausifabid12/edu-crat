@@ -1,5 +1,4 @@
-import Grid from '@mui/material/Grid/Grid';
-import TextField from '@mui/material/TextField/TextField';
+import { Grid, TextField } from '@mui/material';
 import React from 'react';
 
 const EditSocialProfile = () => {
