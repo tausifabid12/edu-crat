@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { BsFillStarFill } from 'react-icons/bs';
+import { BsFillStarFill, BsBookmarkFill } from 'react-icons/bs';
 
 interface CourseInfo {
   data: {
@@ -19,8 +19,11 @@ const CourseCard: React.FC<CourseInfo> = ({ data }) => {
   return (
     <Link
       href={`/courseDetails/${id}`}
-      className="w-full h-[470px] md:h-[430px]  shadow-md rounded-lg"
+      className="w-full h-[470px] md:h-[430px]  shadow-md rounded-lg relative"
     >
+      <button className="text-white text-lg p-2 rounded-full absolute top-2 right-2 hover:bg-black/30">
+        <BsBookmarkFill />
+      </button>
       <div>
         <Image
           src={imgSrc}

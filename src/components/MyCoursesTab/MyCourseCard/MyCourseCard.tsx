@@ -1,13 +1,22 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea, Typography, Stack } from '@mui/material';
+import {
+  CardActionArea,
+  Typography,
+  Stack,
+  Menu,
+  MenuItem,
+} from '@mui/material';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import ShareIcon from '@mui/icons-material/Share';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 import Tooltip from '@mui/material/Tooltip';
 
@@ -27,12 +36,65 @@ function valuetext(value: number) {
 }
 
 const MyCourseCard: React.FC<CourseInfo> = ({ data }) => {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   const { title, imgSrc, lessons, duration, level, id } = data;
   return (
-    <Card sx={{ width: '100%', height: '400px' }}>
+    <Card sx={{ width: '100%', height: '400px', position: 'relative' }}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={imgSrc} alt={title} />
         <CardContent>
+          {/* action button */}
+          <div>
+            <Button
+              id="basic-button"
+              aria-controls={open ? 'basic-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+              onClick={handleClick}
+              sx={{
+                backgroundColor: 'white',
+                position: 'absolute',
+                top: 3,
+                right: 3,
+              }}
+            >
+              <Box
+                sx={{
+                  p: 0.5,
+                  backgroundColor: 'white',
+                  borderRadius: '4px',
+                }}
+              >
+                <MoreVertIcon />
+              </Box>
+            </Button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                'aria-labelledby': 'basic-button',
+              }}
+            >
+              <MenuItem onClick={handleClose}>
+                <ShareIcon sx={{ mr: 1 }} /> <p>Share</p>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <BookmarkIcon sx={{ mr: 1 }} />
+                <p>Favorite</p>
+              </MenuItem>
+            </Menu>
+          </div>
+
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
             <Typography
               gutterBottom

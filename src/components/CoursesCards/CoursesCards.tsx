@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Box, styled, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 import { courses } from '@/utilities/CourseData/CourseData';
 import CourseCard from '../PopularCourses/CourseCard/CourseCard';
 

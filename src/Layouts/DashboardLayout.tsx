@@ -28,29 +28,55 @@ interface Props {
 //   children: JSX.Element[] | JSX.Element;
 // }
 
+const MenuItems = [
+  {
+    title: 'Dashboard',
+    path: '/dashboard',
+  },
+  {
+    title: 'My Courses',
+    path: '/mycourse',
+  },
+  {
+    title: 'Bookmarks',
+    path: '/bookmarks',
+  },
+  {
+    title: 'Messages',
+    path: '/messages',
+  },
+  {
+    title: 'Create Course',
+    path: '/createcourse',
+  },
+  {
+    title: 'Reviews',
+    path: '/reviews',
+  },
+  {
+    title: 'Settings',
+    path: '/settings',
+  },
+  {
+    title: 'Logout',
+    path: '/',
+  },
+];
+
 const drawer = (
   <div>
     <Toolbar />
     <Divider />
     <Stack spacing={8} sx={{ overflow: 'auto', mt: 5, border: 'none' }}>
       <List>
-        {[
-          'Dashboard',
-          'My Courses',
-          'Bookmarks',
-          'Messages',
-          'Create Course',
-          'Reviews',
-          'Settings',
-          'Logout',
-        ].map((text, index) => (
-          <Link href="/mycourse" key={text}>
+        {MenuItems.map((menu, index) => (
+          <Link href={menu?.path} key={menu?.title}>
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary={menu?.title} />
               </ListItemButton>
             </ListItem>
           </Link>
