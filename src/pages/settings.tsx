@@ -75,13 +75,13 @@ const Settings = () => {
           <EditProfileTab />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          {/* <EditPasswordTab /> */}
+          <EditPasswordTab />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          {/* <EditSocialProfile /> */}
+          <EditSocialProfile />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          {/* <CloseAccountTab /> */}
+          <CloseAccountTab />
         </TabPanel>
       </Box>
     </DashboardLayout>

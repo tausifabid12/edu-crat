@@ -45,10 +45,10 @@ const MenuItems = [
     title: 'Messages',
     path: '/messages',
   },
-  {
-    title: 'Create Course',
-    path: '/createcourse',
-  },
+  // {
+  //   title: 'Create Course',
+  //   path: '/createcourse',
+  // },
   {
     title: 'Reviews',
     path: '/reviews',
