@@ -173,5 +173,4 @@ const DashboardLayout = (props: Props) => {
   );
 };
 
-// sx={{  }}
 export default DashboardLayout;

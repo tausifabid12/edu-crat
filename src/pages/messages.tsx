@@ -1,3 +1,4 @@
+import MessageInfo from '@/components/MessageInfo/MessageInfo';
 import DashboardLayout from '@/Layouts/DashboardLayout';
 import { Box, Grid, Typography, Stack } from '@mui/material';
 import Image from 'next/image';
@@ -22,7 +23,15 @@ const messages = () => {
           </Typography>
         </Box>
         <Box>
-          <Grid container spacing={5} mt={0}>
+          <Grid
+            container
+            spacing={1}
+            mt={5}
+            mb={10}
+            sx={{
+              p: 0,
+            }}
+          >
             <Grid
               item
               xs={12}
@@ -30,64 +39,16 @@ const messages = () => {
               sx={{
                 backgroundColor: 'white',
                 borderRadius: '14px',
-                p: 0,
-                m: 0,
+                p: 2,
+                boxShadow: '0px 0px 1px 3px rgba(0, 0, 0, 0.03)',
               }}
             >
-              <Typography
-                variant="body1"
-                sx={{
-                  color: 'primary.main',
-                  fontWeight: '500',
-                  borderBottom: '1px solid #E5E5E5',
-                  boxShadow: '0px 1px 0px #E5E5E5',
-                }}
-              >
-                Basic Information
-              </Typography>
-              {/*  body */}
-              <Box
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                }}
-              >
-                <Image src="/assets/user.png" height={50} width={50} alt="" />
-                <Stack spacing={0} sx={{ py: 3 }}>
-                  <Typography
-                    variant="subtitle2"
-                    sx={{ color: 'primary.main' }}
-                  >
-                    Darlene Robertson
-                  </Typography>
-                  <Typography
-                    variant="subtitle2"
-                    sx={{ color: 'secondary.contrastText' }}
-                  >
-                    Head of Development
-                  </Typography>
-                </Stack>
-                <Typography
-                  variant="subtitle2"
-                  sx={{ color: 'secondary.contrastText' }}
-                >
-                  35min
-                </Typography>
-              </Box>
+              <MessageInfo />
             </Grid>
             <Grid item xs={12} lg={8}>
               {/* <CourseCard data={course} /> */}
               fjskfjslak
             </Grid>
-
-            {/* {courses.map((course) => {
-              return (
-                <Grid key={course?.id} item xs={12} lg={6}>
-                  <CourseCard data={course} />
-                </Grid>
-              );
-            })} */}
           </Grid>
         </Box>
       </Box>
