@@ -7,7 +7,7 @@ import DashboardLayout from '@/Layouts/DashboardLayout';
 const Bookmarks = () => {
   return (
     <DashboardLayout>
-      <Box sx={{ px: 4 }}>
+      <Box sx={{ px: { xs: 1, sm: 4 } }}>
         <Box>
           <Typography
             variant="h4"
