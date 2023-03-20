@@ -24,11 +24,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -88,7 +84,6 @@ const MyCourseTab: React.FC = () => {
           <Typography
             gutterBottom
             variant="subtitle1"
-            component="p"
             sx={{ color: 'primary.main' }}
           >
             You have not finished any course yet.
