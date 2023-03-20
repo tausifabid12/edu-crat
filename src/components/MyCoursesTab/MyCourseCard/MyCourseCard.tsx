@@ -60,10 +60,10 @@ const MyCourseCard: React.FC<CourseInfo> = ({ data }) => {
               aria-expanded={open ? 'true' : undefined}
               onClick={handleClick}
               sx={{
-                backgroundColor: 'white',
                 position: 'absolute',
+                backgroundColor: 'transparent',
                 top: 3,
-                right: 3,
+                right: 2,
               }}
             >
               <Box
