@@ -4,7 +4,7 @@ import React from 'react';
 
 const MessageInfo = () => {
   return (
-    <Box>
+    <Box sx={{ minHeight: '80vh', overflow: 'auto' }}>
       <Typography
         variant="body1"
         sx={{
@@ -18,7 +18,7 @@ const MessageInfo = () => {
         Basic Information
       </Typography>
 
-      {[1, 2, 3, 4, 5, 6, 7].map((item) => (
+      {[1, 2, 3, 4, 5].map((item) => (
         <Box
           key={item}
           sx={{

@@ -1,3 +1,4 @@
+import ChatPage from '@/components/ChatPage/ChatPage';
 import MessageInfo from '@/components/MessageInfo/MessageInfo';
 import DashboardLayout from '@/Layouts/DashboardLayout';
 import { Box, Grid, Typography, Stack } from '@mui/material';
@@ -23,13 +24,42 @@ const messages = () => {
           </Typography>
         </Box>
         <Box>
+          <Grid container spacing={2} mt={3} mb={5}>
+            <Grid item xs={12} md={4}>
+              <Box
+                sx={{
+                  backgroundColor: 'white',
+                  borderRadius: '14px',
+                  p: 2,
+                  boxShadow: '0px 0px 1px 3px rgba(0, 0, 0, 0.03)',
+                }}
+              >
+                <MessageInfo />
+              </Box>
+            </Grid>
+            <Grid item xs={12} lg={8}>
+              <Box
+                sx={{
+                  backgroundColor: 'white',
+                  borderRadius: '14px',
+                  p: 2,
+                  boxShadow: '0px 0px 1px 3px rgba(0, 0, 0, 0.03)',
+                }}
+              >
+                <ChatPage />
+              </Box>
+            </Grid>
+          </Grid>
+
+          {/*           
           <Grid
             container
-            spacing={1}
-            mt={5}
+            spacing={3}
+            mt={6}
             mb={10}
             sx={{
               p: 0,
+              width: '100%',
             }}
           >
             <Grid
@@ -45,11 +75,22 @@ const messages = () => {
             >
               <MessageInfo />
             </Grid>
-            <Grid item xs={12} lg={8}>
-              {/* <CourseCard data={course} /> */}
-              fjskfjslak
+            <Grid
+              item
+              xs={12}
+              lg={7}
+              sx={{
+                backgroundColor: 'white',
+                borderRadius: '14px',
+                p: 2,
+                width: '100%',
+                boxShadow: '0px 0px 1px 3px rgba(0, 0, 0, 0.03)',
+              }}
+            >
+              
+              <ChatPage />
             </Grid>
-          </Grid>
+          </Grid> */}
         </Box>
       </Box>
     </DashboardLayout>
