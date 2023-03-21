@@ -17,6 +17,13 @@ import DashboardNavbar from '@/components/DashboardNavbar/DashboardNavbar';
 import Container from '@mui/material/Container';
 import { Stack } from '@mui/system';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
+import MessageIcon from '@mui/icons-material/Message';
+import SettingsIcon from '@mui/icons-material/Settings';
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 const drawerWidth = 240;
 
@@ -32,18 +39,22 @@ const MenuItems = [
   {
     title: 'Dashboard',
     path: '/dashboard',
+    icon: <InboxIcon />,
   },
   {
     title: 'My Courses',
     path: '/mycourse',
+    icon: <LibraryBooksIcon />,
   },
   {
     title: 'Bookmarks',
     path: '/bookmarks',
+    icon: <BookmarkIcon />,
   },
   {
     title: 'Messages',
     path: '/messages',
+    icon: <MessageIcon />,
   },
   // {
   //   title: 'Create Course',
@@ -52,42 +63,23 @@ const MenuItems = [
   {
     title: 'Reviews',
     path: '/reviews',
+    icon: <ReviewsIcon />,
   },
   {
     title: 'Settings',
     path: '/settings',
+    icon: <SettingsIcon />,
   },
   {
     title: 'Logout',
     path: '/',
+    icon: <LogoutIcon />,
   },
 ];
 
-const drawer = (
-  <div>
-    <Toolbar />
-    <Divider />
-    <Stack spacing={8} sx={{ overflow: 'auto', mt: 5, border: 'none' }}>
-      <List>
-        {MenuItems.map((menu, index) => (
-          <Link href={menu?.path} key={menu?.title}>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={menu?.title} />
-              </ListItemButton>
-            </ListItem>
-          </Link>
-        ))}
-      </List>
-    </Stack>
-  </div>
-);
-
 const DashboardLayout = (props: Props) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const router = useRouter();
 
   const { window, children } = props;
 
@@ -139,27 +131,97 @@ const DashboardLayout = (props: Props) => {
             },
           }}
         >
-          {drawer}
+          {/*  menu Items small device */}
+          <div>
+            <Toolbar />
+            <Divider />
+            <Stack spacing={8} sx={{ overflow: 'auto', mt: 5, border: 'none' }}>
+              <List sx={{ pl: 2 }}>
+                {MenuItems.map((menu, index) => (
+                  <Link href={menu?.path} key={menu?.title}>
+                    <ListItem
+                      disablePadding
+                      sx={{
+                        backgroundColor: `${
+                          menu?.path === router.route ? 'primary.main' : ''
+                        }`,
+                        color: `${menu?.path === router.route ? 'white' : ''}`,
+                        borderRadius: '15px',
+                        py: 1,
+                      }}
+                    >
+                      <ListItemButton>
+                        <ListItemIcon>
+                          {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                        </ListItemIcon>
+                        <ListItemText primary={menu?.title} />
+                      </ListItemButton>
+                    </ListItem>
+                  </Link>
+                ))}
+              </List>
+            </Stack>
+          </div>
+          {/* {drawer} */}
         </Drawer>
         <Drawer
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
+
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
+              border: 'none',
               width: drawerWidth,
             },
           }}
           open
         >
-          {drawer}
+          {/*  menu Items large device */}
+          <div>
+            <Toolbar />
+            <Divider />
+            <Stack spacing={8} sx={{ overflow: 'auto', mt: 5, border: 'none' }}>
+              <List sx={{ pl: 2 }}>
+                {MenuItems.map((menu, index) => (
+                  <Link href={menu?.path} key={menu?.title}>
+                    <ListItem
+                      disablePadding
+                      sx={{
+                        backgroundColor: `${
+                          menu?.path === router.route ? 'primary.main' : ''
+                        }`,
+                        color: `${menu?.path === router.route ? 'white' : ''}`,
+                        borderRadius: '15px',
+                        py: 1,
+                      }}
+                    >
+                      <ListItemButton>
+                        <ListItemIcon>
+                          <Typography
+                            sx={{
+                              color: `${
+                                menu?.path === router.route ? 'white' : ''
+                              }`,
+                            }}
+                          >
+                            {menu?.icon}
+                          </Typography>
+                        </ListItemIcon>
+                        <ListItemText primary={menu?.title} />
+                      </ListItemButton>
+                    </ListItem>
+                  </Link>
+                ))}
+              </List>
+            </Stack>
+          </div>
         </Drawer>
       </Box>
       <Container
         component="main"
         sx={{
           flexGrow: 1,
-          //   px: ,
           backgroundColor: 'info.main',
           mx: { xs: 'none', sm: 8 },
           mt: 14,
