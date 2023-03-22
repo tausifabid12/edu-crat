@@ -225,7 +225,7 @@ const CollegeDashboardLayout = (props: Props) => {
           sx={{
             backgroundColor: 'info.main',
             minHeight: '100vh',
-            p: 4,
+            p: { xs: 0, sm: 4 },
             borderRadius: '15px',
           }}
         >
