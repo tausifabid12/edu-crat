@@ -18,8 +18,7 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import Image from 'next/image';
 
 interface navProps {
-  setMobileOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  mobileOpen: boolean;
+  handleDrawerToggle: () => void;
 }
 
 const Search = styled('div')(({ theme }) => ({
@@ -62,7 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const DashboardNavbar: React.FC<navProps> = ({ mobileOpen, setMobileOpen }) => {
+const DashboardNavbar: React.FC<navProps> = ({ handleDrawerToggle }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -179,14 +178,11 @@ const DashboardNavbar: React.FC<navProps> = ({ mobileOpen, setMobileOpen }) => {
       >
         <Toolbar>
           <IconButton
-            onAbort={() => {
-              setMobileOpen(!mobileOpen);
-            }}
-            size="large"
-            edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2, display: { xs: 'block', md: 'none' } }}
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
           >
             <MenuIcon
               sx={{
@@ -194,6 +190,7 @@ const DashboardNavbar: React.FC<navProps> = ({ mobileOpen, setMobileOpen }) => {
               }}
             />
           </IconButton>
+
           <div className="flex-shrink-0">
             <img
               className="block lg:hidden h-8 w-auto"

@@ -6,7 +6,7 @@ import React from 'react';
 const MyCourse = () => {
   return (
     <DashboardLayout>
-      <Box sx={{ px: 4 }}>
+      <Box sx={{ px: { xs: 1, sm: 4 } }}>
         <Box>
           <Typography
             variant="h4"
@@ -22,7 +22,12 @@ const MyCourse = () => {
           </Typography>
         </Box>
         <Box
-          sx={{ backgroundColor: 'white', p: 2, my: 3, borderRadius: '14px' }}
+          sx={{
+            backgroundColor: 'white',
+            p: { xs: 0, sm: 2 },
+            my: 3,
+            borderRadius: '14px',
+          }}
         >
           <MyCourseTab />
         </Box>

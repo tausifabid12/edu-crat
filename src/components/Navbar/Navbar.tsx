@@ -21,6 +21,7 @@ const Navbar = () => {
     { label: 'Blogs', href: '/' },
     { label: 'Contact', href: '/' },
     { label: 'Dashboard', href: '/dashboard' },
+    { label: 'C-Dashboard', href: '/collegeRoutes/dashboard' },
   ];
 
   const toggleMenu = () => {
