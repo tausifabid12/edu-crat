@@ -22,14 +22,6 @@ function createData(
   return { name, calories, fat, carbs, protein };
 }
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-];
-
 const colleges = [
   {
     name: 'Engineering',
@@ -37,7 +29,7 @@ const colleges = [
       {
         name: 'Computer Science ',
         duration: '4 years',
-        fees: 'Rs. 5,00,000',
+        fees: 'Rs. 5,00,000 ',
         splitFees: 'Rs. 1,25,000',
       },
       {
@@ -137,7 +129,7 @@ const DashboardCourseInfo = () => {
           Courses
         </Typography>
         <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-          <InputLabel id="demo-select-small">college</InputLabel>
+          <InputLabel id="demo-select-small">Faculty</InputLabel>
           <Select
             labelId="demo-select-small"
             id="demo-select-small"

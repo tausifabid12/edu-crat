@@ -4,6 +4,8 @@ import { Container, Stack, Box, Typography, Grid } from '@mui/material';
 import Image from 'next/image';
 import DashboardCollegeInfo from '@/components/DashboardCollegeInfo/DashboardCollegeInfo';
 import DashboardCourseInfo from '@/components/DashboardCourseInfo/DashboardCourseInfo';
+import DashboardPopularCourse from '@/components/DashboardPopularCourse/DashboardPopularCourse';
+import DashboardPopularColleges from '@/components/DashboardPopularColleges/DashboardPopularColleges';
 
 const collegeInfo = () => {
   return (
@@ -21,9 +23,10 @@ const collegeInfo = () => {
         </Box>
         {/*  college bio */}
         <DashboardCollegeInfo />
-
+        <DashboardPopularColleges />
         {/*course info section */}
         <DashboardCourseInfo />
+        <DashboardPopularCourse />
       </Stack>
     </CollegeDashboardLayout>
   );
