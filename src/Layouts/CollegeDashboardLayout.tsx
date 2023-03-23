@@ -52,8 +52,8 @@ const MenuItems = [
     icon: <BookmarkIcon />,
   },
   {
-    title: 'Messages',
-    path: '/collegeRoutes/messages',
+    title: 'Photos',
+    path: '/collegeRoutes/photos',
     icon: <MessageIcon />,
   },
 
