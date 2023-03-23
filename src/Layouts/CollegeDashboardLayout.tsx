@@ -31,9 +31,6 @@ interface Props {
   window?: () => Window;
   children: JSX.Element[] | JSX.Element;
 }
-// interface DProps {
-//   children: JSX.Element[] | JSX.Element;
-// }
 
 const MenuItems = [
   {
@@ -58,18 +55,18 @@ const MenuItems = [
   },
 
   {
-    title: 'Reviews',
-    path: '/collegeRoutes/reviews',
+    title: 'Events',
+    path: '/collegeRoutes/events',
     icon: <ReviewsIcon />,
   },
   {
-    title: 'Settings',
-    path: '/collegeRoutes/settings',
+    title: 'Blogs',
+    path: '/collegeRoutes/blogs',
     icon: <SettingsIcon />,
   },
   {
-    title: 'Logout',
-    path: '/collegeRoutes/',
+    title: 'settings',
+    path: '/collegeRoutes/settings',
     icon: <LogoutIcon />,
   },
 ];
