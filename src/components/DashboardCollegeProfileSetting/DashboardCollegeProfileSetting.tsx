@@ -5,7 +5,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import NoSsr from '@mui/base/NoSsr';
 
-const EditProfileTab = () => {
+const DashboardCollegeProfileSetting = () => {
   return (
     <NoSsr>
       <Box
@@ -53,7 +53,7 @@ const EditProfileTab = () => {
           <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
-              label=" First name"
+              label="College name"
               variant="outlined"
               sx={{ width: '100%' }}
             />
@@ -61,15 +61,16 @@ const EditProfileTab = () => {
           <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
-              label=" Last name"
+              label="Contact Person"
               variant="outlined"
               sx={{ width: '100%' }}
             />
           </Grid>
+
           <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
-              label=" User Email"
+              label=" Email"
               variant="outlined"
               sx={{ width: '100%' }}
             />
@@ -82,22 +83,7 @@ const EditProfileTab = () => {
               sx={{ width: '100%' }}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
-              id="outlined-basic"
-              label="Current School"
-              variant="outlined"
-              sx={{ width: '100%' }}
-            />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TextField
-              id="outlined-basic"
-              label="Current Course"
-              variant="outlined"
-              sx={{ width: '100%' }}
-            />
-          </Grid>
+
           <Grid item xs={12} md={6}>
             <TextField
               id="outlined-basic"
@@ -114,19 +100,10 @@ const EditProfileTab = () => {
               sx={{ width: '100%' }}
             />
           </Grid>
-          <Grid item xs={12} md={12}>
-            <TextField
-              id="outlined-multiline-static"
-              label="Personal info"
-              multiline
-              rows={4}
-              // default  Value="I am a lorem learner Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
-              sx={{ width: '100%', color: 'secondary.contrastText' }}
-            />
-          </Grid>
+
           <Grid item xs={12} lg={6}></Grid>
         </Grid>
-        <button className="bg-secondary text-white px-10 py-4 border-2 transition-all duration-300 border-secondary rounded-lg hover:bg-white hover:text-secondary">
+        <button className="bg-secondary text-white px-10 py-4 mt-5 border-2 transition-all duration-300 border-secondary rounded-lg hover:bg-white hover:text-secondary">
           Update Changes
         </button>
       </Box>
@@ -134,4 +111,4 @@ const EditProfileTab = () => {
   );
 };
 
-export default EditProfileTab;
+export default DashboardCollegeProfileSetting;

@@ -20,10 +20,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-import MessageIcon from '@mui/icons-material/Message';
+import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ReviewsIcon from '@mui/icons-material/Reviews';
-import LogoutIcon from '@mui/icons-material/Logout';
+import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 
 const drawerWidth = 240;
 
@@ -51,7 +51,7 @@ const MenuItems = [
   {
     title: 'Photos',
     path: '/collegeRoutes/photos',
-    icon: <MessageIcon />,
+    icon: <PhotoLibraryIcon />,
   },
 
   {
@@ -62,12 +62,12 @@ const MenuItems = [
   {
     title: 'Blogs',
     path: '/collegeRoutes/blogs',
-    icon: <SettingsIcon />,
+    icon: <LibraryAddIcon />,
   },
   {
     title: 'settings',
     path: '/collegeRoutes/settings',
-    icon: <LogoutIcon />,
+    icon: <SettingsIcon />,
   },
 ];
 
