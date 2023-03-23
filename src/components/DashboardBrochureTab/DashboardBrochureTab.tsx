@@ -50,19 +50,7 @@ const DashboardBrochureTab = () => {
               mt: 1,
             }}
           >
-            Brochure
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{
-              color: 'secondary.main',
-              fontweight: '700',
-              mt: 1,
-              cursor: 'pointer',
-            }}
-          >
-            <AddCircleOutlineIcon /> Add New Facilities
+            Brochures
           </Typography>
         </Box>
         <List sx={{ width: '100%', bgcolor: 'white' }}>

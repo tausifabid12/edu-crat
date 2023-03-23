@@ -24,6 +24,7 @@ const DashboardNewCourseModal: React.FC<DashboardNewCourseModalProps> = ({
 }) => {
   const [section, setSection] = React.useState('');
   const [duration, setDuration] = React.useState(0);
+  const [name, setName] = React.useState('');
 
   const handleChange = (event: SelectChangeEvent) => {
     setSection(event.target.value as string);
@@ -64,7 +65,20 @@ const DashboardNewCourseModal: React.FC<DashboardNewCourseModalProps> = ({
               }}
             >
               <Grid item xs={12} lg={6} p={1}>
-                <TextField fullWidth label="Name" id="fullWidth" />
+                <FormControl fullWidth>
+                  <InputLabel id="demo-simple-select-label">Name</InputLabel>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={name}
+                    label="Name"
+                    onChange={(e) => setName(e.target.value as string)}
+                  >
+                    <MenuItem value={'CSE'}>CSE</MenuItem>
+                    <MenuItem value={'EEE'}>EEE</MenuItem>
+                    <MenuItem value={'ETA'}>ETA</MenuItem>
+                  </Select>
+                </FormControl>
               </Grid>
               <Grid item xs={12} lg={6} p={1}>
                 <Box sx={{ minWidth: 120 }}>

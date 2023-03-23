@@ -1,5 +1,15 @@
 import React from 'react';
-import { Container, Stack, Box, Typography, Grid } from '@mui/material';
+import {
+  Container,
+  Stack,
+  Box,
+  Typography,
+  Grid,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from '@mui/material';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
@@ -7,6 +17,7 @@ import Image from 'next/image';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const DashboardGeneralTab = () => {
+  const [type, setType] = React.useState('Public');
   return (
     <>
       <Box sx={{ position: 'relative' }}>
@@ -74,12 +85,19 @@ const DashboardGeneralTab = () => {
             />
           </Grid>
           <Grid item xs={12} lg={6} p={1}>
-            <TextField
-              fullWidth
-              label="Type"
-              defaultValue="Public"
-              id="fullWidth"
-            />
+            <FormControl fullWidth>
+              <InputLabel id="demo-simple-select-label">Type</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={type}
+                label="Age"
+                onChange={(e) => setType(e.target.value as string)}
+              >
+                <MenuItem value={'Public'}>Public</MenuItem>
+                <MenuItem value={'Private'}>Private</MenuItem>
+              </Select>
+            </FormControl>
           </Grid>
           <Grid item xs={12} lg={6} p={1}>
             <TextField
