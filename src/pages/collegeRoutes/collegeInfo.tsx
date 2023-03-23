@@ -8,6 +8,7 @@ import NoSsr from '@mui/base/NoSsr';
 import DashboardGeneralTab from '@/components/DashboardGeneralTab/DashboardGeneralTab';
 import DashboardFacilitiesTab from '@/components/DashboardFacilitiesTab/DashboardFacilitiesTab';
 import DashboardCoursesTab from '@/components/DashboardCoursesTab/DashboardCoursesTab';
+import DashboardBrochureTab from '@/components/DashboardBrochureTab/DashboardBrochureTab';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -71,7 +72,7 @@ const CollegeInfo = () => {
               <Tab label="General" {...a11yProps(0)} />
               <Tab label="Courses" {...a11yProps(1)} />
               <Tab label="Facilities" {...a11yProps(2)} />
-              <Tab label="Broacher" {...a11yProps(3)} />
+              <Tab label="Brochure" {...a11yProps(3)} />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
@@ -83,8 +84,8 @@ const CollegeInfo = () => {
           <TabPanel value={value} index={2}>
             <DashboardFacilitiesTab />
           </TabPanel>
-          <TabPanel value={value} index={4}>
-            Item Three
+          <TabPanel value={value} index={3}>
+            <DashboardBrochureTab />
           </TabPanel>
         </Box>
       </NoSsr>
