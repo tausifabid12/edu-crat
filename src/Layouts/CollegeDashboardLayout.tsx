@@ -47,8 +47,8 @@ const MenuItems = [
     icon: <LibraryBooksIcon />,
   },
   {
-    title: 'Bookmarks',
-    path: '/collegeRoutes/bookmarks',
+    title: 'Leads',
+    path: '/collegeRoutes/leads',
     icon: <BookmarkIcon />,
   },
   {

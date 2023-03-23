@@ -57,7 +57,7 @@ const CollegeInfo = () => {
             minHeight: '100%',
             bgcolor: 'white',
             borderRadius: '14px',
-            px: 5,
+            px: { xs: 1, sm: 5 },
             py: 3,
             boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.09)',
           }}
