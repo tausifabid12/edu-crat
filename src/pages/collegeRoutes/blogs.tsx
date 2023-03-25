@@ -18,6 +18,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
+import Editor from '@/components/Editor/Editor';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -147,13 +148,14 @@ const Blogs = () => {
             </Grid>
 
             <Grid item xs={12} lg={12} p={1}>
-              <TextField
+              <Editor />
+              {/* <TextField
                 fullWidth
                 id="fullWidth"
                 multiline
                 rows={6}
                 label="Description"
-              />
+              /> */}
             </Grid>
             <Grid item xs={12} lg={12} p={1}>
               <FormControl>

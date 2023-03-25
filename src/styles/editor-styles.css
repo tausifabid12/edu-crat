@@ -1,0 +1,44 @@
+/* Set the font size for the editor content */
+.editor-content {
+    font-size: 16px;
+  }
+  
+  /* Set the font family for the editor content */
+  .editor-content {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style the editor toolbar */
+  .editor-toolbar {
+    background-color: #f1f1f1;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  /* Style the toolbar buttons */
+  .rdw-option-wrapper {
+    margin-right: 10px;
+  }
+  
+  /* Style the font size options */
+  .rdw-fontsize-option span {
+    font-size: 14px !important;
+  }
+  
+  /* Style the font family dropdown */
+  .rdw-fontfamily-dropdown {
+    font-family: Arial, sans-serif !important;
+  }
+  
+  /* Style the color picker */
+  .rdw-colorpicker-modal .rdw-colorpicker-cube div {
+    width: 16px !important;
+    height: 16px !important;
+    border: 1px solid #ccc !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
