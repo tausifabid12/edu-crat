@@ -34,10 +34,9 @@ const DashboardNewCourseModal: React.FC<DashboardNewCourseModalProps> = ({
     setOpenModal(false);
   };
 
-  React.useEffect(() => {
-    console.log(duration);
-    // const installmentFields =
-  }, [duration]);
+  // React.useEffect(() => {
+  //   // const installmentFields =
+  // }, [duration]);
 
   return (
     <div>

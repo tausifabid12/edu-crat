@@ -60,6 +60,11 @@ const MenuItems = [
     icon: <ReviewsIcon />,
   },
   {
+    title: 'Courses',
+    path: '/collegeRoutes/courses',
+    icon: <ReviewsIcon />,
+  },
+  {
     title: 'Pricing',
     path: '/collegeRoutes/pricing',
     icon: <ReviewsIcon />,
@@ -189,7 +194,7 @@ const DashboardLayout = (props: Props) => {
                         }`,
                         color: `${menu?.path === router.route ? 'white' : ''}`,
                         borderRadius: '15px',
-                        py: 1,
+                        py: 0.5,
                       }}
                     >
                       <ListItemButton>
