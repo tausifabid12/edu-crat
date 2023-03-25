@@ -60,6 +60,11 @@ const MenuItems = [
     icon: <ReviewsIcon />,
   },
   {
+    title: 'Pricing',
+    path: '/collegeRoutes/pricing',
+    icon: <ReviewsIcon />,
+  },
+  {
     title: 'Blogs',
     path: '/collegeRoutes/blogs',
     icon: <LibraryAddIcon />,
