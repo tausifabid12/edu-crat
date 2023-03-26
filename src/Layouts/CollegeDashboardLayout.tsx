@@ -75,6 +75,11 @@ const MenuItems = [
     icon: <LibraryAddIcon />,
   },
   {
+    title: 'Campaign',
+    path: '/collegeRoutes/campaign',
+    icon: <LibraryAddIcon />,
+  },
+  {
     title: 'settings',
     path: '/collegeRoutes/settings',
     icon: <SettingsIcon />,
@@ -182,7 +187,7 @@ const DashboardLayout = (props: Props) => {
           <div>
             <Toolbar />
             <Divider />
-            <Stack spacing={8} sx={{ overflow: 'auto', mt: 8, border: 'none' }}>
+            <Stack spacing={8} sx={{ overflow: 'auto', mt: 5, border: 'none' }}>
               <List sx={{ pl: 2 }}>
                 {MenuItems.map((menu, index) => (
                   <Link href={menu?.path} key={menu?.title}>
@@ -194,7 +199,7 @@ const DashboardLayout = (props: Props) => {
                         }`,
                         color: `${menu?.path === router.route ? 'white' : ''}`,
                         borderRadius: '15px',
-                        py: 0.5,
+                        py: 0.4,
                       }}
                     >
                       <ListItemButton>

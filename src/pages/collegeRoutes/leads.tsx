@@ -99,26 +99,36 @@ const Leads = () => {
           <Table sx={{ minWidth: '100%' }} aria-label="simple table">
             <TableHead>
               <TableRow>
+                <TableCell>S no.</TableCell>
                 <TableCell>Name</TableCell>
-                <TableCell align="right">Email</TableCell>
-                <TableCell align="right">Class</TableCell>
-                <TableCell align="right">Steam</TableCell>
-                <TableCell align="right">Mobile</TableCell>
+                <TableCell align="center">Email</TableCell>
+                <TableCell align="center">Class</TableCell>
+                <TableCell align="center">Steam</TableCell>
+                <TableCell align="center">Mobile</TableCell>
+                <TableCell align="center">Action</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {leads.map((row) => (
+              {leads.map((row, i) => (
                 <TableRow
                   key={row.name}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
                   <TableCell component="th" scope="row" sx={{ py: 3 }}>
+                    {i + 1}
+                  </TableCell>
+                  <TableCell component="th" scope="row" sx={{ py: 3 }}>
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.email}</TableCell>
-                  <TableCell align="right">{row.class}</TableCell>
-                  <TableCell align="right">{row.steam}</TableCell>
-                  <TableCell align="right">{row.mobile}</TableCell>
+                  <TableCell align="center">{row.email}</TableCell>
+                  <TableCell align="center">{row.class}</TableCell>
+                  <TableCell align="center">{row.steam}</TableCell>
+                  <TableCell align="center">{row.mobile}</TableCell>
+                  <TableCell align="center">
+                    <button className="bg-primary text-white px-2 py-1 rounded-lg">
+                      Comment
+                    </button>
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

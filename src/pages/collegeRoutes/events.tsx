@@ -4,6 +4,7 @@ import CollegeDashboardLayout from '@/Layouts/CollegeDashboardLayout';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import CollegeEventTable from '@/components/CollegeEventTable/CollegeEventTable';
 const Events = () => {
   return (
     <CollegeDashboardLayout>
@@ -76,6 +77,15 @@ const Events = () => {
           <button className="bg-secondary text-white px-14 py-4 border-2 transition-all duration-300 border-secondary rounded-lg hover:bg-white hover:text-secondary mt-4 ml-1">
             Create Event
           </button>
+        </Box>
+        <Box mt={6}>
+          <Typography
+            variant="h4"
+            sx={{ color: 'primary.main', fontWeight: '600' }}
+          >
+            Events
+          </Typography>
+          <CollegeEventTable />
         </Box>
       </Box>
     </CollegeDashboardLayout>
