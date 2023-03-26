@@ -66,7 +66,6 @@ const Leads = () => {
       <Box
         sx={{
           width: '100%',
-          minHeight: '100%',
           bgcolor: 'white',
           borderRadius: '14px',
           px: { xs: 1, sm: 5 },
