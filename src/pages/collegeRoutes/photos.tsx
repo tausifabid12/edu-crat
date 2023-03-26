@@ -88,6 +88,7 @@ const Photos = () => {
               sx={{
                 color: 'secondary.main',
                 fontweight: '700',
+                fontSize: { xs: '12px', sm: '16px' },
                 mt: 1,
                 cursor: 'pointer',
               }}

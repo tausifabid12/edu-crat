@@ -78,7 +78,7 @@ const MenuItems = [
 ];
 
 const DashboardLayout = (props: Props) => {
-  const [mobileOpen, setMobileOpen] = React.useState(true);
+  const [mobileOpen, setMobileOpen] = React.useState(false);
   const router = useRouter();
 
   const { window, children } = props;

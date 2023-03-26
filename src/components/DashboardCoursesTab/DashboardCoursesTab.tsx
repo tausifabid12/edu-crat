@@ -205,11 +205,12 @@ const DashboardCoursesTab = () => {
             sx={{
               color: 'secondary.main',
               fontweight: '700',
+              fontSize: { xs: '12px', sm: '16px' },
               mt: 1,
               cursor: 'pointer',
             }}
           >
-            <AddCircleOutlineIcon /> Add New Facilities
+            <AddCircleOutlineIcon /> Add New
           </Typography>
         </Box>
         <TableContainer component={Paper}>

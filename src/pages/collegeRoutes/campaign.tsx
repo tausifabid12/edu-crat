@@ -63,6 +63,7 @@ const Campaign = () => {
               sx={{
                 color: 'secondary.main',
                 fontweight: '700',
+                fontSize: { xs: '12px', sm: '16px' },
                 mt: 1,
                 cursor: 'pointer',
               }}
@@ -101,10 +102,11 @@ const Campaign = () => {
               item
               xs={12}
               lg={6}
-              sx={{
-                maxWidth: '20%',
-                // border: '1px solid red',
-              }}
+              sx={
+                {
+                  // border: '1px solid red',
+                }
+              }
             >
               <Typography
                 variant="subtitle1"
