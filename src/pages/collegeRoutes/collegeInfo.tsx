@@ -61,6 +61,7 @@ const CollegeInfo = () => {
             px: { xs: 1, sm: 5 },
             py: 3,
             boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.09)',
+            overflow: 'hidden',
           }}
         >
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

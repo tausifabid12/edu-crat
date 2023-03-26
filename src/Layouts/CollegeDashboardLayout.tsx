@@ -87,7 +87,7 @@ const MenuItems = [
 ];
 
 const DashboardLayout = (props: Props) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = React.useState(true);
   const router = useRouter();
 
   const { window, children } = props;
@@ -130,8 +130,10 @@ const DashboardLayout = (props: Props) => {
           sx={{
             display: { xs: 'block', sm: 'none' },
             border: 'none',
+
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
+              overflow: 'hidden',
               width: drawerWidth,
               border: 'none',
             },
@@ -177,6 +179,7 @@ const DashboardLayout = (props: Props) => {
 
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
+              overflow: 'hidden',
               border: 'none',
               width: drawerWidth,
             },
