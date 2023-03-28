@@ -47,7 +47,7 @@ const Roles = () => {
                 variant="h4"
                 sx={{ color: 'primary.main', fontWeight: '600' }}
               >
-                Campaigns
+                User Roles
               </Typography>
               <Typography
                 variant="subtitle2"
