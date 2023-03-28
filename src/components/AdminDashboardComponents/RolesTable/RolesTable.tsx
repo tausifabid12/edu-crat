@@ -49,7 +49,7 @@ const data = [
   },
 ];
 
-const EmployeeList = () => {
+const RolesTable = () => {
   return (
     <TableContainer>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -57,8 +57,7 @@ const EmployeeList = () => {
           <TableRow>
             <TableCell align="center">id</TableCell>
             <TableCell align="center">Name</TableCell>
-            <TableCell align="center">Email</TableCell>
-            <TableCell align="center"> Update</TableCell>
+            <TableCell align="center"> Role</TableCell>
             <TableCell align="center"> Actions</TableCell>
           </TableRow>
         </TableHead>
@@ -70,13 +69,7 @@ const EmployeeList = () => {
             >
               <TableCell align="center">{row.EmployeeId}</TableCell>
               <TableCell align="center">{row.EmployeeName}</TableCell>
-              <TableCell align="center">{row.dateCreated}</TableCell>
-              <TableCell align="center">
-                {' '}
-                <Button variant="contained" size="small">
-                  Update Password
-                </Button>
-              </TableCell>
+              <TableCell align="center">Admin </TableCell>
               <TableCell align="center">
                 <Paper elevation={0}>
                   <IconButton aria-label="delete" size="large">
@@ -95,4 +88,4 @@ const EmployeeList = () => {
   );
 };
 
-export default EmployeeList;
+export default RolesTable;

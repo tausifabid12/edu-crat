@@ -51,8 +51,8 @@ const AdminDashboardLayout = (props: Props) => {
       icon: <LibraryBooksIcon />,
     },
     {
-      title: 'Leads',
-      path: '/adminRoutes/leads',
+      title: 'Roles',
+      path: '/adminRoutes/roles',
       icon: <BookmarkIcon />,
     },
     {
@@ -113,19 +113,6 @@ const AdminDashboardLayout = (props: Props) => {
               </ListItemButton>
             </ListItem>
           </Link>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
         ))}
       </List>
     </div>
