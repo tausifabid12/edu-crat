@@ -23,6 +23,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import ReviewsIcon from '@mui/icons-material/Reviews';
 import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 import Link from 'next/link';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 const drawerWidth = 240;
 
@@ -165,7 +166,7 @@ const AdminDashboardLayout = (props: Props) => {
             },
           }}
         >
-          {drawer}
+          <Scrollbars>{drawer}</Scrollbars>
         </Drawer>
         <Drawer
           variant="permanent"
@@ -178,7 +179,7 @@ const AdminDashboardLayout = (props: Props) => {
           }}
           open
         >
-          {drawer}
+          <Scrollbars>{drawer}</Scrollbars>
         </Drawer>
       </Box>
       <Paper

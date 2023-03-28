@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import EmployeeGeneralTab from '@/components/AdminDashboardComponents/EmployeeGeneralTab/EmployeeGeneralTab';
 import EmployeeDocumentsTab from '@/components/AdminDashboardComponents/EmployeeDocumentsTab/EmployeeDocumentsTab';
 import EmployeeAddressTab from '@/components/AdminDashboardComponents/EmployeeAddressTab/EmployeeAddressTab';
+import PreviewTab from '../PreviewTab/PreviewTab';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -71,6 +72,9 @@ const CreateEmployeeTab = () => {
         </TabPanel>
         <TabPanel value={value} index={2}>
           <EmployeeAddressTab setValue={setValue} />
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <PreviewTab />
         </TabPanel>
       </Box>
     </>
