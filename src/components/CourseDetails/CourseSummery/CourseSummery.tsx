@@ -16,14 +16,11 @@ const CourseSummery = () => {
         {[1, 2, 3, 4, 5, 6, 7, 8].map((item, i) => (
           <Grid key={i} item xs={12} md={6}>
             <div className="flex space-x-2">
-              <TaskAltIcon
-                fontSize="small"
-                sx={{ color: 'secondary.contrastText' }}
-              />
+              <TaskAltIcon fontSize="small" sx={{ color: 'text_color.main' }} />
               <Typography
                 variant="body1"
                 component="p"
-                sx={{ color: 'secondary.contrastText' }}
+                sx={{ color: 'text_color.main' }}
               >
                 Phasellus enim magna, varius et commodo ut,
               </Typography>

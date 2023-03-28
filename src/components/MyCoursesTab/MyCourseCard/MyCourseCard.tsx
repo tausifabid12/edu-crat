@@ -69,7 +69,7 @@ const MyCourseCard: React.FC<CourseInfo> = ({ data }) => {
               <Box
                 sx={{
                   p: 0.5,
-                  backgroundColor: 'white',
+                  backgroundColor: 'bg_color.main',
                   borderRadius: '4px',
                 }}
               >
@@ -100,7 +100,7 @@ const MyCourseCard: React.FC<CourseInfo> = ({ data }) => {
               gutterBottom
               variant="subtitle2"
               component="p"
-              sx={{ color: 'secondary.contrastText' }}
+              sx={{ color: 'text_color.main' }}
             >
               Ali Tufan
             </Typography>
@@ -132,10 +132,10 @@ const MyCourseCard: React.FC<CourseInfo> = ({ data }) => {
             />
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-            <Typography gutterBottom sx={{ color: 'secondary.contrastText' }}>
+            <Typography gutterBottom sx={{ color: 'text_color.main' }}>
               Complete
             </Typography>
-            <Typography gutterBottom sx={{ color: 'secondary.contrastText' }}>
+            <Typography gutterBottom sx={{ color: 'text_color.main' }}>
               20%{' '}
             </Typography>
           </Box>

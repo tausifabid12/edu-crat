@@ -10,7 +10,7 @@ const EditProfileTab = () => {
     <NoSsr>
       <Box
         sx={{
-          backgroundColor: 'white',
+          backgroundColor: 'bg_color.main',
           borderRadius: '14px',
           p: { xs: 2, sm: 4 },
         }}
@@ -26,19 +26,16 @@ const EditProfileTab = () => {
             <Typography variant="body1" sx={{ color: 'primary.main' }}>
               Your avatar
             </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               PNG or JPG no bigger than 800px wide and tall.
             </Typography>
             <Stack direction="row" spacing={2}>
               <CloudUploadIcon
-                sx={{ color: 'secondary.contrastText' }}
+                sx={{ color: 'text_color.main' }}
               ></CloudUploadIcon>
 
               <DeleteOutlineIcon
-                sx={{ color: 'secondary.contrastText' }}
+                sx={{ color: 'text_color.main' }}
               ></DeleteOutlineIcon>
             </Stack>
           </Stack>
@@ -121,7 +118,7 @@ const EditProfileTab = () => {
               multiline
               rows={4}
               // default  Value="I am a lorem learner Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod."
-              sx={{ width: '100%', color: 'secondary.contrastText' }}
+              sx={{ width: '100%', color: 'text_color.main' }}
             />
           </Grid>
           <Grid item xs={12} lg={6}></Grid>

@@ -18,7 +18,7 @@ const DashboardPopularColleges = () => {
     <Box
       sx={{
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: 'bg_color.main',
         borderRadius: '14px',
         py: 5,
         px: 3,

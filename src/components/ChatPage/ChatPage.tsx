@@ -66,10 +66,7 @@ const ChatPage = () => {
             <Typography variant="subtitle2" sx={{ color: 'primary.main' }}>
               Darlene Robertson
             </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               Head of Development
             </Typography>
           </Stack>
@@ -99,7 +96,7 @@ const ChatPage = () => {
               {/*  bgcolor={
                     message.sender === 'user'
                       ? 'primary.main'
-                      : 'secondary.contrastText'
+                      : 'text_color'
                   } */}
               <p>{message.text}</p>
             </Box>

@@ -45,7 +45,7 @@ const OptionsList: React.FC<IOptionsListProps> = ({ data }) => {
             secondaryAction={
               <Typography
                 aria-label="comments"
-                sx={{ color: 'secondary.contrastText', py: 0 }}
+                sx={{ color: 'text_color.main', py: 0 }}
               >
                 (20)
               </Typography>

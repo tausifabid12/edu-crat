@@ -34,7 +34,7 @@ const ActiveCampaignCard = () => {
         <Typography
           variant="body2"
           sx={{
-            color: 'secondary.contrastText',
+            color: 'text_color.main',
           }}
         >
           Image Campaign
@@ -50,7 +50,7 @@ const ActiveCampaignCard = () => {
           <Typography
             variant="body2"
             sx={{
-              color: 'secondary.contrastText',
+              color: 'text_color.main',
 
               mt: 1,
             }}
@@ -60,7 +60,7 @@ const ActiveCampaignCard = () => {
           <Typography
             variant="body2"
             sx={{
-              color: 'secondary.contrastText',
+              color: 'text_color.main',
 
               mt: 1,
             }}

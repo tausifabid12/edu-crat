@@ -8,10 +8,7 @@ const CloseAccountTab = () => {
         <Typography variant="h6" sx={{ color: 'primary.main' }}>
           Close account
         </Typography>
-        <Typography
-          variant="subtitle2"
-          sx={{ color: 'secondary.contrastText' }}
-        >
+        <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
           Warning: If you close your account, you will be unsubscribed from all
           your 5 courses, and will lose access forever.
         </Typography>

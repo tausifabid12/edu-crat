@@ -165,13 +165,13 @@ const DashboardNavbar: React.FC<navProps> = ({ handleDrawerToggle }) => {
       sx={{
         flexGrow: 1,
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: 'bg_color.main',
       }}
     >
       <AppBar
         position="static"
         sx={{
-          backgroundColor: 'white',
+          backgroundColor: 'bg_color.main',
           boxShadow: 'none',
           py: 1,
         }}
@@ -186,7 +186,7 @@ const DashboardNavbar: React.FC<navProps> = ({ handleDrawerToggle }) => {
           >
             <MenuIcon
               sx={{
-                color: 'secondary.contrastText',
+                color: 'text_color.main',
               }}
             />
           </IconButton>
@@ -212,7 +212,7 @@ const DashboardNavbar: React.FC<navProps> = ({ handleDrawerToggle }) => {
               color="inherit"
             >
               <Badge badgeContent={4} color="error">
-                <MailIcon sx={{ color: 'secondary.contrastText' }} />
+                <MailIcon sx={{ color: 'text_color.main' }} />
               </Badge>
             </IconButton>
             <IconButton
@@ -221,7 +221,7 @@ const DashboardNavbar: React.FC<navProps> = ({ handleDrawerToggle }) => {
               color="inherit"
             >
               <Badge badgeContent={17} color="error">
-                <NotificationsIcon sx={{ color: 'secondary.contrastText' }} />
+                <NotificationsIcon sx={{ color: 'text_color.main' }} />
               </Badge>
             </IconButton>
             <IconButton

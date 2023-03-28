@@ -28,7 +28,7 @@ const Events = () => {
           </Typography>
           <Typography
             variant="subtitle2"
-            sx={{ color: 'secondary.contrastText', fontWeight: '400', mt: '2' }}
+            sx={{ color: 'text_color.main', fontWeight: '400', mt: '2' }}
           >
             Lorem ipsum dolor sit amet, consectetur.
           </Typography>

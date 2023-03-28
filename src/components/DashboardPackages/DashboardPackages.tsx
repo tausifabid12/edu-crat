@@ -88,7 +88,7 @@ const DashboardPackages = () => {
               variant="subtitle2"
               sx={{
                 fontWeight: '300',
-                color: 'secondary.contrastText',
+                color: 'text_color.main',
                 textAlign: 'right',
                 textDecoration: 'line-through',
               }}
@@ -127,7 +127,7 @@ const DashboardPackages = () => {
               variant="subtitle2"
               sx={{
                 fontWeight: '300',
-                color: 'secondary.contrastText',
+                color: 'text_color.main',
                 textAlign: 'right',
                 textDecoration: 'line-through',
               }}
@@ -166,7 +166,7 @@ const DashboardPackages = () => {
               variant="subtitle2"
               sx={{
                 fontWeight: '300',
-                color: 'secondary.contrastText',
+                color: 'text_color.main',
                 textAlign: 'right',
                 textDecoration: 'line-through',
               }}

@@ -57,7 +57,7 @@ const SignUp = () => {
           <Box
             component="form"
             sx={{
-              backgroundColor: 'white',
+              backgroundColor: 'bg_color.main',
               width: '83%',
               height: 'auto',
               borderRadius: '10px',
@@ -73,7 +73,7 @@ const SignUp = () => {
             <Typography
               mt={1}
               variant="subtitle2"
-              sx={{ color: 'secondary.contrastText', display: 'flex' }}
+              sx={{ color: 'text_color.main', display: 'flex' }}
             >
               {`Already have an account `}
               <Typography

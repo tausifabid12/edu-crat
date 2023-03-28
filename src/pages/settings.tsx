@@ -53,7 +53,7 @@ const Settings = () => {
       <Box
         sx={{
           width: '100%',
-          backgroundColor: 'white',
+          backgroundColor: 'bg_color.main',
           mb: 3,
           borderRadius: '14px',
           p: 2,

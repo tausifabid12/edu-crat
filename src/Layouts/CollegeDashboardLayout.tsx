@@ -105,7 +105,7 @@ const DashboardLayout = (props: Props) => {
         position="fixed"
         sx={{
           zIndex: (theme) => theme.zIndex.drawer + 1,
-          backgroundColor: 'white',
+          backgroundColor: 'bg_color.main',
           boxShadow: 'none',
         }}
       >

@@ -33,17 +33,11 @@ const MessageInfo = () => {
             <Typography variant="subtitle2" sx={{ color: 'primary.main' }}>
               Darlene Robertson
             </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               Head of Development
             </Typography>
           </Stack>
-          <Typography
-            variant="subtitle2"
-            sx={{ color: 'secondary.contrastText' }}
-          >
+          <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
             35min
           </Typography>
         </Box>

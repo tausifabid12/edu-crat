@@ -6,7 +6,7 @@ const EditPasswordTab = () => {
   return (
     <Box
       sx={{
-        backgroundColor: 'white',
+        backgroundColor: 'bg_color.main',
         borderRadius: '14px',
         p: { xs: 2, sm: 4 },
       }}

@@ -18,7 +18,7 @@ const messages = () => {
           </Typography>
           <Typography
             variant="subtitle2"
-            sx={{ color: 'secondary.contrastText', fontWeight: '400', mt: '2' }}
+            sx={{ color: 'text_color.main', fontWeight: '400', mt: '2' }}
           >
             Lorem ipsum dolor sit amet, consectetur.
           </Typography>
@@ -28,7 +28,7 @@ const messages = () => {
             <Grid item xs={12} md={4}>
               <Box
                 sx={{
-                  backgroundColor: 'white',
+                  backgroundColor: 'bg_color.main',
                   borderRadius: '14px',
                   p: 2,
                   boxShadow: '0px 0px 1px 3px rgba(0, 0, 0, 0.03)',
@@ -40,7 +40,7 @@ const messages = () => {
             <Grid item xs={12} lg={8}>
               <Box
                 sx={{
-                  backgroundColor: 'white',
+                  backgroundColor: 'bg_color.main',
                   borderRadius: '14px',
                   p: 2,
                   boxShadow: '0px 0px 1px 3px rgba(0, 0, 0, 0.03)',
@@ -67,7 +67,7 @@ const messages = () => {
               xs={12}
               lg={4}
               sx={{
-                backgroundColor: 'white',
+                backgroundColor: 'bg_color.main',
                 borderRadius: '14px',
                 p: 2,
                 boxShadow: '0px 0px 1px 3px rgba(0, 0, 0, 0.03)',
@@ -80,7 +80,7 @@ const messages = () => {
               xs={12}
               lg={7}
               sx={{
-                backgroundColor: 'white',
+                backgroundColor: 'bg_color.main',
                 borderRadius: '14px',
                 p: 2,
                 width: '100%',

@@ -42,11 +42,7 @@ const Courses = () => {
               Filter
             </button>
           </Box>
-          <Typography
-            variant="body2"
-            mt={1}
-            sx={{ color: 'secondary.contrastText' }}
-          >
+          <Typography variant="body2" mt={1} sx={{ color: 'text_color.main' }}>
             Write an introductory description of the category.
           </Typography>
         </Box>

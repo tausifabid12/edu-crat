@@ -34,16 +34,16 @@ const CourseDetails = () => {
             width: '100%',
           }}
         >
-          <Link color="secondary.contrastText" href="/">
+          <Link color="text_color" href="/">
             Home
           </Link>
-          <Link color="secondary.contrastText" href="/">
+          <Link color="text_color" href="/">
             All courses
           </Link>
-          <Link color="secondary.contrastText" href="/">
+          <Link color="text_color" href="/">
             User Experience Design
           </Link>
-          <Link color="secondary.contrastText" href="/">
+          <Link color="text_color" href="/">
             User Interface
           </Link>
         </Breadcrumbs>

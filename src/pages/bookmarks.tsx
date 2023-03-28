@@ -17,13 +17,18 @@ const Bookmarks = () => {
           </Typography>
           <Typography
             variant="subtitle2"
-            sx={{ color: 'secondary.contrastText', fontWeight: '400', mt: '2' }}
+            sx={{ color: 'text_color.main', fontWeight: '400', mt: '2' }}
           >
             Lorem ipsum dolor sit amet, consectetur.
           </Typography>
         </Box>
         <Box
-          sx={{ backgroundColor: 'white', px: 3, my: 3, borderRadius: '14px' }}
+          sx={{
+            backgroundColor: 'bg_color.main',
+            px: 3,
+            my: 3,
+            borderRadius: '14px',
+          }}
         >
           <Grid container spacing={5} mt={0}>
             {courses.map((course) => {

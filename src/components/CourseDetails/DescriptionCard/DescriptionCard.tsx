@@ -22,14 +22,14 @@ const DescriptionCard = () => {
         <Typography
           variant="body2"
           component="p"
-          sx={{ fontWeight: '500', color: 'secondary.contrastText' }}
+          sx={{ fontWeight: '500', color: 'text_color.main' }}
         >
           Overview
         </Typography>
         <Typography
           variant="body2"
           component="p"
-          sx={{ fontWeight: '500', color: 'secondary.contrastText' }}
+          sx={{ fontWeight: '500', color: 'text_color.main' }}
         >
           Overview
         </Typography>
@@ -44,7 +44,7 @@ const DescriptionCard = () => {
       <Typography
         variant="body2"
         component="p"
-        sx={{ color: 'secondary.contrastText' }}
+        sx={{ color: 'text_color.main' }}
       >
         Phasellus enim magna, varius et commodo ut, ultricies vitae velit. Ut
         nulla tellus, eleifend euismod pellentesque vel, sagittis vel justo. In
@@ -56,7 +56,7 @@ const DescriptionCard = () => {
       <Typography
         variant="body2"
         component="p"
-        sx={{ color: 'secondary.contrastText' }}
+        sx={{ color: 'text_color.main' }}
       >
         This course is aimed at people interested in UI/UX Design. We’ll start
         from the very beginning and work all the way through, step by step. If
@@ -66,7 +66,7 @@ const DescriptionCard = () => {
       <Typography
         variant="body2"
         component="p"
-        sx={{ color: 'secondary.contrastText' }}
+        sx={{ color: 'text_color.main' }}
       >
         First, we will go over the differences between UX and UI Design. We will
         look at what our brief for this real-world project is, then we will

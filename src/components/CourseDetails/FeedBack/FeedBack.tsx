@@ -38,7 +38,7 @@ const FeedBack = () => {
             readOnly
             sx={{ mb: 1 }}
           />
-          <Typography variant="body1" sx={{ color: 'secondary.contrastText' }}>
+          <Typography variant="body1" sx={{ color: 'text_color.main' }}>
             Course Rating
           </Typography>
         </Card>
@@ -68,10 +68,7 @@ const FeedBack = () => {
                   readOnly
                   sx={{ mb: 1 }}
                 />
-                <Typography
-                  variant="body1"
-                  sx={{ color: 'secondary.contrastText' }}
-                >
+                <Typography variant="body1" sx={{ color: 'text_color.main' }}>
                   {item}
                 </Typography>
               </Stack>

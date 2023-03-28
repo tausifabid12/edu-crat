@@ -73,7 +73,7 @@ const Photos = () => {
               <Typography
                 variant="subtitle2"
                 sx={{
-                  color: 'secondary.contrastText',
+                  color: 'text_color.main',
                   fontWeight: '400',
                   mt: '3',
                 }}

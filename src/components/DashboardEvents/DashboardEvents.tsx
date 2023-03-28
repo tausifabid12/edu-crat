@@ -88,7 +88,7 @@ const DashboardEvents = () => {
               variant="subtitle2"
               sx={{
                 fontWeight: '300',
-                color: 'secondary.contrastText',
+                color: 'text_color.main',
                 textAlign: 'right',
               }}
             >
@@ -126,7 +126,7 @@ const DashboardEvents = () => {
               variant="subtitle2"
               sx={{
                 fontWeight: '300',
-                color: 'secondary.contrastText',
+                color: 'text_color.main',
                 textAlign: 'right',
               }}
             >
@@ -164,7 +164,7 @@ const DashboardEvents = () => {
               variant="subtitle2"
               sx={{
                 fontWeight: '300',
-                color: 'secondary.contrastText',
+                color: 'text_color.main',
                 textAlign: 'right',
               }}
             >

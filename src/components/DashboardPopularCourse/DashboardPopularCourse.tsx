@@ -17,7 +17,7 @@ const DashboardPopularCourse = () => {
     <Box
       sx={{
         width: '100%',
-        backgroundColor: 'white',
+        backgroundColor: 'bg_color.main',
         borderRadius: '14px',
         boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.07)',
         p: 2,

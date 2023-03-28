@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import { Box, Typography } from '@mui/material';
+import Paper from '@mui/material/Paper';
 
 const leads = [
   {
@@ -63,10 +64,10 @@ const leads = [
 const Leads = () => {
   return (
     <CollegeDashboardLayout>
-      <Box
+      <Paper
         sx={{
           width: '100%',
-          bgcolor: 'white',
+          backgroundColor: 'bg_color.main',
           borderRadius: '14px',
           px: { xs: 1, sm: 5 },
           py: 3,
@@ -82,7 +83,7 @@ const Leads = () => {
           </Typography>
           <Typography
             variant="subtitle2"
-            sx={{ color: 'secondary.contrastText', fontWeight: '400', mt: '2' }}
+            sx={{ color: 'text_color.main', fontWeight: '400', mt: '2' }}
           >
             Lorem ipsum dolor sit amet, consectetur.
           </Typography>
@@ -133,7 +134,7 @@ const Leads = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      </Box>
+      </Paper>
     </CollegeDashboardLayout>
   );
 };

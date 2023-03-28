@@ -26,7 +26,7 @@ const CourseDetailsCard = () => {
       <Typography
         variant="body2"
         component="p"
-        sx={{ fontWeight: '500', color: 'secondary.contrastText' }}
+        sx={{ fontWeight: '500', color: 'text_color.main' }}
       >
         Use XD to get a job in UI Design, User Interface, User Experience ,
         <br />
@@ -36,38 +36,32 @@ const CourseDetailsCard = () => {
         <Stack direction="row" spacing={1}>
           <Typography
             component="legend"
-            sx={{ color: 'secondary.contrastText', fontSize: '14px' }}
+            sx={{ color: 'text_color.main', fontSize: '14px' }}
           >
             Read only
           </Typography>
           <Rating name="read-only" size="small" value={4} readOnly />
           <Typography
             component="legend"
-            sx={{ color: 'secondary.contrastText', fontSize: '14px' }}
+            sx={{ color: 'text_color.main', fontSize: '14px' }}
           >
             (1991)
           </Typography>
         </Stack>
         <Stack direction="row" spacing={1}>
-          <GroupIcon
-            fontSize="small"
-            sx={{ color: 'secondary.contrastText' }}
-          />
+          <GroupIcon fontSize="small" sx={{ color: 'text_color.main' }} />
           <Typography
             component="legend"
-            sx={{ color: 'secondary.contrastText', fontSize: '14px' }}
+            sx={{ color: 'text_color.main', fontSize: '14px' }}
           >
             853 enrolled on this course
           </Typography>
         </Stack>
         <Stack direction="row" spacing={1}>
-          <AccessTimeIcon
-            fontSize="small"
-            sx={{ color: 'secondary.contrastText' }}
-          />
+          <AccessTimeIcon fontSize="small" sx={{ color: 'text_color.main' }} />
           <Typography
             component="legend"
-            sx={{ color: 'secondary.contrastText', fontSize: '14px' }}
+            sx={{ color: 'text_color.main', fontSize: '14px' }}
           >
             Last updated 11/2021
           </Typography>
@@ -83,7 +77,7 @@ const CourseDetailsCard = () => {
         />
         <Typography
           component="legend"
-          sx={{ color: 'secondary.contrastText', fontSize: '15px' }}
+          sx={{ color: 'text_color.main', fontSize: '15px' }}
         >
           Floyd Miles
         </Typography>

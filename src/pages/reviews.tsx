@@ -29,7 +29,7 @@ const reviews = () => {
           <Typography
             variant="subtitle2"
             sx={{
-              color: 'secondary.contrastText',
+              color: 'text_color.main',
               fontWeight: '400',
               mt: '2px',
               mb: 4,
@@ -39,7 +39,12 @@ const reviews = () => {
           </Typography>
         </Box>
         <Box
-          sx={{ backgroundColor: 'white', px: 3, my: 3, borderRadius: '14px' }}
+          sx={{
+            backgroundColor: 'bg_color.main',
+            px: 3,
+            my: 3,
+            borderRadius: '14px',
+          }}
         >
           <Box>
             <Typography
@@ -70,7 +75,7 @@ const reviews = () => {
                   </Typography>
                   <Typography
                     variant="subtitle2"
-                    sx={{ color: 'secondary.contrastText' }}
+                    sx={{ color: 'text_color.main' }}
                   >
                     3 days ago
                   </Typography>
@@ -86,7 +91,7 @@ const reviews = () => {
                 </Typography>
                 <Typography
                   variant="subtitle2"
-                  sx={{ color: 'secondary.contrastText' }}
+                  sx={{ color: 'text_color.main' }}
                 >
                   This course is a very applicable. Professor Ng explains
                   precisely each algorithm and even tries to give an intuition

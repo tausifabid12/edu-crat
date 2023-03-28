@@ -40,7 +40,7 @@ const CourseAddToCartCard = () => {
             sx={{
               textDecoration: 'line-through',
               fontWeight: '500',
-              color: 'secondary.contrastText',
+              color: 'text_color.main',
             }}
           >
             $96.00
@@ -58,7 +58,7 @@ const CourseAddToCartCard = () => {
         <Typography
           variant="body2"
           sx={{
-            color: 'secondary.contrastText',
+            color: 'text_color.main',
             textAlign: 'center',
           }}
         >
@@ -76,7 +76,7 @@ const CourseAddToCartCard = () => {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: 'secondary.contrastText',
+                    color: 'text_color.main',
                     textAlign: 'center',
                   }}
                 >

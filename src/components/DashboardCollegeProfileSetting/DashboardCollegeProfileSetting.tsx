@@ -10,7 +10,7 @@ const DashboardCollegeProfileSetting = () => {
     <NoSsr>
       <Box
         sx={{
-          backgroundColor: 'white',
+          backgroundColor: 'bg_color.main',
           borderRadius: '14px',
           p: { xs: 2, sm: 4 },
         }}
@@ -26,19 +26,16 @@ const DashboardCollegeProfileSetting = () => {
             <Typography variant="body1" sx={{ color: 'primary.main' }}>
               Your avatar
             </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               PNG or JPG no bigger than 800px wide and tall.
             </Typography>
             <Stack direction="row" spacing={2}>
               <CloudUploadIcon
-                sx={{ color: 'secondary.contrastText' }}
+                sx={{ color: 'text_color.main' }}
               ></CloudUploadIcon>
 
               <DeleteOutlineIcon
-                sx={{ color: 'secondary.contrastText' }}
+                sx={{ color: 'text_color.main' }}
               ></DeleteOutlineIcon>
             </Stack>
           </Stack>

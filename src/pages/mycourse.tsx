@@ -16,14 +16,14 @@ const MyCourse = () => {
           </Typography>
           <Typography
             variant="subtitle2"
-            sx={{ color: 'secondary.contrastText', fontWeight: '400', mt: '2' }}
+            sx={{ color: 'text_color.main', fontWeight: '400', mt: '2' }}
           >
             Lorem ipsum dolor sit amet, consectetur.
           </Typography>
         </Box>
         <Box
           sx={{
-            backgroundColor: 'white',
+            backgroundColor: 'bg_color.main',
             p: { xs: 0, sm: 2 },
             my: 3,
             borderRadius: '14px',

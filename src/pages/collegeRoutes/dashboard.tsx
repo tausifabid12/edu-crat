@@ -77,7 +77,7 @@ const Dashboard = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: 'secondary.contrastText',
+                      color: 'text_color.main',
                       textAlign: 'center',
                       mt: 1,
                     }}

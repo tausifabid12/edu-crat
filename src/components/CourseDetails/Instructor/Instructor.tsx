@@ -23,12 +23,12 @@ const Instructor = () => {
         <Stack
           direction="column"
           spacing={0.5}
-          sx={{ color: 'secondary.contrastText' }}
+          sx={{ color: 'text_color.main' }}
         >
           <Typography variant="h6" color="primary">
             Floyd Miles
           </Typography>
-          <Typography variant="body2" sx={{ color: 'secondary.contrastText' }}>
+          <Typography variant="body2" sx={{ color: 'text_color.main' }}>
             President of Sales
           </Typography>
           <Stack
@@ -36,41 +36,29 @@ const Instructor = () => {
             spacing={2}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               Instructor Rating
             </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               23,987 Reviews
             </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               692 Students
             </Typography>
-            <Typography
-              variant="subtitle2"
-              sx={{ color: 'secondary.contrastText' }}
-            >
+            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
               15 Course
             </Typography>
           </Stack>
         </Stack>
       </Box>
-      <Typography variant="subtitle2" sx={{ color: 'secondary.contrastText' }}>
+      <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
         Back in 2010, I started brainspin with a desire to design compelling and
         engaging apps. For over 7 years, I have designed many high profile web
         and iPhone applications. The applications range from 3D medical aided
         web applications to project management applications for niche
         industries.
       </Typography>
-      <Typography variant="subtitle2" sx={{ color: 'secondary.contrastText' }}>
+      <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
         I am also the founder of a large local design organization, Salt Lake
         Designers, where I and other local influencers help cultivate the
         talents of up and coming UX designers through workshops and panel

@@ -67,7 +67,7 @@ const CourseContent = () => {
         <Typography
           variant="body2"
           component="p"
-          sx={{ color: 'secondary.contrastText' }}
+          sx={{ color: 'text_color.main' }}
         >
           27 sections • 95 lectures
         </Typography>
@@ -97,7 +97,7 @@ const CourseContent = () => {
                 }}
               >
                 <Typography color="primary">Course Content</Typography>
-                <Typography sx={{ color: 'secondary.contrastText' }}>
+                <Typography sx={{ color: 'text_color.main' }}>
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -122,7 +122,7 @@ const CourseContent = () => {
                 }}
               >
                 <Typography color="primary">The Brief</Typography>
-                <Typography sx={{ color: 'secondary.contrastText' }}>
+                <Typography sx={{ color: 'text_color.main' }}>
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -149,7 +149,7 @@ const CourseContent = () => {
                 <Typography color="primary">
                   Type, Color & Icon Introduction
                 </Typography>
-                <Typography sx={{ color: 'secondary.contrastText' }}>
+                <Typography sx={{ color: 'text_color.main' }}>
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -176,7 +176,7 @@ const CourseContent = () => {
                 <Typography color="primary">
                   Prototyping a App - Introduction
                 </Typography>
-                <Typography sx={{ color: 'secondary.contrastText' }}>
+                <Typography sx={{ color: 'text_color.main' }}>
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -201,7 +201,7 @@ const CourseContent = () => {
                 }}
               >
                 <Typography color="primary">Wireframe Feedback</Typography>
-                <Typography sx={{ color: 'secondary.contrastText' }}>
+                <Typography sx={{ color: 'text_color.main' }}>
                   5 lectures • 87 min
                 </Typography>
               </Box>

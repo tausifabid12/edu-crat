@@ -72,7 +72,7 @@ const DashboardBlogs = () => {
             variant="subtitle2"
             sx={{
               fontWeight: '500',
-              color: 'secondary.contrastText',
+              color: 'text_color.main',
             }}
           >
             3h ago
@@ -97,7 +97,7 @@ const DashboardBlogs = () => {
             variant="subtitle2"
             sx={{
               fontWeight: '500',
-              color: 'secondary.contrastText',
+              color: 'text_color.main',
             }}
           >
             3h ago
@@ -122,7 +122,7 @@ const DashboardBlogs = () => {
             variant="subtitle2"
             sx={{
               fontWeight: '500',
-              color: 'secondary.contrastText',
+              color: 'text_color.main',
             }}
           >
             3h ago

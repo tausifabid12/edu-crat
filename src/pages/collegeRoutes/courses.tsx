@@ -72,7 +72,7 @@ const Courses = () => {
           </Typography>
           <Typography
             variant="subtitle2"
-            sx={{ color: 'secondary.contrastText', fontWeight: '400', mt: '2' }}
+            sx={{ color: 'text_color.main', fontWeight: '400', mt: '2' }}
           >
             Lorem ipsum dolor sit amet, consectetur.
           </Typography>
@@ -87,14 +87,6 @@ const Courses = () => {
             <TextField
               id="outlined-basic"
               label="Course name"
-              variant="outlined"
-              sx={{ width: '100%' }}
-            />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <TextField
-              id="outlined-basic"
-              label="Description"
               variant="outlined"
               sx={{ width: '100%' }}
             />
@@ -197,18 +189,12 @@ const Courses = () => {
             </LocalizationProvider>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={12}>
             <TextField
+              multiline
+              rows={4}
               id="outlined-basic"
-              label="State"
-              variant="outlined"
-              sx={{ width: '100%' }}
-            />
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <TextField
-              id="outlined-basic"
-              label="Country"
+              label="Description"
               variant="outlined"
               sx={{ width: '100%' }}
             />
