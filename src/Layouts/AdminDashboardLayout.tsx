@@ -24,8 +24,9 @@ import ReviewsIcon from '@mui/icons-material/Reviews';
 import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 import Link from 'next/link';
 import { Scrollbars } from 'react-custom-scrollbars-2';
+import { useRouter } from 'next/router';
 
-const drawerWidth = 240;
+const drawerWidth = 270;
 
 interface Props {
   /**
@@ -39,6 +40,7 @@ interface Props {
 const AdminDashboardLayout = (props: Props) => {
   const { window, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const router = useRouter();
 
   const MenuItems = [
     {
@@ -102,13 +104,29 @@ const AdminDashboardLayout = (props: Props) => {
     <div>
       <Toolbar />
       <Divider />
-      <List>
+      <List sx={{ p: 2 }}>
         {MenuItems.map((item, index) => (
           <Link key={index} href={item.path}>
-            <ListItem disablePadding>
+            <ListItem
+              disablePadding
+              sx={{
+                backgroundColor: `${
+                  item?.path === router.route ? 'secondary.main' : ''
+                }`,
+                color: `${item?.path === router.route ? 'white' : ''}`,
+                borderRadius: '15px',
+                py: 1,
+              }}
+            >
               <ListItemButton>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  <Typography
+                    sx={{
+                      color: `${item?.path === router.route ? 'white' : ''}`,
+                    }}
+                  >
+                    {item?.icon}
+                  </Typography>
                 </ListItemIcon>
                 <ListItemText primary={item.title} />
               </ListItemButton>
@@ -128,9 +146,12 @@ const AdminDashboardLayout = (props: Props) => {
 
       <AppBar
         position="fixed"
-        sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        sx={{
+          zIndex: (theme) => theme.zIndex.drawer + 1,
+          boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.1)',
+        }}
       >
-        <Toolbar>
+        <Toolbar sx={{ backgroundColor: 'white' }}>
           <IconButton
             aria-label="open drawer"
             edge="start"
@@ -139,7 +160,12 @@ const AdminDashboardLayout = (props: Props) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ color: 'secondary.main', fontWeight: 'bold' }}
+          >
             Edu Card
           </Typography>
         </Toolbar>

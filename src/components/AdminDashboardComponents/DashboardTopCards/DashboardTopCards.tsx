@@ -16,7 +16,7 @@ const DashboardTopCards = () => {
       icon: <AssignmentIndIcon />,
       count: 987,
       color:
-        'linear-gradient(120deg, rgb(246, 211, 101) 0%, rgb(253, 160, 133) 100%)',
+        'linear-gradient(120deg, rgb(246, 211, 101) 0%, rgb(253, 160, 133) 100%) ',
     },
     {
       title: 'Transactions',
