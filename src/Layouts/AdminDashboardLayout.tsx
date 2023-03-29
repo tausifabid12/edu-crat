@@ -75,8 +75,8 @@ const AdminDashboardLayout = (props: Props) => {
       icon: <ReviewsIcon />,
     },
     {
-      title: 'Pricing',
-      path: '/adminRoutes/pricing',
+      title: 'Notification',
+      path: '/adminRoutes/notification',
       icon: <ReviewsIcon />,
     },
     {
