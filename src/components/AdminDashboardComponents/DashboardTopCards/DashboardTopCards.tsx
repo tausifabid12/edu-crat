@@ -67,12 +67,12 @@ const DashboardTopCards = () => {
       count: '$5987',
       color: 'rgb(87, 202, 34)',
     },
-    // {
-    //   title: 'Total Students',
-    //   icon: <AssignmentIndIcon />,
-    //   count: 987,
-    //   color: 'rgb(85, 105, 255)',
-    // },
+    {
+      title: 'Total Students',
+      icon: <AssignmentIndIcon />,
+      count: 987,
+      color: 'rgb(85, 105, 255)',
+    },
   ];
 
   return (
@@ -120,7 +120,7 @@ const DashboardTopCards = () => {
             </Paper>
           </Grid>
         ))}
-        <Button
+        {/* <Button
           ref={anchorRef}
           id="composition-button"
           aria-controls={open ? 'composition-menu' : undefined}
@@ -168,9 +168,9 @@ const DashboardTopCards = () => {
               </Typography>
             </Paper>
           </Grid>
-        </Button>
+        </Button> */}
       </Grid>
-      <div>
+      {/* <div>
         <Popper
           open={open}
           anchorEl={anchorRef.current}
@@ -204,7 +204,7 @@ const DashboardTopCards = () => {
             </Grow>
           )}
         </Popper>
-      </div>
+      </div> */}
     </Paper>
   );
 };
