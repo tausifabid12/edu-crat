@@ -59,8 +59,8 @@ const AdminDashboardLayout = (props: Props) => {
       icon: <BookmarkIcon />,
     },
     {
-      title: 'Photos',
-      path: '/adminRoutes/photos',
+      title: 'Leads',
+      path: '/adminRoutes/leads',
       icon: <PhotoLibraryIcon />,
     },
 
