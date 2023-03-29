@@ -17,62 +17,80 @@ const data = [
     email: 'ra@hul.com',
     phone: '1234567890',
     college: 'IIT',
-    date: '12/12/2021',
+    lastLogin: '12/12/2021',
     stream: 'CSE',
     status: 'visible',
+    class: '12',
+    state: 'karnataka',
+    city: 'bangalore',
   },
   {
     name: 'Rahul',
     email: 'ra@hul.com',
     phone: '1234567890',
     college: 'IIT',
-    date: '12/12/2021',
+    lastLogin: '12/12/2021',
     stream: 'CSE',
     status: 'visible',
+    class: '12',
+    state: 'karnataka',
+    city: 'bangalore',
   },
   {
     name: 'Rahul',
     email: 'ra@hul.com',
     phone: '1234567890',
     college: 'IIT',
-    date: '12/12/2021',
+    lastLogin: '12/12/2021',
     stream: 'CSE',
     status: 'visible',
+    class: '12',
+    state: 'karnataka',
+    city: 'bangalore',
   },
   {
     name: 'Rahul',
     email: 'ra@hul.com',
     phone: '1234567890',
     college: 'IIT',
-    date: '12/12/2021',
+    lastLogin: '12/12/2021',
     stream: 'CSE',
     status: 'visible',
+    class: '12',
+    state: 'karnataka',
+    city: 'bangalore',
   },
   {
     name: 'Rahul',
     email: 'ra@hul.com',
     phone: '1234567890',
     college: 'IIT',
-    date: '12/12/2021',
+    lastLogin: '12/12/2021',
     stream: 'CSE',
     status: 'visible',
+    class: '12',
+    state: 'karnataka',
+    city: 'bangalore',
   },
 ];
 
-const LeadsTable = () => {
+const UserTable = () => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Serial No.</TableCell>
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Email</TableCell>
-            <TableCell align="right">Date</TableCell>
-            <TableCell align="right">College</TableCell>
-            <TableCell align="right">Stream</TableCell>
-            <TableCell align="right">Status</TableCell>
-            {/* <TableCell align="right">Action</TableCell> */}
+            <TableCell align="center">Name</TableCell>
+            <TableCell align="center">Email</TableCell>
+            <TableCell align="center">Mobile</TableCell>
+            <TableCell align="center">Last Login</TableCell>
+            <TableCell align="center">College</TableCell>
+            <TableCell align="center">Stream</TableCell>
+            <TableCell align="center">Class</TableCell>
+            <TableCell align="center">State</TableCell>
+            <TableCell align="center">City</TableCell>
+            <TableCell align="center">Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -84,17 +102,22 @@ const LeadsTable = () => {
               <TableCell component="th" scope="row">
                 {i + 1}
               </TableCell>
-              <TableCell align="right">{item.name}</TableCell>
-              <TableCell align="right">{item.email}</TableCell>
-              <TableCell align="right">{item.date}</TableCell>
-              <TableCell align="right">{item.college}</TableCell>
-              <TableCell align="right">{item.stream}</TableCell>
-              <TableCell align="right">{item.status}</TableCell>
-              {/* <TableCell align="right">
+              <TableCell align="center">{item.name}</TableCell>
+              <TableCell align="center">{item.email}</TableCell>
+              <TableCell align="center">
+                {'**' + item.phone.slice(2, item.phone.length - 4) + '****'}
+              </TableCell>
+              <TableCell align="center">{item.lastLogin}</TableCell>
+              <TableCell align="center">{item.college}</TableCell>
+              <TableCell align="center">{item.stream}</TableCell>
+              <TableCell align="center">{item.class}</TableCell>
+              <TableCell align="center">{item.state}</TableCell>
+              <TableCell align="center">{item.city}</TableCell>
+              <TableCell align="center">
                 <Button variant="contained" size="small">
                   View
                 </Button>
-              </TableCell> */}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
@@ -104,4 +127,4 @@ const LeadsTable = () => {
 };
 ``;
 
-export default LeadsTable;
+export default UserTable;

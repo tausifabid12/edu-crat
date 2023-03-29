@@ -7,21 +7,6 @@ import AdminDashboardLayout from '@/Layouts/AdminDashboardLayout';
 import RolesTable from '@/components/AdminDashboardComponents/RolesTable/RolesTable';
 import CreateRoleModal from '@/components/AdminDashboardComponents/CreateRoleModal/CreateRoleModal';
 
-const statistics = [
-  {
-    title: 'Active Campaigns',
-    value: 100,
-  },
-  {
-    title: 'Avg. Click Rate',
-    value: 50,
-  },
-  {
-    title: 'Avg. Open Rate',
-    value: 200,
-  },
-];
-
 const Roles = () => {
   const [openModal, setOpenModal] = React.useState(false);
   return (

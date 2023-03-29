@@ -70,8 +70,8 @@ const AdminDashboardLayout = (props: Props) => {
       icon: <ReviewsIcon />,
     },
     {
-      title: 'Courses',
-      path: '/adminRoutes/courses',
+      title: 'Users',
+      path: '/adminRoutes/users',
       icon: <ReviewsIcon />,
     },
     {
