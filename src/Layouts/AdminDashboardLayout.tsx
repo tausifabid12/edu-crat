@@ -11,7 +11,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -25,6 +24,8 @@ import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 import Link from 'next/link';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useRouter } from 'next/router';
+import Popover from '@mui/material/Popover';
+import Button from '@mui/material/Button';
 
 const drawerWidth = 270;
 
@@ -40,6 +41,9 @@ interface Props {
 const AdminDashboardLayout = (props: Props) => {
   const { window, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
+    null
+  );
   const router = useRouter();
 
   const MenuItems = [
@@ -101,9 +105,22 @@ const AdminDashboardLayout = (props: Props) => {
     },
   ];
 
+  //------ responsive drawer code
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  // ------ setting popover code
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? 'simple-popover' : undefined;
 
   const drawer = (
     <div>
@@ -138,6 +155,52 @@ const AdminDashboardLayout = (props: Props) => {
             </ListItem>
           </Link>
         ))}
+        <Button onClick={handleClick} aria-describedby={id}>
+          <ListItem
+            disablePadding
+            sx={{
+              backgroundColor: `${
+                '/adminRoutes/settings' === router.route ? 'secondary.main' : ''
+              }`,
+              color: `${
+                '/adminRoutes/settings' === router.route ? 'white' : ''
+              }`,
+              borderRadius: '15px',
+              py: 1,
+            }}
+          >
+            <ListItemButton>
+              <ListItemIcon>
+                <Typography
+                  sx={{
+                    color: `${
+                      '/adminRoutes/settings' === router.route ? 'white' : ''
+                    }`,
+                  }}
+                >
+                  <SettingsIcon />
+                </Typography>
+              </ListItemIcon>
+              <ListItemText primary={'Settings'} />
+            </ListItemButton>
+          </ListItem>
+          <Popover
+            id={id}
+            open={open}
+            anchorEl={anchorEl}
+            // onBlur={handleClose}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+          >
+            <Typography sx={{ p: 2 }}>Menu</Typography>
+            <Typography sx={{ p: 2 }}>Footer Section</Typography>
+            <Typography sx={{ p: 2 }}>Under Construction</Typography>
+            <Typography sx={{ p: 2 }}>Header Code</Typography>
+          </Popover>
+        </Button>
       </List>
     </div>
   );
