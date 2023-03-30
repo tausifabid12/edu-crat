@@ -8,6 +8,7 @@ import EventTable from '@/components/AdminDashboardComponents/EventTable/EventTa
 import EventModal from '@/components/AdminDashboardComponents/EventModal/EventModal';
 import NotificationCard from '@/components/AdminDashboardComponents/NotificationCard/NotificationCard';
 import NotificationTable from '@/components/AdminDashboardComponents/NotificationTable/NotificationTable';
+import NotificationModal from '@/components/AdminDashboardComponents/NotificationModal/NotificationModal';
 
 const Notification = () => {
   const [openModal, setOpenModal] = React.useState(false);
@@ -70,7 +71,7 @@ const Notification = () => {
           </Box>
         </Box>
       </AdminDashboardLayout>
-      <EventModal setOpenModal={setOpenModal} openModal={openModal} />
+      <NotificationModal setOpenModal={setOpenModal} openModal={openModal} />
     </>
   );
 };

@@ -32,7 +32,13 @@ const EventModal: React.FC<ModalProps> = ({ openModal, setOpenModal }) => {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-        sx={{ minWidth: { xs: 'auto', lg: '700px' } }}
+        sx={{
+          '& .MuiDialog-paper': {
+            borderRadius: '11px',
+            minWidth: { xs: '100%', sm: '700px' },
+            p: { xs: 3, sm: 1 },
+          },
+        }}
       >
         <DialogTitle id="alert-dialog-title">{'Create New Event'}</DialogTitle>
         <DialogContent>
