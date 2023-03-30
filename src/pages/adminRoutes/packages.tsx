@@ -4,12 +4,13 @@ import { Box, Typography } from '@mui/material';
 
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AdminDashboardLayout from '@/Layouts/AdminDashboardLayout';
-import RolesTable from '@/components/AdminDashboardComponents/RolesTable/RolesTable';
-import CreateRoleModal from '@/components/AdminDashboardComponents/CreateRoleModal/CreateRoleModal';
+import EventTable from '@/components/AdminDashboardComponents/EventTable/EventTable';
+import EventModal from '@/components/AdminDashboardComponents/EventModal/EventModal';
+import PackageModal from '@/components/AdminDashboardComponents/PackageModal/PackageModal';
+import PackageTable from '@/components/AdminDashboardComponents/PackageTable/PackageTable';
 
-const Roles = () => {
+const Packages = () => {
   const [openModal, setOpenModal] = React.useState(false);
-
   return (
     <>
       <AdminDashboardLayout>
@@ -26,7 +27,7 @@ const Roles = () => {
                 variant="h4"
                 sx={{ color: 'primary.main', fontWeight: '600' }}
               >
-                User Roles
+                Packages
               </Typography>
               <Typography
                 variant="subtitle2"
@@ -65,13 +66,13 @@ const Roles = () => {
               boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.09)',
             }}
           >
-            <RolesTable />
+            <PackageTable />
           </Box>
         </Box>
       </AdminDashboardLayout>
-      <CreateRoleModal setOpenModal={setOpenModal} openModal={openModal} />
+      <PackageModal setOpenModal={setOpenModal} openModal={openModal} />
     </>
   );
 };
 
-export default Roles;
+export default Packages;

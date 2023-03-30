@@ -21,6 +21,7 @@ declare module '@mui/material/styles' {
 
 // Create the custom theme
 const theme = createTheme({
+
   palette: {
     // mode: 'dark',
     primary: {
@@ -51,6 +52,7 @@ const theme = createTheme({
       
     },
   },
+  
 });
 
 

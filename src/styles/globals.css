@@ -2,17 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Edu NSW ACT Foundation', cursive; */
 }
-
+/* 
 html,
 body {
   max-width: 1500px;
   margin: 0px auto;
   overflow-x: hidden;
-}
+
+} */
 
 

@@ -150,13 +150,6 @@ const Blogs = () => {
 
             <Grid item xs={12} lg={12} p={1}>
               <Editor />
-              {/* <TextField
-                fullWidth
-                id="fullWidth"
-                multiline
-                rows={6}
-                label="Description"
-              /> */}
             </Grid>
             <Grid item xs={12} lg={12} p={1}>
               <FormControl>

@@ -90,8 +90,8 @@ const AdminDashboardLayout = (props: Props) => {
       icon: <LibraryAddIcon />,
     },
     {
-      title: 'settings',
-      path: '/adminRoutes/settings',
+      title: 'Packages',
+      path: '/adminRoutes/packages',
       icon: <SettingsIcon />,
     },
   ];
@@ -209,6 +209,7 @@ const AdminDashboardLayout = (props: Props) => {
         </Drawer>
       </Box>
       <Paper
+        elevation={0}
         component="main"
         sx={{
           flexGrow: 1,

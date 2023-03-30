@@ -1,17 +1,17 @@
 import React from 'react';
-
 import { Box, Typography } from '@mui/material';
-
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AdminDashboardLayout from '@/Layouts/AdminDashboardLayout';
-import EventTable from '@/components/AdminDashboardComponents/EventTable/EventTable';
-import EventModal from '@/components/AdminDashboardComponents/EventModal/EventModal';
-import NotificationCard from '@/components/AdminDashboardComponents/NotificationCard/NotificationCard';
 import NotificationTable from '@/components/AdminDashboardComponents/NotificationTable/NotificationTable';
 import NotificationModal from '@/components/AdminDashboardComponents/NotificationModal/NotificationModal';
 
 const Notification = () => {
   const [openModal, setOpenModal] = React.useState(false);
+
+  // const style = document.createElement('style');
+  // style.textContent = `body { font-family: Edu NSW ACT Foundation, sans-serif; }`;
+  // document.head.appendChild(style);
+
   return (
     <>
       <AdminDashboardLayout>

@@ -25,7 +25,7 @@ const Editor = () => {
   };
 
   return (
-    <div className="min-h-[300px] border border-gray-300">
+    <div className="min-h-[300px] border border-gray-200 rounded-md">
       <TextEditor
         editorState={editorState}
         onEditorStateChange={onEditorStateChange}
