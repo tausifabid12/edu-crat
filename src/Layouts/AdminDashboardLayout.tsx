@@ -94,6 +94,11 @@ const AdminDashboardLayout = (props: Props) => {
       path: '/adminRoutes/packages',
       icon: <SettingsIcon />,
     },
+    {
+      title: 'Support',
+      path: '/adminRoutes/support',
+      icon: <SettingsIcon />,
+    },
   ];
 
   const handleDrawerToggle = () => {

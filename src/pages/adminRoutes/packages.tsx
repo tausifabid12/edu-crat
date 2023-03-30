@@ -4,8 +4,6 @@ import { Box, Typography } from '@mui/material';
 
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AdminDashboardLayout from '@/Layouts/AdminDashboardLayout';
-import EventTable from '@/components/AdminDashboardComponents/EventTable/EventTable';
-import EventModal from '@/components/AdminDashboardComponents/EventModal/EventModal';
 import PackageModal from '@/components/AdminDashboardComponents/PackageModal/PackageModal';
 import PackageTable from '@/components/AdminDashboardComponents/PackageTable/PackageTable';
 

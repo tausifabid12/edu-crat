@@ -4,6 +4,7 @@ import {
   Box,
   Button,
   Container,
+  Paper,
   Stack,
   TextField,
   Typography,
@@ -17,16 +18,20 @@ export interface Message {
   sender: 'user' | 'bot';
 }
 
-const ChatPage = () => {
+interface Props {
+  setIsOpen: (isOpen: boolean) => void;
+}
+
+const SupportChat: React.FC<Props> = ({ setIsOpen }) => {
   let messages: Message[];
 
   messages = [
     {
-      text: 'Hello',
+      text: 'Hello lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
       sender: 'user',
     },
     {
-      text: 'Hello2',
+      text: 'Hello lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
       sender: 'bot',
     },
     {
@@ -49,7 +54,19 @@ const ChatPage = () => {
     }
   };
   return (
-    <Box display="flex" flexDirection="column" height="80vh">
+    <Box
+      display="flex"
+      flexDirection="column"
+      height="80vh"
+      sx={{
+        position: 'relative',
+        height: '100%',
+        backgroundColor: 'bg_color.main',
+        boxShadow: '0px 0px 5px 0px rgba(0,0,0,.1)',
+        borderRadius: '10px',
+        p: 2,
+      }}
+    >
       <Box
         sx={{
           display: 'flex',
@@ -60,36 +77,42 @@ const ChatPage = () => {
           borderBottom: '1px solid #E5E5E5',
         }}
       >
-        <Stack direction="row" spacing={2}>
+        <Stack
+          direction="row"
+          spacing={2}
+          onClick={() => setIsOpen(true)}
+          sx={{ cursor: 'pointer' }}
+        >
           <Image src="/assets/user.png" height={50} width={50} alt="" />
           <Stack spacing={0}>
             <Typography variant="subtitle2" sx={{ color: 'primary.main' }}>
               Darlene Robertson
             </Typography>
             <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
-              Head of Development
+              ID: TicketID0
             </Typography>
           </Stack>
         </Stack>
       </Box>
 
       {/* end of top user info section */}
-      <Box flexGrow={1} overflow="auto">
+      <Box flexGrow={1} overflow="auto" px={4}>
         {messages.map((message, index) => (
           <Box
             key={index}
             display="flex"
+            mt={2}
             justifyContent={
               message.sender === 'user' ? 'flex-end' : 'flex-start'
             }
           >
-            <Box
+            <Paper
               sx={{
                 backgroundColor: `${
                   message.sender === 'user' ? 'primary.main' : 'grey.600'
                 }`,
                 color: 'white',
-                borderRadius: 16,
+                borderRadius: 2,
                 p: 2,
               }}
             >
@@ -99,11 +122,14 @@ const ChatPage = () => {
                       : 'text_color'
                   } */}
               <p>{message.text}</p>
-            </Box>
+            </Paper>
           </Box>
         ))}
       </Box>
-      <Box display="flex">
+      <Box
+        display="flex"
+        sx={{ position: 'absolute', bottom: 0, width: '100%' }}
+      >
         <Box flexGrow={1}>
           <TextField
             fullWidth
@@ -112,25 +138,17 @@ const ChatPage = () => {
             onChange={(event) => setMessage(event.target.value)}
           />
         </Box>
-        <Box ml={1}>
-          <button
+        <Box>
+          {/* <button
             onClick={handleMessageSend}
             className="bg-secondary text-white px-10 h-14 border-2 transition-all duration-300 border-secondary rounded-lg hover:bg-white hover:text-secondary"
           >
             Send
-          </button>
-          {/* <Button
-            variant="contained"
-            color="primary"
-            // endIcon={<SendIcon />}
-            onClick={handleMessageSend}
-          >
-            Send
-          </Button> */}
+          </button> */}
         </Box>
       </Box>
     </Box>
   );
 };
 
-export default ChatPage;
+export default SupportChat;
