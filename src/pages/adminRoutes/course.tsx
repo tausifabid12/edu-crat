@@ -2,8 +2,6 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AdminDashboardLayout from '@/Layouts/AdminDashboardLayout';
-import FacilitiesTable from '@/components/AdminDashboardComponents/FacilitiesTable/FacilitiesTable';
-import FacilitiesModal from '@/components/AdminDashboardComponents/FacilitiesModal/FacilitiesModal';
 import CourseTable from '@/components/AdminDashboardComponents/CourseTable/CourseTable';
 import CourseModal from '@/components/AdminDashboardComponents/CourseModal/CourseModal';
 
