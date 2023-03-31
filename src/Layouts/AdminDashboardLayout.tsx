@@ -24,8 +24,10 @@ import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 import Link from 'next/link';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 import { useRouter } from 'next/router';
-import Popover from '@mui/material/Popover';
-import Button from '@mui/material/Button';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const drawerWidth = 270;
 
@@ -41,9 +43,6 @@ interface Props {
 const AdminDashboardLayout = (props: Props) => {
   const { window, children } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState<HTMLButtonElement | null>(
-    null
-  );
   const router = useRouter();
 
   const MenuItems = [
@@ -94,6 +93,11 @@ const AdminDashboardLayout = (props: Props) => {
       icon: <LibraryAddIcon />,
     },
     {
+      title: 'Exams',
+      path: '/adminRoutes/exam',
+      icon: <LibraryAddIcon />,
+    },
+    {
       title: 'Packages',
       path: '/adminRoutes/packages',
       icon: <SettingsIcon />,
@@ -109,18 +113,6 @@ const AdminDashboardLayout = (props: Props) => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  // ------ setting popover code
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
 
   const drawer = (
     <div>
@@ -155,52 +147,64 @@ const AdminDashboardLayout = (props: Props) => {
             </ListItem>
           </Link>
         ))}
-        <Button onClick={handleClick} aria-describedby={id}>
-          <ListItem
-            disablePadding
-            sx={{
-              backgroundColor: `${
-                '/adminRoutes/settings' === router.route ? 'secondary.main' : ''
-              }`,
-              color: `${
-                '/adminRoutes/settings' === router.route ? 'white' : ''
-              }`,
-              borderRadius: '15px',
-              py: 1,
-            }}
-          >
-            <ListItemButton>
-              <ListItemIcon>
-                <Typography
-                  sx={{
-                    color: `${
-                      '/adminRoutes/settings' === router.route ? 'white' : ''
-                    }`,
-                  }}
-                >
-                  <SettingsIcon />
-                </Typography>
-              </ListItemIcon>
-              <ListItemText primary={'Settings'} />
-            </ListItemButton>
-          </ListItem>
-          <Popover
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            // onBlur={handleClose}
-            onClose={handleClose}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-          >
-            <Typography sx={{ p: 2 }}>Menu</Typography>
-            <Typography sx={{ p: 2 }}>Footer Section</Typography>
-            <Typography sx={{ p: 2 }}>Under Construction</Typography>
-            <Typography sx={{ p: 2 }}>Header Code</Typography>
-          </Popover>
-        </Button>
+
+        <ListItem
+          disablePadding
+          sx={{
+            backgroundColor: `${
+              '/adminRoutes/settings' === router.route ? 'secondary.main' : ''
+            }`,
+            color: `${'/adminRoutes/settings' === router.route ? 'white' : ''}`,
+            borderRadius: '15px',
+            py: 1,
+          }}
+        >
+          <Accordion sx={{ p: 0, boxShadow: 'none', width: '100%' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              sx={{ p: 0, boxShadow: 'none' }}
+            >
+              <ListItemButton>
+                <ListItemIcon>
+                  <Typography
+                    sx={{
+                      color: `${
+                        '/adminRoutes/settings' === router.route ? 'white' : ''
+                      }`,
+                    }}
+                  >
+                    <SettingsIcon />
+                  </Typography>
+                </ListItemIcon>
+                <ListItemText primary={'Settings'} />
+              </ListItemButton>
+            </AccordionSummary>
+            <AccordionDetails sx={{ boxShadow: 'none', width: '100%' }}>
+              <List sx={{ p: 0 }}>
+                <Link href="/adminRoutes/menuSetting">
+                  <ListItem>Menu</ListItem>
+                </Link>
+                <Link href="/adminRoutes/headerSetting">
+                  <ListItem>Header</ListItem>
+                </Link>
+                <Link href="/adminRoutes/footerSetting">
+                  <ListItem>Footer</ListItem>
+                </Link>
+                <Link href="/adminRoutes/typographySetting">
+                  <ListItem>TypoGraphy</ListItem>
+                </Link>
+                <Link href="/adminRoutes/logoSetting">
+                  <ListItem>Logo</ListItem>
+                </Link>
+                <Link href="/adminRoutes/logoSetting">
+                  <ListItem>Under Construction</ListItem>
+                </Link>
+              </List>
+            </AccordionDetails>
+          </Accordion>
+        </ListItem>
       </List>
     </div>
   );

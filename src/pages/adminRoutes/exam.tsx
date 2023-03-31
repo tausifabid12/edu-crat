@@ -7,8 +7,10 @@ import AdminDashboardLayout from '@/Layouts/AdminDashboardLayout';
 import EventTable from '@/components/AdminDashboardComponents/EventTable/EventTable';
 import EventModal from '@/components/AdminDashboardComponents/EventModal/EventModal';
 import CreateMenuModal from '@/components/AdminDashboardComponents/CreateMenuModal/CreateMenuModal';
+import ExamTable from '@/components/AdminDashboardComponents/ExamTable/ExamTable';
+import ExamModal from '@/components/AdminDashboardComponents/ExamModal/ExamModal';
 
-const MenuSetting = () => {
+const Exam = () => {
   const [openModal, setOpenModal] = React.useState(false);
   return (
     <>
@@ -26,7 +28,7 @@ const MenuSetting = () => {
                 variant="h4"
                 sx={{ color: 'primary.main', fontWeight: '600' }}
               >
-                Menu Setting
+                Exams
               </Typography>
               <Typography
                 variant="subtitle2"
@@ -65,13 +67,13 @@ const MenuSetting = () => {
               boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.09)',
             }}
           >
-            <EventTable />
+            <ExamTable />
           </Box>
         </Box>
       </AdminDashboardLayout>
-      <CreateMenuModal setOpenModal={setOpenModal} openModal={openModal} />
+      <ExamModal setOpenModal={setOpenModal} openModal={openModal} />
     </>
   );
 };
 
-export default MenuSetting;
+export default Exam;
