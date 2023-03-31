@@ -148,6 +148,7 @@ const AdminDashboardLayout = (props: Props) => {
           </Link>
         ))}
 
+        {/*  college pages in dropdown */}
         <ListItem
           disablePadding
           sx={{
@@ -156,7 +157,54 @@ const AdminDashboardLayout = (props: Props) => {
             }`,
             color: `${'/adminRoutes/settings' === router.route ? 'white' : ''}`,
             borderRadius: '15px',
-            py: 1,
+          }}
+        >
+          <Accordion sx={{ p: 0, boxShadow: 'none', width: '100%' }}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+              sx={{ p: 0, boxShadow: 'none' }}
+            >
+              <ListItemButton>
+                <ListItemIcon>
+                  <Typography
+                    sx={{
+                      color: `${
+                        '/adminRoutes/settings' === router.route ? 'white' : ''
+                      }`,
+                    }}
+                  >
+                    <SettingsIcon />
+                  </Typography>
+                </ListItemIcon>
+                <ListItemText primary={'College'} />
+              </ListItemButton>
+            </AccordionSummary>
+            <AccordionDetails sx={{ boxShadow: 'none', width: '100%' }}>
+              <List sx={{ p: 0 }}>
+                <Link href="/adminRoutes/addCollege">
+                  <ListItem>Add College</ListItem>
+                </Link>
+                <Link href="/adminRoutes/facilities">
+                  <ListItem>Facilities</ListItem>
+                </Link>
+                <Link href="/adminRoutes/course">
+                  <ListItem>Courses</ListItem>
+                </Link>
+              </List>
+            </AccordionDetails>
+          </Accordion>
+        </ListItem>
+        {/*  settings pages in dropdown */}
+        <ListItem
+          disablePadding
+          sx={{
+            backgroundColor: `${
+              '/adminRoutes/settings' === router.route ? 'secondary.main' : ''
+            }`,
+            color: `${'/adminRoutes/settings' === router.route ? 'white' : ''}`,
+            borderRadius: '15px',
           }}
         >
           <Accordion sx={{ p: 0, boxShadow: 'none', width: '100%' }}>

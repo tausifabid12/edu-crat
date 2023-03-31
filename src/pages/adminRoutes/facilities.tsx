@@ -4,10 +4,10 @@ import { Box, Typography } from '@mui/material';
 
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import AdminDashboardLayout from '@/Layouts/AdminDashboardLayout';
-import ExamTable from '@/components/AdminDashboardComponents/ExamTable/ExamTable';
-import ExamModal from '@/components/AdminDashboardComponents/ExamModal/ExamModal';
+import FacilitiesTable from '@/components/AdminDashboardComponents/FacilitiesTable/FacilitiesTable';
+import FacilitiesModal from '@/components/AdminDashboardComponents/FacilitiesModal/FacilitiesModal';
 
-const Exam = () => {
+const Facilities = () => {
   const [openModal, setOpenModal] = React.useState(false);
   return (
     <>
@@ -25,7 +25,7 @@ const Exam = () => {
                 variant="h4"
                 sx={{ color: 'primary.main', fontWeight: '600' }}
               >
-                Exams
+                Facilities
               </Typography>
               <Typography
                 variant="subtitle2"
@@ -64,13 +64,13 @@ const Exam = () => {
               boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.09)',
             }}
           >
-            <ExamTable />
+            <FacilitiesTable />
           </Box>
         </Box>
       </AdminDashboardLayout>
-      <ExamModal setOpenModal={setOpenModal} openModal={openModal} />
+      <FacilitiesModal setOpenModal={setOpenModal} openModal={openModal} />
     </>
   );
 };
 
-export default Exam;
+export default Facilities;
