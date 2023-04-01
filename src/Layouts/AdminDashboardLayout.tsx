@@ -192,6 +192,9 @@ const AdminDashboardLayout = (props: Props) => {
                 <Link href="/adminRoutes/course">
                   <ListItem>Courses</ListItem>
                 </Link>
+                <Link href="/adminRoutes/assignCollege">
+                  <ListItem>Assign College</ListItem>
+                </Link>
               </List>
             </AccordionDetails>
           </Accordion>

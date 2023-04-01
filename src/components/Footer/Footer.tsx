@@ -79,14 +79,14 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <p className="text-xl tracking-wide text-gray-300">Apples</p>
+                <p className="text-xl tracking-wide text-gray-300">Partners</p>
                 <ul className="mt-2 space-y-2">
                   <li>
                     <Link
                       href="/"
                       className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200"
                     >
-                      Web
+                      Partner Login
                     </Link>
                   </li>
                   <li>
@@ -94,7 +94,7 @@ const Footer = () => {
                       href="/"
                       className="text-white transition-colors duration-300 hover:text-deep-purple-accent-200"
                     >
-                      eCommerce
+                      Partner Register
                     </Link>
                   </li>
                   <li>
@@ -178,16 +178,16 @@ const Footer = () => {
                   </p>
                   <div>
                     <p>Get in on</p>
-                    <p>Apple Store</p>
+                    <p className="text-xs">Apple Store</p>
                   </div>
                 </div>
-                <div className="flex bg-white/10 items-center justify-center space-x-4 text-white rounded-md py-4 px-6">
+                <div className="flex bg-white/10 items-center justify-center space-x-4 text-white rounded-md py-4 px-5">
                   <p>
                     <BsGooglePlay size={30} />
                   </p>
                   <div>
                     <p>Get in on</p>
-                    <p>Play Store</p>
+                    <p className="text-xs">Play Store</p>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,7 @@ const Footer = () => {
             <div className="flex flex-wrap items-center mt-4 space-x-4 sm:mt-0 space-y-2 ">
               <Link
                 href="/"
-                className="text-white text-sm lg:text-md transition-colors duration-300 hover:text-teal-accent-400"
+                className="text-white text-sm p-0 lg:text-md transition-colors duration-300 hover:text-teal-accent-400"
               >
                 <p>Help</p>
               </Link>
