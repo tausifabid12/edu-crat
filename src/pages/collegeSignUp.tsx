@@ -191,13 +191,6 @@ const SignUp = () => {
                   }}
                 />
               </Grid>
-
-              <Grid item xs={12} lg={12}>
-                {' '}
-                <button className="bg-highlight py-3 text-primary w-full rounded-lg font-semibold">
-                  Sign up
-                </button>
-              </Grid>
             </Grid>
             {selectedValue === 'multipleCollege' && count ? (
               <>
@@ -263,6 +256,12 @@ const SignUp = () => {
                 </Stack>
               </>
             ) : null}
+            <Grid item xs={12} lg={12}>
+              {' '}
+              <button className="bg-highlight w-40 py-3 text-primary mt-7 rounded-lg font-semibold">
+                Sign up
+              </button>
+            </Grid>
           </Box>
         </Grid>
       </Grid>
