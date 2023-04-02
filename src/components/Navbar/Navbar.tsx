@@ -50,7 +50,7 @@ const Navbar = () => {
       <nav
         className={`${
           isScrolled ? 'bg-primary' : 'bg-primary'
-        }  fixed top-0 z-50 w-full  transition-all duration-300 `}
+        }  fixed top-0 z-50 w-full max-w-[1500px] mx-auto  transition-all duration-300 `}
       >
         <div className="bg-secondary py-2 lg:px-16 hidden lg:flex items-center justify-between text-white">
           <div className="flex space-x-5">
@@ -74,7 +74,7 @@ const Navbar = () => {
             <BsGithub />
           </div>
         </div>
-        <div className="max-w-7xl mx-auto  py-2 px-2 sm:px-6 lg:px-8">
+        <div className="w-full  py-2 px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button

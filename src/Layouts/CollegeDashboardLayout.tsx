@@ -232,9 +232,9 @@ const DashboardLayout = (props: Props) => {
         sx={{
           flexGrow: 1,
           backgroundColor: 'info.main',
-          mx: { xs: 'none', sm: 2 },
+          mx: { xs: 'none', md: 2 },
           mt: 6,
-          p: { xs: 1, sm: 4 },
+          p: { xs: 1, md: 4 },
           borderRadius: '15px',
         }}
       >

@@ -93,13 +93,13 @@ const Photos = () => {
                 cursor: 'pointer',
               }}
             >
-              <AddCircleOutlineIcon /> Add New Photos
+              <AddCircleOutlineIcon /> Add New
             </Typography>
           </Box>
 
           <Grid container spacing={3}>
             {data.map((item, index) => (
-              <Grid key={index} item sm={12} lg={4}>
+              <Grid key={index} item xs={12} lg={4}>
                 <Box
                   sx={{
                     width: '100%',
