@@ -106,7 +106,7 @@ const DashboardLayout = (props: Props) => {
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { lg: drawerWidth }, flexShrink: { lg: 0 } }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -119,7 +119,7 @@ const DashboardLayout = (props: Props) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', lg: 'none' },
             border: 'none',
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
@@ -164,7 +164,7 @@ const DashboardLayout = (props: Props) => {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
+            display: { xs: 'none', lg: 'block' },
 
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
@@ -220,7 +220,7 @@ const DashboardLayout = (props: Props) => {
         sx={{
           flexGrow: 1,
           backgroundColor: 'info.main',
-          mx: { xs: 'none', sm: 8 },
+          mx: { xs: 'none', lg: 8 },
           mt: 14,
           borderRadius: '15px',
         }}
