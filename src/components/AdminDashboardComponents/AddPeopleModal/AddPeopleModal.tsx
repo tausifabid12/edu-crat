@@ -26,11 +26,14 @@ const MenuProps = {
 };
 
 interface ModalProps {
-  openModal: boolean;
-  setOpenModal: (open: boolean) => void;
+  openPeopleModal: boolean;
+  setOpenPeopleModal: (open: boolean) => void;
 }
 
-const CreateRoleModal: React.FC<ModalProps> = ({ openModal, setOpenModal }) => {
+const AddPeopleModal: React.FC<ModalProps> = ({
+  openPeopleModal,
+  setOpenPeopleModal,
+}) => {
   const [role, setRole] = React.useState('');
   const [personName, setPersonName] = React.useState<string[]>([]);
 
@@ -45,35 +48,51 @@ const CreateRoleModal: React.FC<ModalProps> = ({ openModal, setOpenModal }) => {
   };
 
   const handleClose = () => {
-    setOpenModal(false);
+    setOpenPeopleModal(false);
   };
 
-  const fields = ['Dashboard', 'Campaigns', 'Support', 'Roles'];
+  const fields = ['Employee-1', 'Employee-2', 'Employee-3', 'Employee-4'];
 
   return (
     <div>
       <Dialog
-        open={openModal}
+        open={openPeopleModal}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-        sx={{ minWidth: { xs: '100%', md: '700px' } }}
+        sx={{
+          minWidth: { xs: '100%', md: '700px' },
+          '& .MuiDialog-paper': {
+            borderRadius: '11px',
+            minWidth: { xs: '100%', sm: '600px' },
+            p: { xs: 3, sm: 1 },
+          },
+        }}
       >
-        <DialogTitle id="alert-dialog-title">{'Create User Role'}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{'Add People'}</DialogTitle>
         <DialogContent>
           <Grid container spacing={2} my={3}>
             <Grid item xs={12} lg={12}>
-              <TextField
-                fullWidth
-                id="outlined-basic"
-                label="Role Name"
-                variant="outlined"
-              />
+              <FormControl fullWidth>
+                <InputLabel id="demo-simple-select-label">Role</InputLabel>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={role}
+                  label="Age"
+                  onChange={(event) => setRole(event.target.value as string)}
+                >
+                  <MenuItem value={20}>Admin</MenuItem>
+                  <MenuItem value={30}>Supper Admin</MenuItem>
+                  <MenuItem value={30}>Support </MenuItem>
+                </Select>
+              </FormControl>
             </Grid>
+
             <Grid item xs={12} lg={12}>
               <FormControl sx={{ width: '100%' }}>
                 <InputLabel id="demo-multiple-checkbox-label">
-                  Fields
+                  Employee
                 </InputLabel>
                 <Select
                   labelId="demo-multiple-checkbox-label"
@@ -95,10 +114,6 @@ const CreateRoleModal: React.FC<ModalProps> = ({ openModal, setOpenModal }) => {
               </FormControl>
             </Grid>
           </Grid>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending
-            anonymous location data to Google, even when no apps are running.
-          </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
@@ -111,4 +126,4 @@ const CreateRoleModal: React.FC<ModalProps> = ({ openModal, setOpenModal }) => {
   );
 };
 
-export default CreateRoleModal;
+export default AddPeopleModal;

@@ -234,22 +234,22 @@ const AdminDashboardLayout = (props: Props) => {
             </AccordionSummary>
             <AccordionDetails sx={{ boxShadow: 'none', width: '100%' }}>
               <List sx={{ p: 0 }}>
-                <Link href="/adminRoutes/menuSetting">
+                {/* <Link href="/adminRoutes/menuSetting">
                   <ListItem>Menu</ListItem>
                 </Link>
                 <Link href="/adminRoutes/headerSetting">
                   <ListItem>Header</ListItem>
-                </Link>
+                </Link> */}
                 <Link href="/adminRoutes/footerSetting">
                   <ListItem>Footer</ListItem>
                 </Link>
                 <Link href="/adminRoutes/typographySetting">
                   <ListItem>TypoGraphy</ListItem>
                 </Link>
-                <Link href="/adminRoutes/logoSetting">
+                {/* <Link href="/adminRoutes/logoSetting">
                   <ListItem>Logo</ListItem>
-                </Link>
-                <Link href="/adminRoutes/logoSetting">
+                </Link> */}
+                <Link href="/adminRoutes/underConstruction">
                   <ListItem>Under Construction</ListItem>
                 </Link>
               </List>
@@ -279,7 +279,7 @@ const AdminDashboardLayout = (props: Props) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { lg: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -295,7 +295,7 @@ const AdminDashboardLayout = (props: Props) => {
       </AppBar>
       <Box
         component="nav"
-        sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+        sx={{ width: { lg: drawerWidth }, flexShrink: { lg: 0 } }}
         aria-label="mailbox folders"
       >
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -308,7 +308,7 @@ const AdminDashboardLayout = (props: Props) => {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', lg: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
@@ -320,7 +320,7 @@ const AdminDashboardLayout = (props: Props) => {
         <Drawer
           variant="permanent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
+            display: { xs: 'none', lg: 'block' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
@@ -337,7 +337,7 @@ const AdminDashboardLayout = (props: Props) => {
         sx={{
           flexGrow: 1,
           p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: { lg: `calc(100% - ${drawerWidth}px)` },
         }}
       >
         <Toolbar />

@@ -10,71 +10,66 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ModeEditIcon from '@mui/icons-material/ModeEdit';
-import Switch from '@mui/material/Switch';
-
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 const data = [
   {
-    id: '1',
+    EmployeeId: '1',
 
-    roleName: 'Admin',
+    EmployeeName: 'Employee 1',
     dateCreated: 'em@ploee.com',
     recipient: 'John Doe',
   },
   {
-    id: '2',
+    EmployeeId: '2',
 
-    roleName: 'Admin',
+    EmployeeName: 'Employee 1',
     dateCreated: 'em@ploee.com',
     recipient: 'John Doe',
   },
   {
-    id: '3',
+    EmployeeId: '3',
 
-    roleName: 'Admin',
+    EmployeeName: 'Employee 1',
     dateCreated: 'em@ploee.com',
     recipient: 'John Doe',
   },
   {
-    id: '4',
+    EmployeeId: '4',
 
-    roleName: 'Admin',
+    EmployeeName: 'Employee 1',
     dateCreated: 'em@ploee.com',
     recipient: 'John Doe',
   },
   {
-    id: '5',
+    EmployeeId: '5',
 
-    roleName: 'Admin',
+    EmployeeName: 'Employee 1',
     dateCreated: 'em@ploee.com',
     recipient: 'John Doe',
   },
 ];
 
-const RolesTable = () => {
+const RolesPeopleTable = () => {
   return (
     <TableContainer>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align="center">Serial no.</TableCell>
+            <TableCell align="center">id</TableCell>
             <TableCell align="center">Name</TableCell>
-            <TableCell align="center"> Status</TableCell>
+            <TableCell align="center"> Role</TableCell>
             <TableCell align="center"> Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {data.map((row) => (
             <TableRow
-              key={row.id}
+              key={row.EmployeeId}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <TableCell align="center">{row.id}</TableCell>
-              <TableCell align="center">{row.roleName}</TableCell>
-              <TableCell align="center">
-                <Switch {...label} defaultChecked />
-              </TableCell>
+              <TableCell align="center">{row.EmployeeId}</TableCell>
+              <TableCell align="center">{row.EmployeeName}</TableCell>
+              <TableCell align="center">Admin </TableCell>
               <TableCell align="center">
                 <Paper elevation={0}>
                   <IconButton aria-label="delete" size="large">
@@ -93,4 +88,4 @@ const RolesTable = () => {
   );
 };
 
-export default RolesTable;
+export default RolesPeopleTable;
