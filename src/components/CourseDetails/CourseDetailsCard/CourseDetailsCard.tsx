@@ -32,8 +32,15 @@ const CourseDetailsCard = () => {
         <br />
         design, UX design & Web Design
       </Typography>
-      <Stack direction="row" spacing={6}>
-        <Stack direction="row" spacing={1}>
+      <Box
+        sx={{
+          display: 'flex',
+          // alignItems: 'center',
+
+          flexDirection: { xs: 'column', sm: 'row' },
+        }}
+      >
+        <Stack direction="row" spacing={1} sx={{ mr: 2, mb: { xs: 2, sm: 0 } }}>
           <Typography
             component="legend"
             sx={{ color: 'text_color.main', fontSize: '14px' }}
@@ -48,7 +55,7 @@ const CourseDetailsCard = () => {
             (1991)
           </Typography>
         </Stack>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" spacing={1} sx={{ mr: 2, mb: { xs: 2, sm: 0 } }}>
           <GroupIcon fontSize="small" sx={{ color: 'text_color.main' }} />
           <Typography
             component="legend"
@@ -57,7 +64,7 @@ const CourseDetailsCard = () => {
             853 enrolled on this course
           </Typography>
         </Stack>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" spacing={1} sx={{ mr: 2, mb: { xs: 2, sm: 0 } }}>
           <AccessTimeIcon fontSize="small" sx={{ color: 'text_color.main' }} />
           <Typography
             component="legend"
@@ -66,7 +73,7 @@ const CourseDetailsCard = () => {
             Last updated 11/2021
           </Typography>
         </Stack>
-      </Stack>
+      </Box>
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <Image
           src="/assets/courseDetails/instructor.png"

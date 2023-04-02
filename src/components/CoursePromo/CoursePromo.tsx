@@ -10,7 +10,7 @@ const CoursePromo = () => {
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
       }}
-      className="w-full h-full grid place-content-center text-center py-48"
+      className="w-full h-full grid place-content-center text-center py-48 md:px-5 lg:px-0"
     >
       <div className="space-y-7">
         <h1 className="text-5xl font-bold text-white">

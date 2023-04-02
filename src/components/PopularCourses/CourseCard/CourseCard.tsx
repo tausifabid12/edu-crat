@@ -19,7 +19,7 @@ const CourseCard: React.FC<CourseInfo> = ({ data }) => {
   return (
     <Link
       href={`/courseDetails/${id}`}
-      className="w-full h-[470px] md:h-[430px]  shadow-md rounded-lg relative"
+      className="w-full h-full pb-4  shadow-md rounded-lg relative"
     >
       <button className="text-white text-lg p-2 rounded-full absolute top-2 right-2 hover:bg-black/30">
         <BsBookmarkFill />

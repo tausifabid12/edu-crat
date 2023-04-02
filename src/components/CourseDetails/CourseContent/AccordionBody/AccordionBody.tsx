@@ -26,14 +26,19 @@ const AccordionBody = () => {
   };
 
   return (
-    <List dense sx={{ width: '100%', bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
       {[0, 1, 2, 3].map((value) => {
         const labelId = `checkbox-list-secondary-label-${value}`;
         return (
           <ListItem
             key={value}
             secondaryAction={
-              <Box sx={{ display: 'flex' }}>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: { xs: 'column', sm: 'row' },
+                }}
+              >
                 <Typography
                   variant="body2"
                   sx={{
@@ -47,6 +52,7 @@ const AccordionBody = () => {
                 <Typography
                   variant="body2"
                   sx={{
+                    display: { xs: 'none', sm: 'block' },
                     color: 'secondary.main',
                     pr: 1,
                     textDecoration: 'underline',
@@ -56,7 +62,11 @@ const AccordionBody = () => {
                 </Typography>
                 <Typography
                   variant="body2"
-                  sx={{ color: 'secondary.main', textDecoration: 'underline' }}
+                  sx={{
+                    display: { xs: 'none', sm: 'block' },
+                    color: 'secondary.main',
+                    textDecoration: 'underline',
+                  }}
                 >
                   3.50
                 </Typography>

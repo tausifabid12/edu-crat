@@ -7,10 +7,10 @@ const Footer = () => {
   return (
     <footer className="px-3 lg:px-32 bg-primaryLight pt-16">
       {/* top - section -  */}
-      <div className="flex items-center justify-between ">
-        <div className="w-full lg:w-1/2 ">
+      <div className=" flex  flex-col lg:flex-row items-center justify-between  ">
+        <div className="w-full lg:w-1/2 px-2 lg:px-0 mb-12 lg:mb-0 ">
           <p className="text-white pb-5">GET IN TOUCH</p>
-          <div className="bg-white/10 text-white flex p-3 w-full mx-auto rounded-full focus:ring-2 focus:ring-gray-700">
+          <div className="bg-white/10 text-white flex p-3 w-full md:w-1/2 lg:w-full lg:mx-auto rounded-full focus:ring-2 focus:ring-gray-700">
             <input
               type="text"
               className="outline-none bg-transparent  flex-grow px-4 placeholder:text-gray-200"
@@ -21,7 +21,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div className=" w-full lg:w-1/2 space-y-8 px-20">
+        <div className=" w-full lg:w-1/2 space-y-8 px-2 lg:px-20">
           <Image src="/assets/logo.svg" height={160} width={160} alt="logo" />
           <div className="flex space-x-7">
             <div>
@@ -38,7 +38,7 @@ const Footer = () => {
       {/*  */}
       {/*  middle section */}
       <div className="mt-8">
-        <div className="px-3 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="px-3 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  lg:px-8">
           <div className="grid row-gap-10 mb-8 lg:grid-cols-6">
             <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
               <div>
@@ -243,8 +243,3 @@ const Footer = () => {
 };
 
 export default Footer;
-// Help
-// Privacy Policy
-// Cookie Notice
-// Security
-// Terms of Use

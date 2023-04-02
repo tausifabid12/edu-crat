@@ -1,12 +1,12 @@
 import React from 'react';
 import EventCard from '../EventCard/EventCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Navigation, Pagination } from 'swiper';
+import { A11y, Navigation, Pagination, Autoplay } from 'swiper';
 import { BsArrowUpRight } from 'react-icons/bs';
 
 const UpcomingEvent = () => {
   return (
-    <section className="bg-[#eef2f6] min-h-screen px-3 lg:px-16 py-20">
+    <section className="bg-[#eef2f6] lg:min-h-screen px-3 lg:px-16 py-20">
       <div>
         <h1 className="text-3xl text-primary font-bold">Upcoming Events</h1>
         <p className="text-gray-600 mt-2">
@@ -15,9 +15,16 @@ const UpcomingEvent = () => {
       </div>
       <div className="mt-16 ">
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
+          modules={[Navigation, Pagination, A11y, Autoplay]}
           spaceBetween={10}
-          // loop={true}
+          loop={true}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
           slidesPerView={1}
           breakpoints={{
             640: {

@@ -94,20 +94,17 @@ const PopularCourses = () => {
         </div>
         <div>
           <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2  ">
-            <option className="py-2" selected>
-              Choose a country
+            <option className="py-2" selected disabled>
+              Filter
             </option>
             <option className="py-2" value="US">
-              United States
+              Top Rating
             </option>
             <option className="py-2" value="CA">
-              Canada
+              Top Selling
             </option>
             <option className="py-2" value="FR">
-              France
-            </option>
-            <option className="py-2" value="DE">
-              Germany
+              Top Viewed
             </option>
           </select>
         </div>

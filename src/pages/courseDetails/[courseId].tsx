@@ -17,17 +17,17 @@ const CourseDetails = () => {
       <Box
         sx={{
           width: '100%',
-          padding: '120px 0px',
+          padding: { xs: '90px 0px', sm: '120px 0px' },
 
           //   backgroundColor: 'info.main',
         }}
       >
         {/* top  */}
-        <Breadcrumbs
+        {/* <Breadcrumbs
           separator="›"
           aria-label="breadcrumb"
           sx={{
-            padding: '12px 60px',
+            padding: '16px 60px',
             fontSize: '14px',
             fontWeight: '500',
             backgroundColor: 'info.main',
@@ -46,19 +46,20 @@ const CourseDetails = () => {
           <Link color="text_color" href="/">
             User Interface
           </Link>
-        </Breadcrumbs>
+        </Breadcrumbs> */}
         {/* body */}
         <Grid
           className=""
           container
           spacing={5}
           sx={{
-            padding: '60px',
+            padding: { xs: '10px', sm: '60px' },
             backgroundColor: 'info.main',
             position: 'relative',
+            overflow: 'hidden',
           }}
         >
-          <Grid item xs={12} lg={8} py={19}>
+          <Grid item xs={12} lg={8} pt={19}>
             <CourseDetailsCard />
             <DescriptionCard />
             <CourseSummery />
@@ -67,7 +68,7 @@ const CourseDetails = () => {
             <FeedBack />
           </Grid>
           <Grid item xs={12} lg={4}>
-            <div className="fixed min-h-[700px] ">
+            <div className="lg:fixed ">
               <CourseAddToCartCard />
             </div>
           </Grid>

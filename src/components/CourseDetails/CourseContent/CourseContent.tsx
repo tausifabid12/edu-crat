@@ -97,7 +97,12 @@ const CourseContent = () => {
                 }}
               >
                 <Typography color="primary">Course Content</Typography>
-                <Typography sx={{ color: 'text_color.main' }}>
+                <Typography
+                  sx={{
+                    color: 'text_color.main',
+                    fontSize: { xs: '14px', sx: '16px' },
+                  }}
+                >
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -122,7 +127,12 @@ const CourseContent = () => {
                 }}
               >
                 <Typography color="primary">The Brief</Typography>
-                <Typography sx={{ color: 'text_color.main' }}>
+                <Typography
+                  sx={{
+                    color: 'text_color.main',
+                    fontSize: { xs: '14px', sx: '16px' },
+                  }}
+                >
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -149,7 +159,12 @@ const CourseContent = () => {
                 <Typography color="primary">
                   Type, Color & Icon Introduction
                 </Typography>
-                <Typography sx={{ color: 'text_color.main' }}>
+                <Typography
+                  sx={{
+                    color: 'text_color.main',
+                    fontSize: { xs: '14px', sx: '16px' },
+                  }}
+                >
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -176,7 +191,12 @@ const CourseContent = () => {
                 <Typography color="primary">
                   Prototyping a App - Introduction
                 </Typography>
-                <Typography sx={{ color: 'text_color.main' }}>
+                <Typography
+                  sx={{
+                    color: 'text_color.main',
+                    fontSize: { xs: '14px', sx: '16px' },
+                  }}
+                >
                   5 lectures • 87 min
                 </Typography>
               </Box>
@@ -201,7 +221,12 @@ const CourseContent = () => {
                 }}
               >
                 <Typography color="primary">Wireframe Feedback</Typography>
-                <Typography sx={{ color: 'text_color.main' }}>
+                <Typography
+                  sx={{
+                    color: 'text_color.main',
+                    fontSize: { xs: '14px', sx: '16px' },
+                  }}
+                >
                   5 lectures • 87 min
                 </Typography>
               </Box>

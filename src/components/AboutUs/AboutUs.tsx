@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 px-3 lg:px-16 py-32 min-h-screen">
       <div>
-        <div className="text-primary text-xl  lg:text-5xl font-bold lg:leading-[55px] ">
+        <div className="text-primary text-xl  md:text-5xl font-bold md:leading-[55px] ">
           Online aboutUs
           <br />
           solutions that meet your needs.
@@ -17,7 +17,7 @@ const AboutUs = () => {
         </p>
         {/* cards */}
         <div className="space-y-8 mt-10 ">
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start">
             <div className="bg-[#def5f0] rounded-full w-24 lg:w-40 h-24  flex items-center justify-center">
               <Image
                 src="/assets/aboutUs/icons/1.svg"
@@ -28,15 +28,17 @@ const AboutUs = () => {
               />
             </div>
             <div className="lg:pr-16 lg:pl-8 mt-5 lg:mt-0">
-              <h1 className="text-lg text-primary">Leadership development</h1>
-              <p className="text-gray-800  mt-1">
+              <h1 className="text-lg text-primary text-center lg:text-left">
+                Leadership development
+              </h1>
+              <p className="text-gray-800  mt-1 text-center lg:text-left">
                 Lorem ipsum is placeholder text commonly used in the graphic,
                 print, and publishing industries
               </p>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row">
-            <div className="bg-[#def5f0] rounded-full w-24 lg:w-40 h-24  flex items-center justify-center">
+          <div className="flex flex-col lg:flex-row  items-center lg:items-start">
+            <div className="bg-[#def5f0] rounded-full w-24 lg:w-40 h-24  flex items-center justify-center ">
               <Image
                 src="/assets/aboutUs/icons/2.svg"
                 height={50}
@@ -46,14 +48,16 @@ const AboutUs = () => {
               />
             </div>
             <div className="lg:pr-16 lg:pl-8 mt-5 lg:mt-0">
-              <h1 className="text-lg text-primary">Leadership development</h1>
-              <p className="text-gray-800  mt-1">
+              <h1 className="text-lg text-primary text-center lg:text-left">
+                Leadership development
+              </h1>
+              <p className="text-gray-800  mt-1 text-center lg:text-left">
                 Lorem ipsum is placeholder text commonly used in the graphic,
                 print, and publishing industries
               </p>
             </div>
           </div>
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start">
             <div className="bg-[#def5f0] rounded-full w-24 lg:w-40 h-24  flex items-center justify-center">
               <Image
                 src="/assets/aboutUs/icons/3.svg"
@@ -64,8 +68,10 @@ const AboutUs = () => {
               />
             </div>
             <div className="lg:pr-16 lg:pl-8 mt-5 lg:mt-0">
-              <h1 className="text-lg text-primary">Leadership development</h1>
-              <p className="text-gray-800 mt-1">
+              <h1 className="text-lg text-primary text-center lg:text-left">
+                Leadership development
+              </h1>
+              <p className="text-gray-800 mt-1 text-center lg:text-left">
                 Lorem ipsum is placeholder text commonly used in the graphic,
                 print, and publishing industries
               </p>
@@ -74,7 +80,7 @@ const AboutUs = () => {
         </div>
       </div>
       {/* 2nd section */}
-      <div className="flex items-center justify-center mt-14 lg:mt-0 lg:ml-10">
+      <div className="hidden lg:flex items-center justify-center mt-14 lg:mt-0 lg:ml-10">
         <div className="relative  px-2 ">
           <Image
             src="/assets/aboutUs/1.png"

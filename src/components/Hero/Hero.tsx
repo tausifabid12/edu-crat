@@ -1,5 +1,5 @@
 import React from 'react';
-import { A11y, Navigation, Pagination } from 'swiper';
+import { A11y, Navigation, Pagination, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SlideBody from './SlideBody/SlideBody';
 import SwipeButtons from './SwipeButtons/SwipeButtons';
@@ -38,11 +38,15 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen ">
+    <section className=" lg:min-h-screen ">
       <Swiper
-        modules={[Navigation, Pagination, A11y]}
+        modules={[Navigation, Pagination, A11y, Autoplay]}
         spaceBetween={0}
         loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         slidesPerView={1}
       >
         <SwiperSlide>

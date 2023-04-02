@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { A11y, Navigation, Pagination } from 'swiper';
+import { A11y, Navigation, Pagination, Autoplay } from 'swiper';
 import StudentCard from '../StudentCard/StudentCard';
 
 type studentData = {
@@ -62,11 +62,18 @@ const TopStudents = () => {
           </span>
         </button>
       </div>
-      <div className="mt-16 pl-5">
+      <div className="mt-16 pl-0">
         <Swiper
-          modules={[Navigation, Pagination, A11y]}
-          spaceBetween={10}
-          // loop={true}
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          spaceBetween={5}
+          loop={true}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
           slidesPerView={1}
           breakpoints={{
             640: {
@@ -78,16 +85,70 @@ const TopStudents = () => {
               spaceBetween: 10,
             },
             900: {
-              slidesPerView: 4.2,
+              slidesPerView: 3.3,
               spaceBetween: 18,
             },
           }}
         >
-          {students.map((student) => (
+          {/* {students.map((student) => (
             <SwiperSlide key={student.id} className="pb-28 px-2">
               <StudentCard data={student} />
             </SwiperSlide>
-          ))}
+          ))} */}
+          <SwiperSlide className="pb-28 lg:px-2">
+            <StudentCard
+              data={{
+                name: 'Jhon Doe',
+                title: 'Web Developer',
+                imgSrc: '/assets/students/5.png',
+              }}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="pb-28 px-2">
+            <StudentCard
+              data={{
+                name: 'Jhon Doe',
+                title: 'Web Developer',
+                imgSrc: '/assets/students/5.png',
+              }}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="pb-28 px-2">
+            <StudentCard
+              data={{
+                name: 'Jhon Doe',
+                title: 'Web Developer',
+                imgSrc: '/assets/students/5.png',
+              }}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="pb-28 px-2">
+            <StudentCard
+              data={{
+                name: 'Jhon Doe',
+                title: 'Web Developer',
+                imgSrc: '/assets/students/5.png',
+              }}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="pb-28 px-2">
+            <StudentCard
+              data={{
+                name: 'Jhon Doe',
+                title: 'Web Developer',
+                imgSrc: '/assets/students/5.png',
+              }}
+            />
+          </SwiperSlide>
+          <SwiperSlide className="pb-28 px-2">
+            <StudentCard
+              data={{
+                name: 'Jhon Doe',
+                title: 'Web Developer',
+                imgSrc: '/assets/students/5.png',
+              }}
+            />
+          </SwiperSlide>
         </Swiper>
       </div>
     </section>

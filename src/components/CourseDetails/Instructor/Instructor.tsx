@@ -36,7 +36,13 @@ const Instructor = () => {
             spacing={2}
             sx={{ display: 'flex', alignItems: 'center' }}
           >
-            <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>
+            <Typography
+              variant="subtitle2"
+              sx={{
+                color: 'text_color.main',
+                display: { xs: 'none', sm: 'block' },
+              }}
+            >
               Instructor Rating
             </Typography>
             <Typography variant="subtitle2" sx={{ color: 'text_color.main' }}>

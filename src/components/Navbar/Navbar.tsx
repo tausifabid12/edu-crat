@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
         <div className="max-w-7xl mx-auto  py-2 px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
-            <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button
                 type="button"
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -128,7 +128,7 @@ const Navbar = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="hidden sm:block sm:ml-6">
+              <div className="hidden lg:block lg:ml-6">
                 <div className="flex space-x-4">
                   {navLinks.map((link, i) => (
                     <Link
@@ -159,7 +159,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? 'block' : 'hidden'
-          } sm:hidden transition-all duration-500 ease-in-out`}
+          } lg:hidden transition-all duration-500 ease-in-out`}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
             {navLinks.map((link, i) => (

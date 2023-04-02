@@ -17,11 +17,11 @@ const FeedBack = () => {
       spacing={2}
       sx={{ padding: '60px 0 0 0', backgroundColor: 'info.main' }}
     >
-      <Grid item xs={12} md={4} py={20}>
+      <Grid item xs={12} md={4} sx={{ py: { xs: 2, md: 20 } }}>
         <Card
           sx={{
             width: '100%',
-            height: '230px',
+            height: '250px',
             p: 5,
             display: 'grid',
             placeContent: 'center',
@@ -49,7 +49,7 @@ const FeedBack = () => {
         md={8}
         // sx={{ position: 'relative' }}
       >
-        <Card sx={{ width: '100%', p: 5, height: '230px' }}>
+        <Card sx={{ width: '100%', p: 3, height: '250px' }}>
           {[70, 50, 30, 60, 12].map((item, i) => (
             <Stack key={i} spacing={2} direction="row">
               <Slider
