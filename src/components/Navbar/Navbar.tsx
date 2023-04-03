@@ -50,7 +50,7 @@ const Navbar = () => {
       <nav
         className={`${
           isScrolled ? 'bg-primary' : 'bg-primary'
-        }  fixed top-0 z-50 w-full max-w-[1500px] mx-auto  transition-all duration-300 `}
+        }  fixed top-0 z-50 w-full max-w-[1500px] mx-auto overflow-hidden  transition-all duration-300 `}
       >
         <div className="bg-secondary py-2 lg:px-16 hidden lg:flex items-center justify-between text-white">
           <div className="flex space-x-5">
