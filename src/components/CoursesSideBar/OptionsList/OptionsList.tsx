@@ -34,29 +34,28 @@ const OptionsList: React.FC<IOptionsListProps> = ({ data }) => {
   };
 
   return (
-    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List
+      dense={true}
+      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+    >
       {data.options.map((value, i) => {
         const labelId = `checkbox-list-label-${value}`;
 
         return (
           <ListItem
-            dense={true}
+            sx={{ borderBottom: '1px solid #e0e0e0' }}
             key={i + 1}
-            secondaryAction={
-              <Typography
-                aria-label="comments"
-                sx={{ color: 'text_color.main', py: 0 }}
-              >
-                (20)
-              </Typography>
-            }
+            // secondaryAction={
+            //   <Typography
+            //     aria-label="comments"
+            //     sx={{ color: 'text_color.main', py: 0 }}
+            //   >
+            //     (20)
+            //   </Typography>
+            // }
             disablePadding
           >
-            <ListItemButton
-              role={undefined}
-              onClick={handleToggle(i + 1)}
-              dense
-            >
+            <ListItemButton role={undefined} onClick={handleToggle(i + 1)}>
               <ListItemIcon sx={{ minWidth: '0px' }}>
                 <Checkbox
                   edge="start"
@@ -67,7 +66,7 @@ const OptionsList: React.FC<IOptionsListProps> = ({ data }) => {
                   inputProps={{ 'aria-labelledby': labelId }}
                 />
               </ListItemIcon>
-              <ListItemText id={labelId} primary={`${value + 1}`} />
+              <ListItemText id={labelId} primary={`${value}`} />
             </ListItemButton>
           </ListItem>
         );

@@ -41,7 +41,7 @@ const theme = createTheme({
 
     },
     bg_color: {
-      light: '#ffa726',
+      light: '#f5f7fe',
       // main: '#1a1a1a',
       main: '#fff',
       
