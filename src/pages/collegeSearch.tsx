@@ -6,6 +6,8 @@ import CollegeSearchFilters from '@/components/CollegeSearchFilters/CollegeSearc
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import IconButton from '@mui/material/IconButton';
 import { Scrollbars } from 'react-custom-scrollbars-2';
+import CollegeAdvertise from '@/components/CollegeAdvertise/CollegeAdvertise';
+import TextField from '@mui/material/TextField';
 
 // const coursesBody = styled(Box)(({ theme }) => ({
 //   width: '100%',
@@ -16,8 +18,8 @@ const CollegeSearch = () => {
   return (
     <NoSsr>
       <Navbar />
-      <Container maxWidth="xl" sx={{ mt: '120px' }}>
-        <Grid container spacing={2} mt={0}>
+      <Container maxWidth="xl" sx={{ mt: '130px' }}>
+        <Grid container spacing={1} mt={0}>
           <Grid
             item
             xs={12}
@@ -43,8 +45,8 @@ const CollegeSearch = () => {
 
             <CollegeSearchFilters />
           </Grid>
-          <Grid item xs={12} lg={9}>
-            <Paper elevation={2} sx={{ p: 2 }}>
+          <Grid item xs={12} md={9}>
+            <Paper elevation={2} sx={{ p: 2, borderRadius: '10px' }}>
               <Box
                 sx={{
                   display: 'flex',
@@ -58,6 +60,12 @@ const CollegeSearch = () => {
                 >
                   Colleges
                 </Typography>
+                <TextField
+                  label="Search"
+                  id="outlined-size-small"
+                  size="small"
+                  sx={{ display: { xs: 'none', lg: 'block' } }}
+                />
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   className="lg:hidden px-3 py-1 bg-secondary text-white rounded-lg"
@@ -67,7 +75,15 @@ const CollegeSearch = () => {
               </Box>
             </Paper>
             <Grid container spacing={4} mt={0}>
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+              {[1, 2, 3, 4, 5].map((item) => (
+                <Grid key={item} item xs={12} lg={12}>
+                  <CollegeSearchCard />
+                </Grid>
+              ))}
+              <Grid item xs={12}>
+                <CollegeAdvertise />
+              </Grid>
+              {[1, 2, 3, 4, 5].map((item) => (
                 <Grid key={item} item xs={12} lg={12}>
                   <CollegeSearchCard />
                 </Grid>

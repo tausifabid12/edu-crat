@@ -15,7 +15,7 @@ const Login = () => {
         container
         spacing={5}
         sx={{
-          marginTop: '120px',
+          marginTop: { xs: '70px', lg: '120px' },
           minHeight: '100vh',
           backgroundColor: 'info.light',
           position: 'relative',
@@ -29,7 +29,7 @@ const Login = () => {
           sx={{
             background: `url('/assets/login/bg.png')`,
             backgroundColor: 'primary.main',
-            display: 'flex',
+            display: { xs: 'none', lg: 'flex' },
             alignItems: 'center',
             justifyContent: 'center',
           }}
@@ -58,7 +58,7 @@ const Login = () => {
             component="form"
             sx={{
               backgroundColor: 'bg_color.main',
-              width: '70%',
+              width: { xs: '100%', lg: '80%' },
               height: 'auto',
               borderRadius: '10px',
               padding: '50px',

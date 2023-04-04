@@ -17,11 +17,11 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Courses', href: '/courses' },
-    { label: 'Event', href: '/' },
-    { label: 'Blogs', href: '/' },
-    { label: 'Contact', href: '/' },
-    { label: 'Dashboard', href: '/dashboard' },
-    { label: 'C-Dashboard', href: '/collegeRoutes/dashboard' },
+    { label: 'College', href: '/college' },
+    { label: 'College search', href: '/CollegeSearch' },
+    // { label: 'Contact', href: '/' },
+    // { label: 'Dashboard', href: '/dashboard' },
+    // { label: 'C-Dashboard', href: '/collegeRoutes/dashboard' },
   ];
 
   const toggleMenu = () => {

@@ -1,6 +1,6 @@
 import MainLayout from '@/Layouts/MainLayout';
 import React from 'react';
-import { Button, Typography, Paper, Box, Grid } from '@mui/material';
+import { Button, Typography, Paper, Box, Grid, NoSsr } from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';

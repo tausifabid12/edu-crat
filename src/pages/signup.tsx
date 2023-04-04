@@ -15,7 +15,7 @@ const SignUp = () => {
         container
         spacing={5}
         sx={{
-          marginTop: '120px',
+          marginTop: { xs: '70px', lg: '120px' },
           minHeight: '100vh',
           backgroundColor: 'info.light',
           position: 'relative',
@@ -29,7 +29,7 @@ const SignUp = () => {
           sx={{
             background: `url('/assets/login/bg.png')`,
             backgroundColor: 'primary.main',
-            display: 'flex',
+            display: { xs: 'none', lg: 'flex' },
             alignItems: 'center',
             justifyContent: 'center',
           }}
@@ -58,10 +58,10 @@ const SignUp = () => {
             component="form"
             sx={{
               backgroundColor: 'bg_color.main',
-              width: '83%',
+              width: { xs: '100%', lg: '85%' },
               height: 'auto',
               borderRadius: '10px',
-              padding: '50px',
+              padding: { xs: '20px', lg: '50px' },
               boxShadow: '0px 0px 10px 0px rgba(0,0,0,0.2)',
             }}
             noValidate
@@ -94,6 +94,7 @@ const SignUp = () => {
             >
               <Grid item xs={12} lg={6}>
                 <TextField
+                  fullWidth
                   error={false}
                   id="outlined-error"
                   label="Name "
@@ -103,6 +104,7 @@ const SignUp = () => {
               </Grid>
               <Grid item xs={12} lg={6}>
                 <TextField
+                  fullWidth
                   error={false}
                   id="outlined-error"
                   label="User Name "
@@ -113,6 +115,7 @@ const SignUp = () => {
               <Grid item xs={12} lg={6}>
                 {' '}
                 <TextField
+                  fullWidth
                   error={false}
                   id="outlined-error"
                   label="Email"
@@ -132,6 +135,7 @@ const SignUp = () => {
               <Grid item xs={12} lg={6}>
                 {' '}
                 <TextField
+                  fullWidth
                   error={false}
                   id="outlined-error"
                   label="Password"
@@ -141,6 +145,7 @@ const SignUp = () => {
               <Grid item xs={12} lg={6}>
                 {' '}
                 <TextField
+                  fullWidth
                   error={false}
                   id="outlined-error"
                   label="Conform Password"

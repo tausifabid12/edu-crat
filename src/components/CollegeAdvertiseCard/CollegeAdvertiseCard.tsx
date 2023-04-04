@@ -10,35 +10,38 @@ import Rating from '@mui/material/Rating';
 import NearMeIcon from '@mui/icons-material/NearMe';
 import DownloadIcon from '@mui/icons-material/Download';
 
-const CollegeSearchCard = () => {
+const CollegeAdvertiseCard = () => {
   return (
     <Card
       sx={{
-        maxWidth: '100%',
+        width: '100%',
         boxShadow: 'xl',
+
         '&:hover': {
           boxShadow: 'xl',
           borderColor: 'neutral.outlinedHoverBorder',
         },
       }}
     >
-      <CardActionArea
-        sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' } }}
-      >
+      <CardActionArea sx={{}}>
         <CardMedia
           component="img"
           height="120"
           image="/assets/campus.jpg"
           alt="green iguana"
           sx={{
-            width: { xs: '100%', sm: '40%' },
-            height: '240px',
-            borderRadius: '8px',
-            m: 1,
+            width: '100%',
+            height: '150px',
+            borderRadius: '8px 8px 0px 0px',
           }}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" color="primary">
+          <Typography
+            gutterBottom
+            variant="subtitle1"
+            fontWeight="bold"
+            color="primary"
+          >
             Indian Institute of Technology
           </Typography>
           <Box
@@ -62,21 +65,11 @@ const CollegeSearchCard = () => {
                 variant="body2"
                 sx={{ color: 'text_color.main', ml: 1 }}
               >
-                (125) |
+                (125)
               </Typography>
             </Box>
-            <Typography
-              variant="body2"
-              sx={{ color: 'text_color.main', ml: 1 }}
-            >
-              Fees: ₹ 8.00 Lakh | Salary : ₹ 15.00 Lakh
-            </Typography>
           </Box>
 
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica....
-          </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, mt: 1 }}>
             <Typography variant="body2" sx={{ color: 'primary.main' }}>
               Ranking: #1
@@ -88,20 +81,25 @@ const CollegeSearchCard = () => {
           <Box mt={3}>
             <Button
               variant="contained"
-              sx={{ color: 'primary', borderColor: 'primary', mr: 3 }}
+              size="small"
+              sx={{
+                color: 'primary',
+                borderColor: 'primary',
+                mx: 'auto',
+              }}
             >
               Apply Now <NearMeIcon sx={{ ml: 1 }} />
             </Button>
-            <Button
+            {/* <Button
               variant="outlined"
               sx={{
                 color: 'primary',
                 borderColor: 'primary',
-                mt: { xs: 2, sm: 0 },
+                // mt: { xs: 2, sm: 0 },
               }}
             >
               Brochure <DownloadIcon sx={{ ml: 1 }} />
-            </Button>
+            </Button> */}
           </Box>
         </CardContent>
       </CardActionArea>
@@ -109,4 +107,4 @@ const CollegeSearchCard = () => {
   );
 };
 
-export default CollegeSearchCard;
+export default CollegeAdvertiseCard;
