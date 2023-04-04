@@ -10,7 +10,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className="max-w-screen-2xl mx-auto">{children}</main>
       <Footer />
     </>
   );

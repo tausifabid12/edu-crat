@@ -99,7 +99,7 @@ const DashboardLayout = (props: Props) => {
     setMobileOpen(!mobileOpen);
   };
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', maxWidth: '1536px', mx: 'auto' }}>
       <CssBaseline />
       <AppBar
         position="fixed"

@@ -16,16 +16,18 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <PopularCourses />
-        <CoursePromo />
-        <AboutUs />
-        <UpcomingEvent />
-        <TopCategories />
-        <TopStudents />
-        <RegisterSec />
-        <Clients />
-        <Footer />
+        <div className="max-w-screen-2xl mx-auto">
+          <PopularCourses />
+          <CoursePromo />
+          <AboutUs />
+          <UpcomingEvent />
+          <TopCategories />
+          <TopStudents />
+          <RegisterSec />
+          <Clients />
+        </div>
       </main>
+      <Footer />
     </>
   );
 }

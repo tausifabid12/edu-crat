@@ -47,133 +47,139 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={`${
-          isScrolled ? 'bg-primary' : 'bg-primary'
-        }  fixed top-0 z-50 w-full max-w-[1500px] mx-auto overflow-hidden  transition-all duration-300 `}
-      >
-        <div className="bg-secondary py-2 lg:px-16 hidden lg:flex items-center justify-between text-white">
-          <div className="flex space-x-5">
-            <div className="flex items-center justify-center space-x-3">
-              <span>
-                <BsEnvelope size={18} />
-              </span>{' '}
-              <p>(00) 242 844 39 88</p>
+      <div className="fixed top-0 z-50 w-full">
+        <div className="bg-secondary  ">
+          <div className="max-w-screen-2xl mx-auto py-2 lg:px-16 hidden lg:flex items-center justify-between text-white">
+            <div className="flex space-x-5">
+              <div className="flex items-center justify-center space-x-3">
+                <span>
+                  <BsEnvelope size={18} />
+                </span>{' '}
+                <p className="text-sm">(00) 242 844 39 88</p>
+              </div>
+              <div className="flex items-center justify-center space-x-3">
+                <span>
+                  <BsEnvelope size={18} />
+                </span>{' '}
+                <p className="text-sm">hello@educrat.com</p>
+              </div>
             </div>
-            <div className="flex items-center justify-center space-x-3">
-              <span>
-                <BsEnvelope size={18} />
-              </span>{' '}
-              <p>hello@educrat.com</p>
+            <div className="flex items-center justify-center space-x-4 text-sm text-white">
+              <BsFacebook />
+              <BsLinkedin />
+              <BsTwitter />
+              <BsGithub />
             </div>
-          </div>
-          <div className="flex items-center justify-center space-x-4 text-sm text-white">
-            <BsFacebook />
-            <BsLinkedin />
-            <BsTwitter />
-            <BsGithub />
           </div>
         </div>
-        <div className="w-full  py-2 px-2 sm:px-6 lg:px-8">
-          <div className="relative flex items-center justify-between h-16">
-            <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
-              <button
-                type="button"
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                onClick={toggleMenu}
-              >
-                <span className="sr-only">Open main menu</span>
-                <svg
-                  className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-                <svg
-                  className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="flex-1 flex items-center justify-between">
-              <div className="flex-shrink-0">
-                <img
-                  className="block lg:hidden h-8 w-auto"
-                  src="/assets/logo.svg"
-                  alt="Logo"
-                />
-                <img
-                  className="hidden lg:block h-14 w-auto"
-                  src="/assets/logo.svg"
-                  alt="Logo"
-                />
-              </div>
-              <div className="hidden lg:block lg:ml-6">
-                <div className="flex space-x-4">
-                  {navLinks.map((link, i) => (
-                    <Link
-                      key={i + 1}
-                      href={link.href}
-                      className=" text-white px-3 py-2 rounded-md text-md font-medium"
+        <nav
+          className={`${
+            isScrolled ? 'bg-primary' : 'bg-primary'
+          }  z-50 w-full   overflow-hidden  transition-all duration-300 `}
+        >
+          <div className="max-w-screen-2xl mx-auto">
+            <div className="w-full  py-2 px-2 sm:px-6 lg:px-8">
+              <div className="relative flex items-center justify-between h-16">
+                <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
+                  <button
+                    type="button"
+                    className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    onClick={toggleMenu}
+                  >
+                    <span className="sr-only">Open main menu</span>
+                    <svg
+                      className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
                     >
-                      {link.label}
-                    </Link>
-                  ))}
-                  <Link
-                    href="/login"
-                    className=" text-white px-3 py-2 rounded-md text-md font-medium"
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    href="/signup"
-                    className=" bg-white px-6 py-3 rounded-full text-primary"
-                  >
-                    signUp
-                  </Link>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                    <svg
+                      className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div className="flex-1 flex items-center justify-between">
+                  <div className="flex-shrink-0">
+                    <img
+                      className="block lg:hidden h-8 w-auto"
+                      src="/assets/logo.svg"
+                      alt="Logo"
+                    />
+                    <img
+                      className="hidden lg:block h-14 w-auto"
+                      src="/assets/logo.svg"
+                      alt="Logo"
+                    />
+                  </div>
+                  <div className="hidden lg:block lg:ml-6">
+                    <div className="flex space-x-4">
+                      {navLinks.map((link, i) => (
+                        <Link
+                          key={i + 1}
+                          href={link.href}
+                          className=" text-white px-3 py-2 rounded-md text-md font-medium"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                      <Link
+                        href="/login"
+                        className=" text-white px-3 py-2 rounded-md text-md font-medium"
+                      >
+                        Login
+                      </Link>
+                      <Link
+                        href="/signup"
+                        className=" bg-white px-6 py-3 rounded-full text-primary"
+                      >
+                        signUp
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <div
+              className={`${
+                isOpen ? 'block' : 'hidden'
+              } lg:hidden transition-all duration-500 ease-in-out`}
+            >
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
+                {navLinks.map((link, i) => (
+                  <Link
+                    key={i + 1}
+                    href={link.href}
+                    className=" text-primary px-3 py-2 rounded-md text-md font-medium block"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-        <div
-          className={`${
-            isOpen ? 'block' : 'hidden'
-          } lg:hidden transition-all duration-500 ease-in-out`}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white">
-            {navLinks.map((link, i) => (
-              <Link
-                key={i + 1}
-                href={link.href}
-                className=" text-primary px-3 py-2 rounded-md text-md font-medium block"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </>
   );
 };

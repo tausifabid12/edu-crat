@@ -5,17 +5,17 @@ import Grid from '@mui/material/Grid';
 import { Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar/Navbar';
+import MainLayout from '@/Layouts/MainLayout';
 
 const Login = () => {
   return (
-    <>
-      <Navbar />
+    <MainLayout>
       <Grid
         className=""
         container
         spacing={5}
         sx={{
-          marginTop: { xs: '70px', lg: '120px' },
+          marginTop: { xs: '70px', lg: '110px' },
           minHeight: '100vh',
           backgroundColor: 'info.light',
           position: 'relative',
@@ -120,7 +120,7 @@ const Login = () => {
           </Box>
         </Grid>
       </Grid>
-    </>
+    </MainLayout>
   );
 };
 
