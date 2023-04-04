@@ -57,7 +57,7 @@ const CollegeAwardsRecruiters = () => {
                 height={100}
                 width={100}
                 alt="client"
-                style={{ width: '80%' }}
+                style={{ width: '50%' }}
               />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
@@ -66,7 +66,7 @@ const CollegeAwardsRecruiters = () => {
                 height={100}
                 width={100}
                 alt="client"
-                style={{ width: '70%' }}
+                style={{ width: '40%' }}
               />
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
@@ -75,7 +75,7 @@ const CollegeAwardsRecruiters = () => {
                 height={100}
                 width={100}
                 alt="client"
-                style={{ width: '80%' }}
+                style={{ width: '50%' }}
               />
             </Grid>
           </Grid>

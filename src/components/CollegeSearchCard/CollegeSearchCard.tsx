@@ -97,7 +97,7 @@ const CollegeSearchCard = () => {
               sx={{
                 color: 'primary',
                 borderColor: 'primary',
-                mt: { xs: 2, sm: 0 },
+                // mt: { xs: 2, sm: 0 },
               }}
             >
               Brochure <DownloadIcon sx={{ ml: 1 }} />

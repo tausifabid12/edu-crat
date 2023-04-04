@@ -8,6 +8,7 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import CollegeCourses from '../CollegeCourses/CollegeCourses';
 import CollegeCourseFeesDetailsCard from '../CollegeCourseFeesDetailsCard/CollegeCourseFeesDetailsCard';
 import AdmissionDetails from '../AdmissionDetails/AdmissionDetails';
+import CollegeReview from '../CollegeReview/CollegeReview';
 
 const AdmissionTab = () => {
   return (
@@ -113,9 +114,10 @@ const AdmissionTab = () => {
       </Box>
       {/* ------ */}
       {/*  --------- */}
-      <Box sx={{ mt: 3 }}>
+      <Box sx={{ my: 3 }}>
         <CollegeCourses />
       </Box>
+      <CollegeReview />
       {/* ------ */}
     </>
   );
