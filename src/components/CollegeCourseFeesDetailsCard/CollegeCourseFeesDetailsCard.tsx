@@ -21,7 +21,7 @@ const CollegeCourseFeesDetailsCard = () => {
     },
   ];
   return (
-    <Paper elevation={0} sx={{ p: 3 }}>
+    <Paper elevation={0} sx={{ p: 2 }}>
       <Typography variant="h6" fontWeight="bold" sx={{ color: 'primary.main' }}>
         Courses Offered
       </Typography>
@@ -33,6 +33,7 @@ const CollegeCourseFeesDetailsCard = () => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
+              flexDirection: { xs: 'column', sm: 'row' },
             }}
           >
             <Box>

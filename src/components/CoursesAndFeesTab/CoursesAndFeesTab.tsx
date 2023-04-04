@@ -45,6 +45,7 @@ const CoursesAndFeesTab = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
+            flexDirection: { xs: 'column', sm: 'row' },
           }}
         >
           <Stack spacing={0.5} p={2}>

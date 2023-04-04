@@ -175,7 +175,7 @@ const College = () => {
           width: '100%',
           minHeight: '100vh',
           bgcolor: 'white',
-          px: { xs: 2, sm: 10 },
+          px: { xs: 0.2, sm: 10 },
         }}
       >
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
