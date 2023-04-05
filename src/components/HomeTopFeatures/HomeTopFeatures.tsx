@@ -47,6 +47,7 @@ const HomeTopFeatures = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-around',
+          flexWrap: 'wrap',
           py: 2,
           maxWidth: '1536px',
           mx: 'auto',
@@ -58,19 +59,22 @@ const HomeTopFeatures = () => {
             elevation={0}
             sx={{
               py: 3,
-              px: 8,
+              px: { xs: 0, lg: 8 },
               display: 'flex',
+              width: { xs: '100%', lg: 'auto' },
               alignItems: 'center',
               justifyContent: 'center',
               borderRadius: '10px',
             }}
           >
-            <Typography sx={{ mx: 'auto', textAlign: 'center' }}>
-              {item.icon}
-            </Typography>
-            <Typography sx={{ fontWeight: '600', ml: 1 }}>
-              {item.title}
-            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Typography sx={{ mx: 'auto', textAlign: 'center' }}>
+                {item.icon}
+              </Typography>
+              <Typography sx={{ fontWeight: '600', ml: 1 }}>
+                {item.title}
+              </Typography>
+            </Box>
           </Paper>
         ))}
       </Box>

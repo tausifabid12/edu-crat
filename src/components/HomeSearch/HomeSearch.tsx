@@ -9,8 +9,13 @@ const HomeSearch = () => {
   const [course, setCourse] = React.useState('courses');
   const [location, setLocation] = React.useState('location');
   return (
-    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} mt={6}>
-      <FormControl sx={{ width: '250px' }}>
+    <Stack
+      direction={{ xs: 'column', lg: 'row' }}
+      spacing={1}
+      mt={3}
+      sx={{ px: { xs: 4, sm: 10, lg: 0 } }}
+    >
+      <FormControl sx={{ width: { xs: '100%', lg: '250px' } }}>
         <Select
           size="small"
           labelId="demo-simple-select-label"
@@ -21,6 +26,7 @@ const HomeSearch = () => {
           onChange={(e) => setCourse(e.target.value as string)}
           sx={{
             backgroundColor: 'white',
+            width: '100%',
             py: 0.5,
             '& > fieldset': { border: 'none' },
           }}
@@ -33,7 +39,7 @@ const HomeSearch = () => {
           <MenuItem value={30}>Thirty</MenuItem>
         </Select>
       </FormControl>
-      <FormControl sx={{ width: '250px' }}>
+      <FormControl sx={{ width: { xs: '100%', lg: '250px' }, mx: 'auto' }}>
         <Select
           size="small"
           labelId="demo-simple-select-label"

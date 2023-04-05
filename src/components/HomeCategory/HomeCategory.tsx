@@ -38,11 +38,11 @@ const HomeCategory = () => {
     },
   ];
   return (
-    <Paper sx={{ p: 8 }}>
+    <Paper sx={{ p: { xs: 1, md: 8 } }}>
       <Typography
         variant="h5"
         color="primary"
-        sx={{ fontWeight: '600', textAlign: 'center', mb: 3 }}
+        sx={{ fontWeight: '600', textAlign: 'center', my: 3 }}
       >
         Explore Category
       </Typography>
