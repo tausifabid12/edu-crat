@@ -17,6 +17,8 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Courses', href: '/courses' },
+    { label: 'Events', href: '/events' },
+    { label: 'Blogs', href: '/blog' },
     { label: 'College', href: '/college' },
     { label: 'College search', href: '/collegeSearch' },
     // { label: 'Contact', href: '/' },

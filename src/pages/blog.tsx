@@ -14,8 +14,27 @@ import EventCard from '@/components/EventCard/EventCard';
 const Blog = () => {
   return (
     <MainLayout>
-      <Paper elevation={0} sx={{ mt: '110px', minHeight: '100vh' }}>
-        <Grid container spacing={0} sx={{}}>
+      <Paper
+        elevation={0}
+        sx={{ mt: { xs: '70px', sm: '110px' }, minHeight: '100vh' }}
+      >
+        <Box
+          sx={{
+            background: `linear-gradient( rgba(20, 3, 66, .5), rgba(20, 3, 66, .5)),  url('/assets/contact.jpg')`,
+            backgroundPosition: 'bottom',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            height: '300px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <Typography variant="h3" sx={{ color: 'white', fontWeight: '600' }}>
+            Blogs
+          </Typography>
+        </Box>
+        {/* <Grid container spacing={0} sx={{}}>
           <Grid item xs={12} lg={6} p={5} sx={{}}>
             <Typography variant="h1" sx={{ fontWeight: '600' }}>
               We always think
@@ -38,7 +57,7 @@ const Blog = () => {
               experience focused on a wide range of original collabs.
             </Typography>
           </Grid>
-        </Grid>
+        </Grid> */}
 
         <Grid container sx={{ my: 5, p: 5 }} spacing={5}>
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
