@@ -4,6 +4,7 @@ import CoursePromo from '@/components/CoursePromo/CoursePromo';
 import Footer from '@/components/Footer/Footer';
 import Hero from '@/components/Hero/Hero';
 import HomeCategory from '@/components/HomeCategory/HomeCategory';
+import HomeExam from '@/components/HomeExam/HomeExam';
 import HomeTopCities from '@/components/HomeTopCities/HomeTopCities';
 import HomeTopFeatures from '@/components/HomeTopFeatures/HomeTopFeatures';
 import Navbar from '@/components/Navbar/Navbar';
@@ -23,6 +24,7 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto">
           <HomeCategory />
           <HomeTopCities />
+          <HomeExam />
           <PopularCourses />
           <CoursePromo />
           <AboutUs />
