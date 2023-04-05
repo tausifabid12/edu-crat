@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Stack } from '@mui/material';
 
 import DashboardLayout from '@/Layouts/DashboardLayout';
 import Image from 'next/image';
-import { Stack } from '@mui/system';
+
 import Rating from '@mui/material/Rating';
 
 const bull = (

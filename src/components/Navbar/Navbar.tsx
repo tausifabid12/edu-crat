@@ -18,7 +18,7 @@ const Navbar = () => {
     { label: 'Home', href: '/' },
     { label: 'Courses', href: '/courses' },
     { label: 'College', href: '/college' },
-    { label: 'College search', href: '/CollegeSearch' },
+    { label: 'College search', href: '/collegeSearch' },
     // { label: 'Contact', href: '/' },
     // { label: 'Dashboard', href: '/dashboard' },
     // { label: 'C-Dashboard', href: '/collegeRoutes/dashboard' },
