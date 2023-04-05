@@ -1,4 +1,4 @@
-import { Box, Button, Paper, Typography, Grid } from '@mui/material';
+import { Box, Button, Paper, Typography, Grid, NoSsr } from '@mui/material';
 import React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -42,97 +42,101 @@ const HomeExam = () => {
     setValue(newValue);
   };
   return (
-    <Paper sx={{ px: 10 }}>
-      <Typography
-        variant="h5"
-        color="primary"
-        sx={{ fontWeight: '600', textAlign: 'center', mt: 3 }}
-      >
-        Top Exams
-      </Typography>
-      <Typography
-        variant="body2"
-        sx={{
-          fontWeight: '600',
-          textAlign: 'center',
-          color: 'text_color.main',
-        }}
-      >
-        Exams cherry picked for you
-      </Typography>
-      <Box sx={{ mx: 'auto', position: 'relative', mt: 5 }}>
-        <Box sx={{ width: '100%' }}>
-          <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              aria-label="basic tabs example"
-            >
-              <Tab label="Engineering" {...a11yProps(0)} />
-              <Tab label="Medical" {...a11yProps(1)} />
-              <Tab label="B sc" {...a11yProps(2)} />
-              <Tab label="M sc" {...a11yProps(3)} />
-              <Tab label="B Tech" {...a11yProps(4)} />
-              <Tab label="B com" {...a11yProps(5)} />
-            </Tabs>
+    <NoSsr>
+      <Paper sx={{ px: { xs: 1, sm: 10 } }}>
+        <Typography
+          variant="h5"
+          color="primary"
+          sx={{ fontWeight: '600', textAlign: 'center', mt: 3 }}
+        >
+          Top Exams
+        </Typography>
+        <Typography
+          variant="body2"
+          sx={{
+            fontWeight: '600',
+            textAlign: 'center',
+            color: 'text_color.main',
+          }}
+        >
+          Exams cherry picked for you
+        </Typography>
+        <Box sx={{ mx: 'auto', position: 'relative', mt: 5 }}>
+          <Box sx={{ width: '100%' }}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="basic tabs example"
+                variant="scrollable"
+                scrollButtons="auto"
+              >
+                <Tab label="Engineering" {...a11yProps(0)} />
+                <Tab label="Medical" {...a11yProps(1)} />
+                <Tab label="B sc" {...a11yProps(2)} />
+                <Tab label="M sc" {...a11yProps(3)} />
+                <Tab label="B Tech" {...a11yProps(4)} />
+                <Tab label="B com" {...a11yProps(5)} />
+              </Tabs>
+            </Box>
+            <TabPanel value={value} index={0}>
+              <Grid container spacing={2} sx={{ mt: 1 }}>
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <Grid key={item} item xs={12} md={4}>
+                    <ExamCard />
+                  </Grid>
+                ))}
+              </Grid>
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <Grid container spacing={2} sx={{ mt: 1 }}>
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <Grid key={item} item xs={12} md={4}>
+                    <ExamCard />
+                  </Grid>
+                ))}
+              </Grid>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              <Grid container spacing={2} sx={{ mt: 1 }}>
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <Grid key={item} item xs={12} md={4}>
+                    <ExamCard />
+                  </Grid>
+                ))}
+              </Grid>
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+              <Grid container spacing={2} sx={{ mt: 1 }}>
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <Grid key={item} item xs={12} md={4}>
+                    <ExamCard />
+                  </Grid>
+                ))}
+              </Grid>
+            </TabPanel>
+            <TabPanel value={value} index={4}>
+              <Grid container spacing={2} sx={{ mt: 1 }}>
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <Grid key={item} item xs={12} md={4}>
+                    <ExamCard />
+                  </Grid>
+                ))}
+              </Grid>
+            </TabPanel>
+            <TabPanel value={value} index={5}>
+              <Grid container spacing={2} sx={{ mt: 1 }}>
+                {[1, 2, 3, 4, 5, 6].map((item) => (
+                  <Grid key={item} item xs={12} md={4}>
+                    <ExamCard />
+                  </Grid>
+                ))}
+              </Grid>
+            </TabPanel>
           </Box>
-          <TabPanel value={value} index={0}>
-            <Grid container spacing={2} sx={{ mt: 1 }}>
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <Grid key={item} item xs={12} md={4}>
-                  <ExamCard />
-                </Grid>
-              ))}
-            </Grid>
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <Grid container spacing={2} sx={{ mt: 1 }}>
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <Grid key={item} item xs={12} md={4}>
-                  <ExamCard />
-                </Grid>
-              ))}
-            </Grid>
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            <Grid container spacing={2} sx={{ mt: 1 }}>
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <Grid key={item} item xs={12} md={4}>
-                  <ExamCard />
-                </Grid>
-              ))}
-            </Grid>
-          </TabPanel>
-          <TabPanel value={value} index={3}>
-            <Grid container spacing={2} sx={{ mt: 1 }}>
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <Grid key={item} item xs={12} md={4}>
-                  <ExamCard />
-                </Grid>
-              ))}
-            </Grid>
-          </TabPanel>
-          <TabPanel value={value} index={4}>
-            <Grid container spacing={2} sx={{ mt: 1 }}>
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <Grid key={item} item xs={12} md={4}>
-                  <ExamCard />
-                </Grid>
-              ))}
-            </Grid>
-          </TabPanel>
-          <TabPanel value={value} index={5}>
-            <Grid container spacing={2} sx={{ mt: 1 }}>
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <Grid key={item} item xs={12} md={4}>
-                  <ExamCard />
-                </Grid>
-              ))}
-            </Grid>
-          </TabPanel>
         </Box>
-      </Box>
-    </Paper>
+      </Paper>
+    </NoSsr>
   );
 };
 
