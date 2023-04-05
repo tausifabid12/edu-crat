@@ -20,7 +20,7 @@ const SlideBody: React.FC<ISlideBodyData> = ({ data }) => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}
-      className="w-full min-h-[580px] pb-5  pt-12 flex items-end justify-end"
+      className="w-full min-h-[540px] pb-5  pt-12 flex items-end justify-end"
     >
       {/* top section - heading and search */}
       <div className="w-full pr-8">

@@ -10,7 +10,7 @@ const HomeTopFeatures = () => {
     {
       icon: (
         <AccountBalanceIcon
-          sx={{ fontSize: '30px', mx: 'auto', color: 'text_color.main' }}
+          sx={{ fontSize: '30px', mx: 'auto', color: 'primary.main' }}
         />
       ),
       title: 'Top Colleges',
@@ -18,7 +18,7 @@ const HomeTopFeatures = () => {
     {
       icon: (
         <AssignmentIcon
-          sx={{ fontSize: '30px', mx: 'auto', color: 'text_color.main' }}
+          sx={{ fontSize: '30px', mx: 'auto', color: 'primary.main' }}
         />
       ),
       title: 'Explore Exam',
@@ -26,7 +26,7 @@ const HomeTopFeatures = () => {
     {
       icon: (
         <FeedIcon
-          sx={{ fontSize: '30px', mx: 'auto', color: 'text_color.main' }}
+          sx={{ fontSize: '30px', mx: 'auto', color: 'primary.main' }}
         />
       ),
       title: 'Get Admission',
@@ -34,7 +34,7 @@ const HomeTopFeatures = () => {
     {
       icon: (
         <NewspaperIcon
-          sx={{ fontSize: '30px', mx: 'auto', color: 'text_color.main' }}
+          sx={{ fontSize: '30px', mx: 'auto', color: 'primary.main' }}
         />
       ),
       title: 'Latest News',
@@ -47,7 +47,7 @@ const HomeTopFeatures = () => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-around',
-          py: 5,
+          py: 2,
           maxWidth: '1536px',
           mx: 'auto',
         }}
@@ -55,13 +55,20 @@ const HomeTopFeatures = () => {
         {data.map((item) => (
           <Paper
             key={item.title}
-            elevation={3}
-            sx={{ bgcolor: 'white', py: 3, px: 8, borderRadius: '10px' }}
+            elevation={0}
+            sx={{
+              py: 3,
+              px: 8,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '10px',
+            }}
           >
             <Typography sx={{ mx: 'auto', textAlign: 'center' }}>
               {item.icon}
             </Typography>
-            <Typography sx={{ fontWeight: '600', mt: 2 }}>
+            <Typography sx={{ fontWeight: '600', ml: 1 }}>
               {item.title}
             </Typography>
           </Paper>
