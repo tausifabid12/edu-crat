@@ -27,8 +27,8 @@ const ContactUs = () => {
       <Paper elevation={0} sx={{ mt: { xs: '70px', sm: '110px' } }}>
         <Box
           sx={{
-            background: `linear-gradient( rgba(0,0,0, .5), rgba(0,0,0, .5)),  url('/assets/hero.jpg')`,
-            backgroundPosition: 'center',
+            background: `linear-gradient( rgba(20, 3, 66, .5), rgba(20, 3, 66, .5)),  url('/assets/contact.jpg')`,
+            backgroundPosition: 'bottom',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             height: '250px',
