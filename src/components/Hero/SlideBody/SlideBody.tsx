@@ -7,57 +7,28 @@ interface ISlideBodyData {
     title: string;
     imageSrc: string;
     description: string;
-    highlight: string;
   };
 }
 
 const SlideBody: React.FC<ISlideBodyData> = ({ data }) => {
-  const { imageSrc, title, description, highlight } = data;
+  const { imageSrc, title, description } = data;
   return (
     <div
       style={{
-        background: `linear-gradient( rgba(20, 3, 66, .5), rgba(20, 3, 66, .5)),  url(${imageSrc})`,
-        backgroundPosition: 'center',
+        background: `linear-gradient( rgba(20, 3, 66, .6), rgba(20, 3, 66, .5)),  url(${imageSrc})`,
+        backgroundPosition: 'top',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
       }}
-      className="w-full lg:min-h-screen pb-14 pt-12"
+      className="w-full lg:min-h-[580px] pb-5  pt-12 flex items-end justify-end"
     >
       {/* top section - heading and search */}
-      <div className="w-full lg:w-1/2 lg:px-20  py-20 md:py-28 lg:py-14  mx-auto lg:min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-4xl lg:text-6xl text-white font-bold text-center lg:leading-[80px]">
-          {title}
-        </h1>
-        <h2 className="text-white text-4xl lg:text-6xl  font-bold text-center">
-          {highlight}
-        </h2>
-        <p className="text-white text-md font-semibold mt-4 lg:mt-10">
-          {description}
-        </p>
-        <div className="hidden  bg-white lg:flex p-2 w-[80%] mx-auto rounded-full mt-14 focus:ring-2 focus:ring-gray-700">
-          <input
-            type="text"
-            className="outline-none bg-transparent  flex-grow px-4 placeholder:text-gray-800"
-            placeholder="What do you want to learn today?"
-          />
-          <button className="bg-secondary py-3 px-12 rounded-full border-2 transition-all duration-150 border-secondary text-white hover:text-secondary hover:bg-white ">
-            Search
-          </button>
-        </div>
-        {/* small device search */}
-        <div className="  lg:hidden p-2 w-[80%] md:w-[40%]  mx-auto  mt-5 focus:ring-2 focus:ring-gray-700">
-          <input
-            type="text"
-            className="outline-none bg-white w-full py-3 rounded-lg flex-grow pl-2 placeholder:text-gray-800"
-            placeholder="What do you want to learn today?"
-          />
-          <button className="bg-secondary py-3 rounded-xl w-full mt-3 border-2 transition-all duration-150 border-secondary text-white hover:text-secondary hover:bg-white ">
-            Search
-          </button>
-        </div>
-      </div>
+      <div className="w-full pr-8">
+        <h1 className="text-md  text-white font-bold   text-end">{title}</h1>
 
-      {/* bottom info section  */}
+        {/* <p className="text-white text-md font-semibold  ">{description}</p> */}
+      </div>
+      {/* bottom info section
       <div className="flex items-center flex-col md:flex-row space-y-5 md:space-y-0 justify-center md:space-x-5 lg:space-x-12 ">
         <div className="flex flex-col space-y-3 text-white text-center">
           <Image
@@ -93,7 +64,7 @@ const SlideBody: React.FC<ISlideBodyData> = ({ data }) => {
           <h1 className="text-xl font-semibold">Lifetime access</h1>
           <p className="text-sm">Learn on your schedule</p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
