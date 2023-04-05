@@ -9,7 +9,7 @@ const HomeSearch = () => {
   const [course, setCourse] = React.useState('courses');
   const [location, setLocation] = React.useState('location');
   return (
-    <Stack direction="row" spacing={1} mt={6}>
+    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1} mt={6}>
       <FormControl sx={{ width: '250px' }}>
         <Select
           size="small"

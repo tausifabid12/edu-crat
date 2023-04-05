@@ -68,8 +68,8 @@ const Hero = () => {
       </Swiper>
 
       {/* title and search */}
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-        <h1 className="text-5xl  text-white font-bold text-center mt-8 ">
+      <div className="absolute w-full lg:w-auto left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <h1 className="text-2xl  lg:text-6xl  text-white font-bold text-center mt-8 w-full ">
           FIND BEST COLLEGE <br /> FOR YOU
         </h1>
         <p className="text-white text-sm mt-3 font-bold text-center">
