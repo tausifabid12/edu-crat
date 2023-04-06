@@ -9,12 +9,13 @@ const HomeEventCard = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        p: 3,
+        flexDirection: { xs: 'column', md: 'row' },
+        p: { xs: '1', md: 3 },
         border: '1px solid #e0e0e0',
         borderRadius: '10px',
       }}
     >
-      <Box sx={{ display: 'flex', alignItems: 'center', pt: 3, px: 1 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', px: 1 }}>
         <Image
           src="/assets/exam.jpg"
           height={80}
@@ -41,7 +42,7 @@ const HomeEventCard = () => {
           </Typography>
         </Box>
       </Box>
-      <Box>
+      <Box sx={{ my: { xs: 2, md: '0' } }}>
         <Typography
           variant="h6"
           sx={{ fontWeight: '600', ml: 2, color: 'primary.main' }}
@@ -67,6 +68,7 @@ const HomeEventCard = () => {
           px: 6,
           py: 1.3,
           borderRadius: '20px',
+          my: { xs: 2, md: '0' },
         }}
       >
         {' '}
