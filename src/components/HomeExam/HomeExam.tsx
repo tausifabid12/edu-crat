@@ -43,7 +43,7 @@ const HomeExam = () => {
   };
   return (
     <NoSsr>
-      <Paper sx={{ px: { xs: 1, sm: 10 } }}>
+      <Paper sx={{ px: { xs: 1, sm: 10 }, mb: 8 }} elevation={0}>
         <Typography
           variant="h5"
           color="primary"
@@ -70,6 +70,7 @@ const HomeExam = () => {
                 aria-label="basic tabs example"
                 variant="scrollable"
                 scrollButtons="auto"
+                centered
               >
                 <Tab label="Engineering" {...a11yProps(0)} />
                 <Tab label="Medical" {...a11yProps(1)} />

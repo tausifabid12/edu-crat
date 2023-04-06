@@ -4,6 +4,7 @@ import CoursePromo from '@/components/CoursePromo/CoursePromo';
 import Footer from '@/components/Footer/Footer';
 import Hero from '@/components/Hero/Hero';
 import HomeCategory from '@/components/HomeCategory/HomeCategory';
+import HomeEvents from '@/components/HomeEvents/HomeEvents';
 import HomeExam from '@/components/HomeExam/HomeExam';
 import HomeTopCities from '@/components/HomeTopCities/HomeTopCities';
 import HomeTopFeatures from '@/components/HomeTopFeatures/HomeTopFeatures';
@@ -25,6 +26,7 @@ export default function Home() {
           <HomeCategory />
           <HomeTopCities />
           <HomeExam />
+          <HomeEvents />
           <PopularCourses />
           <CoursePromo />
           <AboutUs />

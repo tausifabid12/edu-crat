@@ -34,7 +34,7 @@ const HomeTopCities = () => {
   ];
 
   return (
-    <Paper sx={{ p: 8 }}>
+    <Paper sx={{ p: 8, mb: 8 }} elevation={0}>
       <Typography
         variant="h5"
         color="primary"
