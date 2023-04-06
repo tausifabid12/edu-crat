@@ -17,14 +17,22 @@ const blogPreview = () => {
 
   return (
     <MainLayout>
-      <Container maxWidth="xl">
-        <Box mt={16} p={5}>
-          {tags.map((tag, i) => (
-            <Chip key={i} label={tag} sx={{ ml: 1 }} />
-          ))}
-
-          <Grid container spacing={3} mt={1}>
-            <Grid item xs={12} lg={8} px={5}>
+      <Container>
+        <Box mt={7} p={5}>
+          <Grid container spacing={3} mt={1} sx={{ width: '98%', mx: 'auto' }}>
+            <Grid item xs={12} lg={12}>
+              <Image
+                height={500}
+                width={1000}
+                src="/assets/campus.jpg"
+                alt="/"
+                className="rounded-xl w-full h-[500px]"
+              />
+              {tags.map((tag, i) => (
+                <Chip key={i} label={tag} sx={{ ml: 1, mt: 2 }} />
+              ))}
+            </Grid>
+            <Grid item xs={12} lg={12} px={5}>
               <Typography
                 variant="h2"
                 sx={{ color: 'primary.main', fontWeight: '600' }}
@@ -41,7 +49,7 @@ const blogPreview = () => {
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  mt: 6,
+                  mt: 4,
                 }}
               >
                 <Avatar
@@ -64,15 +72,6 @@ const blogPreview = () => {
                   </Typography>
                 </Stack>
               </Box>
-            </Grid>
-            <Grid item xs={12} lg={4}>
-              <Image
-                height={500}
-                width={500}
-                src="/assets/blog.jpg"
-                alt="/"
-                className="rounded-xl"
-              />
             </Grid>
           </Grid>
         </Box>

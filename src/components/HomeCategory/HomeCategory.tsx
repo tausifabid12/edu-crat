@@ -38,7 +38,7 @@ const HomeCategory = () => {
     },
   ];
   return (
-    <Paper sx={{ p: { xs: 1, md: 8 } }}>
+    <Paper sx={{ p: { xs: 1, md: 8 } }} elevation={0}>
       <Typography
         variant="h5"
         color="primary"
