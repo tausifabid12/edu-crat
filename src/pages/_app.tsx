@@ -30,7 +30,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
-
-// highlight: { main: '#00ff84' },
-// secondary: { main: '#6440fb' },
-// primaryLight: { main: '#1a064f' },
