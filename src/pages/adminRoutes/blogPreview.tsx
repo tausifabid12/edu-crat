@@ -18,21 +18,26 @@ const blogPreview = () => {
   return (
     <MainLayout>
       <Container>
-        <Box mt={7} p={5}>
-          <Grid container spacing={3} mt={1} sx={{ width: '98%', mx: 'auto' }}>
+        <Box mt={7}>
+          <Grid
+            container
+            spacing={3}
+            mt={1}
+            sx={{ width: { xs: '100%', sm: '98%' }, mx: 'auto' }}
+          >
             <Grid item xs={12} lg={12}>
               <Image
                 height={500}
                 width={1000}
                 src="/assets/campus.jpg"
                 alt="/"
-                className="rounded-xl w-full h-[500px]"
+                className="rounded-xl w-full h-auto lg:h-[500px]"
               />
               {tags.map((tag, i) => (
                 <Chip key={i} label={tag} sx={{ ml: 1, mt: 2 }} />
               ))}
             </Grid>
-            <Grid item xs={12} lg={12} px={5}>
+            <Grid item xs={12} lg={12}>
               <Typography
                 variant="h2"
                 sx={{ color: 'primary.main', fontWeight: '600' }}

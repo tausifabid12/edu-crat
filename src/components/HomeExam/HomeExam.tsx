@@ -70,7 +70,6 @@ const HomeExam = () => {
                 aria-label="basic tabs example"
                 variant="scrollable"
                 scrollButtons="auto"
-                centered
               >
                 <Tab label="Engineering" {...a11yProps(0)} />
                 <Tab label="Medical" {...a11yProps(1)} />
