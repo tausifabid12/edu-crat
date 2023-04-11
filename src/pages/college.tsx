@@ -65,115 +65,136 @@ const College = () => {
             backgroundPosition: 'center',
             borderRadius: '0px',
             display: 'flex',
+            width: '100%',
             alignItems: 'center',
             pl: { xs: 2, sm: 10 },
           }}
         >
           {/* top section */}
-          <Box sx={{ backgroundColor: 'transparent' }}>
-            <Typography
-              variant="h4"
-              color="white"
-              sx={{ fontWeight: '600', fontSize: { xs: '35px', sm: '50px' } }}
-            >
-              Indian Institute of Technology
-            </Typography>
-            <Typography
-              color="white"
-              variant="subtitle1"
-              sx={{
-                fontWeight: '600',
-                mt: 1,
-                fontSize: { xs: '15px', sm: '22px' },
-              }}
-            >
-              <PlaceIcon
-                sx={{ color: 'white', fontSize: { xs: '17px', sm: '20px' } }}
-              />{' '}
-              Chennai, Tamil Nadu
-            </Typography>
+          <Box
+            sx={{
+              backgroundColor: 'transparent',
+              maxWidth: '1536px',
+              mx: 'auto',
+
+              width: '100%',
+            }}
+          >
             <Box
               sx={{
+                width: '100%',
                 display: 'flex',
-                alignItems: 'center',
-                mt: 2,
+                alignItems: 'start',
+                flexDirection: 'column',
               }}
             >
               <Typography
+                variant="h4"
                 color="white"
-                variant="body2"
+                sx={{ fontWeight: '600', fontSize: { xs: '35px', sm: '50px' } }}
+              >
+                Indian Institute of Technology
+              </Typography>
+              <Typography
+                color="white"
+                variant="subtitle1"
                 sx={{
                   fontWeight: '600',
-                  mr: 1,
-                  fontSize: { xs: '12px', sm: '17px' },
+                  mt: 1,
+                  fontSize: { xs: '15px', sm: '22px' },
                 }}
               >
-                <DateRangeIcon
+                <PlaceIcon
+                  sx={{ color: 'white', fontSize: { xs: '17px', sm: '20px' } }}
+                />{' '}
+                Chennai, Tamil Nadu
+              </Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  mt: 2,
+                }}
+              >
+                <Typography
+                  color="white"
+                  variant="body2"
                   sx={{
-                    color: 'white',
-                    fontSize: { xs: '13px', sm: '17px' },
+                    fontWeight: '600',
+                    mr: 1,
+                    fontSize: { xs: '12px', sm: '17px' },
+                  }}
+                >
+                  <DateRangeIcon
+                    sx={{
+                      color: 'white',
+                      fontSize: { xs: '13px', sm: '17px' },
+                      mr: 2,
+                    }}
+                  />
+                  ESTD 1959
+                </Typography>
+                <Typography
+                  color="white"
+                  variant="body2"
+                  sx={{
+                    fontWeight: '600',
                     mr: 2,
+                    fontSize: { xs: '12px', sm: '17px' },
                   }}
-                />
-                ESTD 1959
-              </Typography>
-              <Typography
-                color="white"
-                variant="body2"
-                sx={{
-                  fontWeight: '600',
-                  mr: 2,
-                  fontSize: { xs: '12px', sm: '17px' },
-                }}
-              >
-                <AccountBalanceIcon
+                >
+                  <AccountBalanceIcon
+                    sx={{
+                      color: 'white',
+                      fontSize: { xs: '13px', sm: '17px' },
+                      mr: 1,
+                    }}
+                  />
+                  Public College
+                </Typography>
+                <Typography
+                  color="white"
+                  variant="body2"
                   sx={{
-                    color: 'white',
-                    fontSize: { xs: '13px', sm: '17px' },
-                    mr: 1,
+                    fontWeight: '600',
+                    mr: 2,
+                    fontSize: { xs: '12px', sm: '17px' },
                   }}
-                />
-                Public College
-              </Typography>
-              <Typography
-                color="white"
-                variant="body2"
-                sx={{
-                  fontWeight: '600',
-                  mr: 2,
-                  fontSize: { xs: '12px', sm: '17px' },
-                }}
-              >
-                <OfflinePinIcon
-                  sx={{
-                    color: 'white',
-                    fontSize: { xs: '13px', sm: '17px' },
-                    mr: 1,
-                  }}
-                />
-                AICTE Approved
-              </Typography>
-            </Box>
-            <Box mt={3}>
-              <Button
-                variant="outlined"
-                sx={{ color: 'white', borderColor: 'white', mr: 3 }}
-              >
-                Apply Now <NearMeIcon sx={{ ml: 1 }} />
-              </Button>
-              <Button
-                variant="outlined"
-                sx={{ color: 'white', borderColor: 'white' }}
-              >
-                Brochure <DownloadIcon sx={{ ml: 1 }} />
-              </Button>
+                >
+                  <OfflinePinIcon
+                    sx={{
+                      color: 'white',
+                      fontSize: { xs: '13px', sm: '17px' },
+                      mr: 1,
+                    }}
+                  />
+                  AICTE Approved
+                </Typography>
+              </Box>
+              <Box mt={3}>
+                <Button
+                  variant="outlined"
+                  sx={{ color: 'white', borderColor: 'white', mr: 3 }}
+                >
+                  Apply Now <NearMeIcon sx={{ ml: 1 }} />
+                </Button>
+                <Button
+                  variant="outlined"
+                  sx={{ color: 'white', borderColor: 'white' }}
+                >
+                  Brochure <DownloadIcon sx={{ ml: 1 }} />
+                </Button>
+              </Box>
             </Box>
           </Box>
         </Paper>
         {/* Body with tabs */}
+
         <Box
           sx={{
             width: '100%',
+            maxWidth: '1536px',
+            mx: 'auto',
             minHeight: '100vh',
             bgcolor: 'white',
             px: { xs: 0.2, sm: 10 },

@@ -30,9 +30,9 @@ export default function Home() {
           <PopularCourses />
           <CoursePromo />
           <AboutUs />
-          <UpcomingEvent />
+          {/* <UpcomingEvent /> */}
           <TopCategories />
-          <TopStudents />
+          {/* <TopStudents /> */}
           <RegisterSec />
           <Clients />
         </div>
